@@ -33,12 +33,20 @@ namespace ERPFacturacao
                 MessageBox.Show("OK");
 
                 dataGridView1.DataSource= service.findAll();
+                
             /*}
             catch(Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }*/
             
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            EFContext ef = new EFContext();
+            SectorService service = new SectorService(ef);
+            advancedDataGridView1.DataSource = service.findAll();
         }
     }
 }

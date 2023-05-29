@@ -42,7 +42,7 @@
             this.btnAnular = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.btnListar = new System.Windows.Forms.ToolStripButton();
-            this.dataGridCargo = new System.Windows.Forms.DataGridView();
+            this.dataGridCargo = new ADGV.AdvancedDataGridView();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridCargo)).BeginInit();
             this.SuspendLayout();
@@ -159,12 +159,15 @@
             // 
             // dataGridCargo
             // 
+            this.dataGridCargo.AutoGenerateContextFilters = true;
             this.dataGridCargo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridCargo.DateWithTime = false;
             this.dataGridCargo.Location = new System.Drawing.Point(12, 149);
             this.dataGridCargo.Name = "dataGridCargo";
             this.dataGridCargo.RowTemplate.Height = 25;
             this.dataGridCargo.Size = new System.Drawing.Size(535, 265);
-            this.dataGridCargo.TabIndex = 14;
+            this.dataGridCargo.TabIndex = 15;
+            this.dataGridCargo.TimeFilter = false;
             // 
             // FormCargo
             // 
@@ -206,7 +209,7 @@
         private ToolStripButton btnEditar;
         private ToolStripButton btnAnular;
         private ToolStripSeparator toolStripSeparator1;
-        private DataGridView dataGridCargo;
         private ToolStripButton btnListar;
+        private ADGV.AdvancedDataGridView dataGridCargo;
     }
 }

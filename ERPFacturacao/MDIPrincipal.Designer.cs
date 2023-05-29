@@ -67,6 +67,7 @@
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.formularioTesteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
             this.SuspendLayout();
@@ -322,7 +323,8 @@
             // 
             this.tabelasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cargoToolStripMenuItem,
-            this.sectoresToolStripMenuItem});
+            this.sectoresToolStripMenuItem,
+            this.formularioTesteToolStripMenuItem});
             this.tabelasToolStripMenuItem.Name = "tabelasToolStripMenuItem";
             this.tabelasToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
             this.tabelasToolStripMenuItem.Text = "Tabelas";
@@ -357,6 +359,13 @@
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
             this.toolStripStatusLabel1.Size = new System.Drawing.Size(105, 17);
             this.toolStripStatusLabel1.Text = "Seja bem vindo(a):";
+            // 
+            // formularioTesteToolStripMenuItem
+            // 
+            this.formularioTesteToolStripMenuItem.Name = "formularioTesteToolStripMenuItem";
+            this.formularioTesteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.formularioTesteToolStripMenuItem.Text = "Formulario Teste";
+            this.formularioTesteToolStripMenuItem.Click += new System.EventHandler(this.formularioTesteToolStripMenuItem_Click);
             // 
             // MDIPrincipal
             // 
@@ -418,6 +427,7 @@
         private ToolStripMenuItem cargoToolStripMenuItem;
         private ToolStripMenuItem sectoresToolStripMenuItem;
         private ToolStripStatusLabel toolStripStatusLabel1;
+        private ToolStripMenuItem formularioTesteToolStripMenuItem;
     }
 }
 

@@ -34,7 +34,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.advancedDataGridView1 = new ADGV.AdvancedDataGridView();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.advancedDataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -88,11 +91,35 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // advancedDataGridView1
+            // 
+            this.advancedDataGridView1.AutoGenerateContextFilters = true;
+            this.advancedDataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.advancedDataGridView1.DateWithTime = false;
+            this.advancedDataGridView1.Location = new System.Drawing.Point(279, 321);
+            this.advancedDataGridView1.Name = "advancedDataGridView1";
+            this.advancedDataGridView1.RowTemplate.Height = 25;
+            this.advancedDataGridView1.Size = new System.Drawing.Size(407, 150);
+            this.advancedDataGridView1.TabIndex = 6;
+            this.advancedDataGridView1.TimeFilter = false;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(183, 364);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 7;
+            this.button2.Text = "button2";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(705, 361);
+            this.ClientSize = new System.Drawing.Size(705, 547);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.advancedDataGridView1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -103,6 +130,7 @@
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.FormPrincipal_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.advancedDataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -116,5 +144,7 @@
         private Label label1;
         private Label label2;
         private Button button1;
+        private ADGV.AdvancedDataGridView advancedDataGridView1;
+        private Button button2;
     }
 }

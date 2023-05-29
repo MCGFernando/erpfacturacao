@@ -1,4 +1,5 @@
-﻿using ERPFacturacao.Controller;
+﻿using ADGV;
+using ERPFacturacao.Controller;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -47,7 +48,7 @@ namespace ERPFacturacao
                 txtCargo.Text = value;
             }
         }
-        public DataGridView tblCargo
+        public AdvancedDataGridView tblCargo
         {
             get
             {

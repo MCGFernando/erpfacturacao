@@ -109,5 +109,10 @@ namespace ERPFacturacao
             frmCargo.Show();
             new CargoController(frmCargo);
         }
+
+        private void formularioTesteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new Form1().Show();
+        }
     }
 }
