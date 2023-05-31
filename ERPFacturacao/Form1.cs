@@ -9,6 +9,11 @@ namespace ERPFacturacao
         public Form1()
         {
             InitializeComponent();
+            EFContext ef = new EFContext();
+            PaisService s = new PaisService(ef);
+            comboBox1.DataSource = s.findAll();
+            comboBox1.DisplayMember = "_Pais";
+            comboBox1.ValueMember = "Id";
         }
 
         private void FormPrincipal_Load(object sender, EventArgs e)
@@ -47,6 +52,12 @@ namespace ERPFacturacao
             EFContext ef = new EFContext();
             SectorService service = new SectorService(ef);
             advancedDataGridView1.DataSource = service.findAll();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            var pais = (Pais)comboBox1.SelectedItem;
+            MessageBox.Show(pais.Id.ToString());
         }
     }
 }

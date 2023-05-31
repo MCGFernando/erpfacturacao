@@ -64,10 +64,14 @@
             this.tabelasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cargoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sectoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.formularioTesteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.paisesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.paísToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.provínciaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.municípioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.formularioTesteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
             this.SuspendLayout();
@@ -324,7 +328,8 @@
             this.tabelasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cargoToolStripMenuItem,
             this.sectoresToolStripMenuItem,
-            this.formularioTesteToolStripMenuItem});
+            this.formularioTesteToolStripMenuItem,
+            this.paisesToolStripMenuItem});
             this.tabelasToolStripMenuItem.Name = "tabelasToolStripMenuItem";
             this.tabelasToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
             this.tabelasToolStripMenuItem.Text = "Tabelas";
@@ -343,6 +348,44 @@
             this.sectoresToolStripMenuItem.Text = "Sectores";
             this.sectoresToolStripMenuItem.Click += new System.EventHandler(this.sectoresToolStripMenuItem_Click);
             // 
+            // formularioTesteToolStripMenuItem
+            // 
+            this.formularioTesteToolStripMenuItem.Name = "formularioTesteToolStripMenuItem";
+            this.formularioTesteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.formularioTesteToolStripMenuItem.Text = "Formulario Teste";
+            this.formularioTesteToolStripMenuItem.Click += new System.EventHandler(this.formularioTesteToolStripMenuItem_Click);
+            // 
+            // paisesToolStripMenuItem
+            // 
+            this.paisesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.paísToolStripMenuItem,
+            this.provínciaToolStripMenuItem,
+            this.municípioToolStripMenuItem});
+            this.paisesToolStripMenuItem.Name = "paisesToolStripMenuItem";
+            this.paisesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.paisesToolStripMenuItem.Text = "Paises";
+            // 
+            // paísToolStripMenuItem
+            // 
+            this.paísToolStripMenuItem.Name = "paísToolStripMenuItem";
+            this.paísToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.paísToolStripMenuItem.Text = "País";
+            this.paísToolStripMenuItem.Click += new System.EventHandler(this.paísToolStripMenuItem_Click);
+            // 
+            // provínciaToolStripMenuItem
+            // 
+            this.provínciaToolStripMenuItem.Name = "provínciaToolStripMenuItem";
+            this.provínciaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.provínciaToolStripMenuItem.Text = "Província";
+            this.provínciaToolStripMenuItem.Click += new System.EventHandler(this.provínciaToolStripMenuItem_Click);
+            // 
+            // municípioToolStripMenuItem
+            // 
+            this.municípioToolStripMenuItem.Name = "municípioToolStripMenuItem";
+            this.municípioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.municípioToolStripMenuItem.Text = "Município";
+            this.municípioToolStripMenuItem.Click += new System.EventHandler(this.municípioToolStripMenuItem_Click);
+            // 
             // statusStrip
             // 
             this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -359,13 +402,6 @@
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
             this.toolStripStatusLabel1.Size = new System.Drawing.Size(105, 17);
             this.toolStripStatusLabel1.Text = "Seja bem vindo(a):";
-            // 
-            // formularioTesteToolStripMenuItem
-            // 
-            this.formularioTesteToolStripMenuItem.Name = "formularioTesteToolStripMenuItem";
-            this.formularioTesteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.formularioTesteToolStripMenuItem.Text = "Formulario Teste";
-            this.formularioTesteToolStripMenuItem.Click += new System.EventHandler(this.formularioTesteToolStripMenuItem_Click);
             // 
             // MDIPrincipal
             // 
@@ -428,6 +464,10 @@
         private ToolStripMenuItem sectoresToolStripMenuItem;
         private ToolStripStatusLabel toolStripStatusLabel1;
         private ToolStripMenuItem formularioTesteToolStripMenuItem;
+        private ToolStripMenuItem paisesToolStripMenuItem;
+        private ToolStripMenuItem paísToolStripMenuItem;
+        private ToolStripMenuItem provínciaToolStripMenuItem;
+        private ToolStripMenuItem municípioToolStripMenuItem;
     }
 }
 

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace ERPFacturacao.Model
 {
     internal class Entidade
-    {
+    {/*
         [Fornecedor]
       ,[Nome]
       ,[NomeFiscal]
@@ -46,7 +46,7 @@ namespace ERPFacturacao.Model
       ,[ModoRecebimento]
       ,[AutoFacturacao]
       ,[DataCriacao]
-      ,[DataUltimaActualizacao]
+      ,[DataUltimaActualizacao]*/
 
     }
 }

@@ -114,5 +114,28 @@ namespace ERPFacturacao
         {
             new Form1().Show();
         }
+
+        private void paísToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormPais frmPais= new FormPais();
+            frmPais.MdiParent = this;
+            frmPais.Show();
+            new PaisController(frmPais);
+        }
+
+        private void provínciaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormProvincia frmProvincia= new FormProvincia();
+            frmProvincia.MdiParent= this;
+            frmProvincia.Show();
+            new ProvinciaController(frmProvincia);
+        }
+
+        private void municípioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormMunicipio frmMunicipio= new FormMunicipio();   
+            frmMunicipio.MdiParent= this;   
+            frmMunicipio.Show();
+        }
     }
 }

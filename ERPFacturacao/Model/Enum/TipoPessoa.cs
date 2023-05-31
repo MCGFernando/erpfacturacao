@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ERPFacturacao.Model.Enum
 {
-    public enum TiopPessoa : int
+    public enum TipoPessoa : int
     {
         FISICA = 1,
         JURIDICA = 2,
