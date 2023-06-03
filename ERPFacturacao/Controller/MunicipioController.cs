@@ -1,4 +1,5 @@
 ﻿using ERPFacturacao.Data;
+using ERPFacturacao.Model;
 using ERPFacturacao.Service;
 using System;
 using System.Collections.Generic;
@@ -19,6 +20,12 @@ namespace ERPFacturacao.Controller
             this._frmMunicipio = frmMunicipio;
             _context = new EFContext();
             _service = new MunicipioService(_context);
+            this._frmMunicipio.PaisComboBox.DataSource = _context.Pais.ToList();
+            this._frmMunicipio.PaisComboBox.DisplayMember = "_Pais";
+            this._frmMunicipio.PaisComboBox.ValueMember = "Id";
+            this._frmMunicipio.ProvinciaComboBox.DataSource = _context.Provincia.ToList();
+            this._frmMunicipio.ProvinciaComboBox.DisplayMember = "_Provincia";
+            this._frmMunicipio.ProvinciaComboBox.ValueMember = "Id";
             _frmMunicipio.Gravar += Gravar;
             _frmMunicipio.Novo += Novo;
             _frmMunicipio.Editar += Editar;
@@ -27,7 +34,8 @@ namespace ERPFacturacao.Controller
 
         private void Listar(object? sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            this._frmMunicipio.MunicipioAdvancedDataGridView.DataSource = 
+                _service.findAll();
         }
 
         private void Editar(object? sender, EventArgs e)
@@ -42,7 +50,18 @@ namespace ERPFacturacao.Controller
 
         private void Gravar(object? sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            var pais = (Pais)this._frmMunicipio.PaisComboBox.SelectedItem;
+            var provincia = (Provincia)this._frmMunicipio.ProvinciaComboBox.SelectedItem;
+            var municipio = new Municipio()
+            {
+                ProvinciaId = provincia.Id,
+                Provincia = provincia,
+                CodigoMunicipio = this._frmMunicipio.CodigoMunicipioTextBox,
+                _Municipio = this._frmMunicipio.MunicipioTextBox,
+                DataRegisto = DateTime.Now,
+            };
+            _service.insert(municipio);
+            MessageBox.Show("Ok");
         }
     }
 }

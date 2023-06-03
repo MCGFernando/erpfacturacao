@@ -136,6 +136,12 @@ namespace ERPFacturacao
             FormMunicipio frmMunicipio= new FormMunicipio();   
             frmMunicipio.MdiParent= this;   
             frmMunicipio.Show();
+            new MunicipioController(frmMunicipio);
+        }
+
+        private void MDIPrincipal_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

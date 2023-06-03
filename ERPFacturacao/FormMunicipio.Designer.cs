@@ -46,9 +46,9 @@
             this.txtId = new System.Windows.Forms.TextBox();
             this.cmbProvincia = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.advancedDataGridView1 = new ADGV.AdvancedDataGridView();
+            this.dataGridMunicipio = new ADGV.AdvancedDataGridView();
             this.toolStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.advancedDataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridMunicipio)).BeginInit();
             this.SuspendLayout();
             // 
             // toolStrip1
@@ -193,24 +193,24 @@
             this.label6.TabIndex = 29;
             this.label6.Text = "Província";
             // 
-            // advancedDataGridView1
+            // dataGridMunicipio
             // 
-            this.advancedDataGridView1.AutoGenerateContextFilters = true;
-            this.advancedDataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.advancedDataGridView1.DateWithTime = false;
-            this.advancedDataGridView1.Location = new System.Drawing.Point(12, 177);
-            this.advancedDataGridView1.Name = "advancedDataGridView1";
-            this.advancedDataGridView1.RowTemplate.Height = 25;
-            this.advancedDataGridView1.Size = new System.Drawing.Size(536, 261);
-            this.advancedDataGridView1.TabIndex = 30;
-            this.advancedDataGridView1.TimeFilter = false;
+            this.dataGridMunicipio.AutoGenerateContextFilters = true;
+            this.dataGridMunicipio.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridMunicipio.DateWithTime = false;
+            this.dataGridMunicipio.Location = new System.Drawing.Point(12, 177);
+            this.dataGridMunicipio.Name = "dataGridMunicipio";
+            this.dataGridMunicipio.RowTemplate.Height = 25;
+            this.dataGridMunicipio.Size = new System.Drawing.Size(536, 261);
+            this.dataGridMunicipio.TabIndex = 30;
+            this.dataGridMunicipio.TimeFilter = false;
             // 
             // FormMunicipio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(560, 450);
-            this.Controls.Add(this.advancedDataGridView1);
+            this.Controls.Add(this.dataGridMunicipio);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.cmbProvincia);
             this.Controls.Add(this.label4);
@@ -227,7 +227,7 @@
             this.Load += new System.EventHandler(this.FormMunicipio_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.advancedDataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridMunicipio)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -252,6 +252,6 @@
         private TextBox txtId;
         private ComboBox cmbProvincia;
         private Label label6;
-        private ADGV.AdvancedDataGridView advancedDataGridView1;
+        private ADGV.AdvancedDataGridView dataGridMunicipio;
     }
 }

@@ -368,21 +368,21 @@
             // paísToolStripMenuItem
             // 
             this.paísToolStripMenuItem.Name = "paísToolStripMenuItem";
-            this.paísToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.paísToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
             this.paísToolStripMenuItem.Text = "País";
             this.paísToolStripMenuItem.Click += new System.EventHandler(this.paísToolStripMenuItem_Click);
             // 
             // provínciaToolStripMenuItem
             // 
             this.provínciaToolStripMenuItem.Name = "provínciaToolStripMenuItem";
-            this.provínciaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.provínciaToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
             this.provínciaToolStripMenuItem.Text = "Província";
             this.provínciaToolStripMenuItem.Click += new System.EventHandler(this.provínciaToolStripMenuItem_Click);
             // 
             // municípioToolStripMenuItem
             // 
             this.municípioToolStripMenuItem.Name = "municípioToolStripMenuItem";
-            this.municípioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.municípioToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
             this.municípioToolStripMenuItem.Text = "Município";
             this.municípioToolStripMenuItem.Click += new System.EventHandler(this.municípioToolStripMenuItem_Click);
             // 
@@ -415,6 +415,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "MDIPrincipal";
             this.Text = "MDIPrincipal";
+            this.Load += new System.EventHandler(this.MDIPrincipal_Load);
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
             this.statusStrip.ResumeLayout(false);

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ADGV;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,11 +13,80 @@ namespace ERPFacturacao
 {
     public partial class FormMunicipio : Form
     {
+        public string IDTextBox
+        {
+            get
+            {
+                return txtId.Text;
+            }
+            set
+            {
+                txtId.Text = value;
+            }
+        }
+        public string CodigoMunicipioTextBox
+        {
+            get
+            {
+                return txtCodigoMunicipio.Text;
+            }
+            set
+            {
+                txtCodigoMunicipio.Text = value;
+            }
+        }
+        public string MunicipioTextBox
+        {
+            get
+            {
+                return txtMunicipio.Text;
+            }
+            set
+            {
+                txtMunicipio.Text = value;
+            }
+        }
+        public ComboBox PaisComboBox
+        {
+            get
+            {
+                return cmbPais;
+            }
+            set
+            {
+                cmbPais = value;
+            }
+        }
+        
+        public ComboBox ProvinciaComboBox
+        {
+            get
+            {
+                return cmbProvincia;
+            }
+            set
+            {
+                cmbProvincia = value;
+            }
+        }
+
+        public AdvancedDataGridView MunicipioAdvancedDataGridView
+        {
+            get
+            {
+                return dataGridMunicipio;
+            }
+            set
+            {
+                dataGridMunicipio = value;
+            }
+        }
         public event EventHandler Gravar;
         public event EventHandler Novo;
         public event EventHandler Editar;
         public event EventHandler Anular;
         public event EventHandler Listar;
+        
         public FormMunicipio()
         {
             InitializeComponent();
