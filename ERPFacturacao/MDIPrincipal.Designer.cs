@@ -69,6 +69,8 @@
             this.paísToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.provínciaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.municípioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ramoDeActividadeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.moedaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
@@ -329,7 +331,9 @@
             this.cargoToolStripMenuItem,
             this.sectoresToolStripMenuItem,
             this.formularioTesteToolStripMenuItem,
-            this.paisesToolStripMenuItem});
+            this.paisesToolStripMenuItem,
+            this.ramoDeActividadeToolStripMenuItem,
+            this.moedaToolStripMenuItem});
             this.tabelasToolStripMenuItem.Name = "tabelasToolStripMenuItem";
             this.tabelasToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
             this.tabelasToolStripMenuItem.Text = "Tabelas";
@@ -385,6 +389,20 @@
             this.municípioToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
             this.municípioToolStripMenuItem.Text = "Município";
             this.municípioToolStripMenuItem.Click += new System.EventHandler(this.municípioToolStripMenuItem_Click);
+            // 
+            // ramoDeActividadeToolStripMenuItem
+            // 
+            this.ramoDeActividadeToolStripMenuItem.Name = "ramoDeActividadeToolStripMenuItem";
+            this.ramoDeActividadeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.ramoDeActividadeToolStripMenuItem.Text = "Ramo de Actividade";
+            this.ramoDeActividadeToolStripMenuItem.Click += new System.EventHandler(this.ramoDeActividadeToolStripMenuItem_Click);
+            // 
+            // moedaToolStripMenuItem
+            // 
+            this.moedaToolStripMenuItem.Name = "moedaToolStripMenuItem";
+            this.moedaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.moedaToolStripMenuItem.Text = "Moeda";
+            this.moedaToolStripMenuItem.Click += new System.EventHandler(this.moedaToolStripMenuItem_Click);
             // 
             // statusStrip
             // 
@@ -469,6 +487,8 @@
         private ToolStripMenuItem paísToolStripMenuItem;
         private ToolStripMenuItem provínciaToolStripMenuItem;
         private ToolStripMenuItem municípioToolStripMenuItem;
+        private ToolStripMenuItem ramoDeActividadeToolStripMenuItem;
+        private ToolStripMenuItem moedaToolStripMenuItem;
     }
 }
 

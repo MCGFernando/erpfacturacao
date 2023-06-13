@@ -40,53 +40,50 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.panel3 = new System.Windows.Forms.Panel();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.textBox23 = new System.Windows.Forms.TextBox();
+            this.txtLimiteCredito = new System.Windows.Forms.TextBox();
             this.label32 = new System.Windows.Forms.Label();
-            this.textBox24 = new System.Windows.Forms.TextBox();
+            this.txtValorDesconto = new System.Windows.Forms.TextBox();
             this.label34 = new System.Windows.Forms.Label();
-            this.textBox26 = new System.Windows.Forms.TextBox();
+            this.txtPrazoEntrega = new System.Windows.Forms.TextBox();
             this.label36 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.textBox17 = new System.Windows.Forms.TextBox();
+            this.txtBI = new System.Windows.Forms.TextBox();
             this.label28 = new System.Windows.Forms.Label();
-            this.textBox18 = new System.Windows.Forms.TextBox();
+            this.txtNaturalidade = new System.Windows.Forms.TextBox();
             this.label29 = new System.Windows.Forms.Label();
-            this.textBox16 = new System.Windows.Forms.TextBox();
+            this.txtNacionalidade = new System.Windows.Forms.TextBox();
             this.label30 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
-            this.textBox19 = new System.Windows.Forms.TextBox();
             this.label26 = new System.Windows.Forms.Label();
-            this.textBox20 = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
-            this.textBox21 = new System.Windows.Forms.TextBox();
             this.label24 = new System.Windows.Forms.Label();
-            this.textBox15 = new System.Windows.Forms.TextBox();
+            this.txtCodigoClienteFornecedor = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.label23 = new System.Windows.Forms.Label();
-            this.textBox14 = new System.Windows.Forms.TextBox();
+            this.txtNome = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.label21 = new System.Windows.Forms.Label();
-            this.comboBox9 = new System.Windows.Forms.ComboBox();
+            this.cmbMoeda = new System.Windows.Forms.ComboBox();
             this.label15 = new System.Windows.Forms.Label();
-            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.txtContribuinteOrigem = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
-            this.comboBox8 = new System.Windows.Forms.ComboBox();
+            this.cmbTipoRegime = new System.Windows.Forms.ComboBox();
             this.label19 = new System.Windows.Forms.Label();
-            this.comboBox7 = new System.Windows.Forms.ComboBox();
+            this.cmbTipoContribuinte = new System.Windows.Forms.ComboBox();
             this.label18 = new System.Windows.Forms.Label();
-            this.comboBox6 = new System.Windows.Forms.ComboBox();
+            this.cmbPais = new System.Windows.Forms.ComboBox();
             this.label17 = new System.Windows.Forms.Label();
             this.comboBox5 = new System.Windows.Forms.ComboBox();
             this.label14 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox13 = new System.Windows.Forms.TextBox();
+            this.txtNumeroCotribuinte = new System.Windows.Forms.TextBox();
+            this.txtNomeFiscal = new System.Windows.Forms.TextBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.label13 = new System.Windows.Forms.Label();
-            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.txtReferencia = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
@@ -98,10 +95,10 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.txtBairro = new System.Windows.Forms.TextBox();
+            this.txtRua = new System.Windows.Forms.TextBox();
+            this.txtCidade = new System.Windows.Forms.TextBox();
+            this.txtEndereco = new System.Windows.Forms.TextBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.advancedDataGridView1 = new ADGV.AdvancedDataGridView();
@@ -111,24 +108,27 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtSite = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.txtTelemovel = new System.Windows.Forms.TextBox();
+            this.txtTelefone = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.button3 = new System.Windows.Forms.Button();
+            this.advancedDataGridView3 = new ADGV.AdvancedDataGridView();
+            this.label35 = new System.Windows.Forms.Label();
+            this.txtAgencia = new System.Windows.Forms.TextBox();
+            this.label33 = new System.Windows.Forms.Label();
+            this.txtBanco = new System.Windows.Forms.TextBox();
+            this.label31 = new System.Windows.Forms.Label();
+            this.txtSiglaBanco = new System.Windows.Forms.TextBox();
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.label22 = new System.Windows.Forms.Label();
-            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.txtObservacao = new System.Windows.Forms.TextBox();
             this.tabPage7 = new System.Windows.Forms.TabPage();
-            this.label31 = new System.Windows.Forms.Label();
-            this.textBox22 = new System.Windows.Forms.TextBox();
-            this.label33 = new System.Windows.Forms.Label();
-            this.textBox25 = new System.Windows.Forms.TextBox();
-            this.label35 = new System.Windows.Forms.Label();
-            this.textBox27 = new System.Windows.Forms.TextBox();
-            this.advancedDataGridView3 = new ADGV.AdvancedDataGridView();
-            this.button3 = new System.Windows.Forms.Button();
+            this.cmbGenero = new System.Windows.Forms.ComboBox();
+            this.cmbEstadoCivil = new System.Windows.Forms.ComboBox();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.toolStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -141,8 +141,8 @@
             this.tabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.advancedDataGridView1)).BeginInit();
             this.tabPage5.SuspendLayout();
-            this.tabPage6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.advancedDataGridView3)).BeginInit();
+            this.tabPage6.SuspendLayout();
             this.SuspendLayout();
             // 
             // toolStrip1
@@ -226,11 +226,11 @@
             this.tabPage1.Controls.Add(this.panel3);
             this.tabPage1.Controls.Add(this.panel2);
             this.tabPage1.Controls.Add(this.label24);
-            this.tabPage1.Controls.Add(this.textBox15);
+            this.tabPage1.Controls.Add(this.txtCodigoClienteFornecedor);
             this.tabPage1.Controls.Add(this.panel1);
             this.tabPage1.Controls.Add(this.checkBox1);
             this.tabPage1.Controls.Add(this.label23);
-            this.tabPage1.Controls.Add(this.textBox14);
+            this.tabPage1.Controls.Add(this.txtNome);
             this.tabPage1.Location = new System.Drawing.Point(4, 24);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -242,11 +242,11 @@
             // panel3
             // 
             this.panel3.Controls.Add(this.checkBox2);
-            this.panel3.Controls.Add(this.textBox23);
+            this.panel3.Controls.Add(this.txtLimiteCredito);
             this.panel3.Controls.Add(this.label32);
-            this.panel3.Controls.Add(this.textBox24);
+            this.panel3.Controls.Add(this.txtValorDesconto);
             this.panel3.Controls.Add(this.label34);
-            this.panel3.Controls.Add(this.textBox26);
+            this.panel3.Controls.Add(this.txtPrazoEntrega);
             this.panel3.Controls.Add(this.label36);
             this.panel3.Location = new System.Drawing.Point(6, 227);
             this.panel3.Name = "panel3";
@@ -263,12 +263,12 @@
             this.checkBox2.Text = "Desconto";
             this.checkBox2.UseVisualStyleBackColor = true;
             // 
-            // textBox23
+            // txtLimiteCredito
             // 
-            this.textBox23.Location = new System.Drawing.Point(318, 29);
-            this.textBox23.Name = "textBox23";
-            this.textBox23.Size = new System.Drawing.Size(210, 23);
-            this.textBox23.TabIndex = 35;
+            this.txtLimiteCredito.Location = new System.Drawing.Point(318, 29);
+            this.txtLimiteCredito.Name = "txtLimiteCredito";
+            this.txtLimiteCredito.Size = new System.Drawing.Size(210, 23);
+            this.txtLimiteCredito.TabIndex = 35;
             // 
             // label32
             // 
@@ -279,12 +279,12 @@
             this.label32.TabIndex = 45;
             this.label32.Text = "Prazo de Entrega";
             // 
-            // textBox24
+            // txtValorDesconto
             // 
-            this.textBox24.Location = new System.Drawing.Point(102, 29);
-            this.textBox24.Name = "textBox24";
-            this.textBox24.Size = new System.Drawing.Size(210, 23);
-            this.textBox24.TabIndex = 37;
+            this.txtValorDesconto.Location = new System.Drawing.Point(102, 29);
+            this.txtValorDesconto.Name = "txtValorDesconto";
+            this.txtValorDesconto.Size = new System.Drawing.Size(210, 23);
+            this.txtValorDesconto.TabIndex = 37;
             // 
             // label34
             // 
@@ -295,12 +295,12 @@
             this.label34.TabIndex = 38;
             this.label34.Text = "Limite de Crédito";
             // 
-            // textBox26
+            // txtPrazoEntrega
             // 
-            this.textBox26.Location = new System.Drawing.Point(102, 73);
-            this.textBox26.Name = "textBox26";
-            this.textBox26.Size = new System.Drawing.Size(210, 23);
-            this.textBox26.TabIndex = 42;
+            this.txtPrazoEntrega.Location = new System.Drawing.Point(102, 73);
+            this.txtPrazoEntrega.Name = "txtPrazoEntrega";
+            this.txtPrazoEntrega.Size = new System.Drawing.Size(210, 23);
+            this.txtPrazoEntrega.TabIndex = 42;
             // 
             // label36
             // 
@@ -313,29 +313,29 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.textBox17);
+            this.panel2.Controls.Add(this.dateTimePicker1);
+            this.panel2.Controls.Add(this.cmbEstadoCivil);
+            this.panel2.Controls.Add(this.cmbGenero);
+            this.panel2.Controls.Add(this.txtBI);
             this.panel2.Controls.Add(this.label28);
-            this.panel2.Controls.Add(this.textBox18);
+            this.panel2.Controls.Add(this.txtNaturalidade);
             this.panel2.Controls.Add(this.label29);
-            this.panel2.Controls.Add(this.textBox16);
+            this.panel2.Controls.Add(this.txtNacionalidade);
             this.panel2.Controls.Add(this.label30);
             this.panel2.Controls.Add(this.label27);
-            this.panel2.Controls.Add(this.textBox19);
             this.panel2.Controls.Add(this.label26);
-            this.panel2.Controls.Add(this.textBox20);
             this.panel2.Controls.Add(this.label25);
-            this.panel2.Controls.Add(this.textBox21);
             this.panel2.Location = new System.Drawing.Point(6, 97);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(696, 124);
             this.panel2.TabIndex = 47;
             // 
-            // textBox17
+            // txtBI
             // 
-            this.textBox17.Location = new System.Drawing.Point(13, 31);
-            this.textBox17.Name = "textBox17";
-            this.textBox17.Size = new System.Drawing.Size(210, 23);
-            this.textBox17.TabIndex = 36;
+            this.txtBI.Location = new System.Drawing.Point(13, 31);
+            this.txtBI.Name = "txtBI";
+            this.txtBI.Size = new System.Drawing.Size(210, 23);
+            this.txtBI.TabIndex = 36;
             // 
             // label28
             // 
@@ -346,12 +346,12 @@
             this.label28.TabIndex = 46;
             this.label28.Text = "Gênero";
             // 
-            // textBox18
+            // txtNaturalidade
             // 
-            this.textBox18.Location = new System.Drawing.Point(445, 31);
-            this.textBox18.Name = "textBox18";
-            this.textBox18.Size = new System.Drawing.Size(210, 23);
-            this.textBox18.TabIndex = 35;
+            this.txtNaturalidade.Location = new System.Drawing.Point(445, 31);
+            this.txtNaturalidade.Name = "txtNaturalidade";
+            this.txtNaturalidade.Size = new System.Drawing.Size(210, 23);
+            this.txtNaturalidade.TabIndex = 35;
             // 
             // label29
             // 
@@ -362,12 +362,12 @@
             this.label29.TabIndex = 45;
             this.label29.Text = "Data de Nascimento";
             // 
-            // textBox16
+            // txtNacionalidade
             // 
-            this.textBox16.Location = new System.Drawing.Point(229, 31);
-            this.textBox16.Name = "textBox16";
-            this.textBox16.Size = new System.Drawing.Size(210, 23);
-            this.textBox16.TabIndex = 37;
+            this.txtNacionalidade.Location = new System.Drawing.Point(229, 31);
+            this.txtNacionalidade.Name = "txtNacionalidade";
+            this.txtNacionalidade.Size = new System.Drawing.Size(210, 23);
+            this.txtNacionalidade.TabIndex = 37;
             // 
             // label30
             // 
@@ -387,13 +387,6 @@
             this.label27.TabIndex = 38;
             this.label27.Text = "Naturalidade";
             // 
-            // textBox19
-            // 
-            this.textBox19.Location = new System.Drawing.Point(229, 74);
-            this.textBox19.Name = "textBox19";
-            this.textBox19.Size = new System.Drawing.Size(210, 23);
-            this.textBox19.TabIndex = 43;
-            // 
             // label26
             // 
             this.label26.AutoSize = true;
@@ -402,13 +395,6 @@
             this.label26.Size = new System.Drawing.Size(20, 15);
             this.label26.TabIndex = 39;
             this.label26.Text = "B.I";
-            // 
-            // textBox20
-            // 
-            this.textBox20.Location = new System.Drawing.Point(13, 74);
-            this.textBox20.Name = "textBox20";
-            this.textBox20.Size = new System.Drawing.Size(210, 23);
-            this.textBox20.TabIndex = 42;
             // 
             // label25
             // 
@@ -419,13 +405,6 @@
             this.label25.TabIndex = 40;
             this.label25.Text = "Nacionalidade";
             // 
-            // textBox21
-            // 
-            this.textBox21.Location = new System.Drawing.Point(445, 74);
-            this.textBox21.Name = "textBox21";
-            this.textBox21.Size = new System.Drawing.Size(210, 23);
-            this.textBox21.TabIndex = 41;
-            // 
             // label24
             // 
             this.label24.AutoSize = true;
@@ -435,12 +414,12 @@
             this.label24.TabIndex = 34;
             this.label24.Text = "Código";
             // 
-            // textBox15
+            // txtCodigoClienteFornecedor
             // 
-            this.textBox15.Location = new System.Drawing.Point(8, 23);
-            this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(92, 23);
-            this.textBox15.TabIndex = 33;
+            this.txtCodigoClienteFornecedor.Location = new System.Drawing.Point(8, 23);
+            this.txtCodigoClienteFornecedor.Name = "txtCodigoClienteFornecedor";
+            this.txtCodigoClienteFornecedor.Size = new System.Drawing.Size(92, 23);
+            this.txtCodigoClienteFornecedor.TabIndex = 33;
             // 
             // panel1
             // 
@@ -493,31 +472,31 @@
             this.label23.TabIndex = 28;
             this.label23.Text = "Nome ";
             // 
-            // textBox14
+            // txtNome
             // 
-            this.textBox14.Location = new System.Drawing.Point(106, 23);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(598, 23);
-            this.textBox14.TabIndex = 27;
+            this.txtNome.Location = new System.Drawing.Point(106, 23);
+            this.txtNome.Name = "txtNome";
+            this.txtNome.Size = new System.Drawing.Size(598, 23);
+            this.txtNome.TabIndex = 27;
             // 
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.label21);
-            this.tabPage2.Controls.Add(this.comboBox9);
+            this.tabPage2.Controls.Add(this.cmbMoeda);
             this.tabPage2.Controls.Add(this.label15);
-            this.tabPage2.Controls.Add(this.textBox11);
+            this.tabPage2.Controls.Add(this.txtContribuinteOrigem);
             this.tabPage2.Controls.Add(this.label20);
-            this.tabPage2.Controls.Add(this.comboBox8);
+            this.tabPage2.Controls.Add(this.cmbTipoRegime);
             this.tabPage2.Controls.Add(this.label19);
-            this.tabPage2.Controls.Add(this.comboBox7);
+            this.tabPage2.Controls.Add(this.cmbTipoContribuinte);
             this.tabPage2.Controls.Add(this.label18);
-            this.tabPage2.Controls.Add(this.comboBox6);
+            this.tabPage2.Controls.Add(this.cmbPais);
             this.tabPage2.Controls.Add(this.label17);
             this.tabPage2.Controls.Add(this.comboBox5);
             this.tabPage2.Controls.Add(this.label14);
             this.tabPage2.Controls.Add(this.label16);
-            this.tabPage2.Controls.Add(this.textBox9);
-            this.tabPage2.Controls.Add(this.textBox13);
+            this.tabPage2.Controls.Add(this.txtNumeroCotribuinte);
+            this.tabPage2.Controls.Add(this.txtNomeFiscal);
             this.tabPage2.Location = new System.Drawing.Point(4, 24);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -535,13 +514,13 @@
             this.label21.TabIndex = 40;
             this.label21.Text = "Moeda";
             // 
-            // comboBox9
+            // cmbMoeda
             // 
-            this.comboBox9.FormattingEnabled = true;
-            this.comboBox9.Location = new System.Drawing.Point(440, 71);
-            this.comboBox9.Name = "comboBox9";
-            this.comboBox9.Size = new System.Drawing.Size(210, 23);
-            this.comboBox9.TabIndex = 39;
+            this.cmbMoeda.FormattingEnabled = true;
+            this.cmbMoeda.Location = new System.Drawing.Point(440, 71);
+            this.cmbMoeda.Name = "cmbMoeda";
+            this.cmbMoeda.Size = new System.Drawing.Size(210, 23);
+            this.cmbMoeda.TabIndex = 39;
             // 
             // label15
             // 
@@ -552,12 +531,12 @@
             this.label15.TabIndex = 38;
             this.label15.Text = "Contribuinte país de origem";
             // 
-            // textBox11
+            // txtContribuinteOrigem
             // 
-            this.textBox11.Location = new System.Drawing.Point(440, 115);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(210, 23);
-            this.textBox11.TabIndex = 37;
+            this.txtContribuinteOrigem.Location = new System.Drawing.Point(440, 115);
+            this.txtContribuinteOrigem.Name = "txtContribuinteOrigem";
+            this.txtContribuinteOrigem.Size = new System.Drawing.Size(210, 23);
+            this.txtContribuinteOrigem.TabIndex = 37;
             // 
             // label20
             // 
@@ -568,13 +547,13 @@
             this.label20.TabIndex = 36;
             this.label20.Text = "Tipo de Regime IVA";
             // 
-            // comboBox8
+            // cmbTipoRegime
             // 
-            this.comboBox8.FormattingEnabled = true;
-            this.comboBox8.Location = new System.Drawing.Point(224, 71);
-            this.comboBox8.Name = "comboBox8";
-            this.comboBox8.Size = new System.Drawing.Size(210, 23);
-            this.comboBox8.TabIndex = 35;
+            this.cmbTipoRegime.FormattingEnabled = true;
+            this.cmbTipoRegime.Location = new System.Drawing.Point(224, 71);
+            this.cmbTipoRegime.Name = "cmbTipoRegime";
+            this.cmbTipoRegime.Size = new System.Drawing.Size(210, 23);
+            this.cmbTipoRegime.TabIndex = 35;
             // 
             // label19
             // 
@@ -585,13 +564,13 @@
             this.label19.TabIndex = 34;
             this.label19.Text = "Tipo de Contribuinte";
             // 
-            // comboBox7
+            // cmbTipoContribuinte
             // 
-            this.comboBox7.FormattingEnabled = true;
-            this.comboBox7.Location = new System.Drawing.Point(224, 115);
-            this.comboBox7.Name = "comboBox7";
-            this.comboBox7.Size = new System.Drawing.Size(210, 23);
-            this.comboBox7.TabIndex = 33;
+            this.cmbTipoContribuinte.FormattingEnabled = true;
+            this.cmbTipoContribuinte.Location = new System.Drawing.Point(224, 115);
+            this.cmbTipoContribuinte.Name = "cmbTipoContribuinte";
+            this.cmbTipoContribuinte.Size = new System.Drawing.Size(210, 23);
+            this.cmbTipoContribuinte.TabIndex = 33;
             // 
             // label18
             // 
@@ -602,13 +581,13 @@
             this.label18.TabIndex = 32;
             this.label18.Text = "País";
             // 
-            // comboBox6
+            // cmbPais
             // 
-            this.comboBox6.FormattingEnabled = true;
-            this.comboBox6.Location = new System.Drawing.Point(8, 70);
-            this.comboBox6.Name = "comboBox6";
-            this.comboBox6.Size = new System.Drawing.Size(210, 23);
-            this.comboBox6.TabIndex = 31;
+            this.cmbPais.FormattingEnabled = true;
+            this.cmbPais.Location = new System.Drawing.Point(8, 70);
+            this.cmbPais.Name = "cmbPais";
+            this.cmbPais.Size = new System.Drawing.Size(210, 23);
+            this.cmbPais.TabIndex = 31;
             // 
             // label17
             // 
@@ -645,24 +624,24 @@
             this.label16.TabIndex = 26;
             this.label16.Text = "Nome Fiscal";
             // 
-            // textBox9
+            // txtNumeroCotribuinte
             // 
-            this.textBox9.Location = new System.Drawing.Point(8, 115);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(210, 23);
-            this.textBox9.TabIndex = 25;
+            this.txtNumeroCotribuinte.Location = new System.Drawing.Point(8, 115);
+            this.txtNumeroCotribuinte.Name = "txtNumeroCotribuinte";
+            this.txtNumeroCotribuinte.Size = new System.Drawing.Size(210, 23);
+            this.txtNumeroCotribuinte.TabIndex = 25;
             // 
-            // textBox13
+            // txtNomeFiscal
             // 
-            this.textBox13.Location = new System.Drawing.Point(8, 26);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(649, 23);
-            this.textBox13.TabIndex = 22;
+            this.txtNomeFiscal.Location = new System.Drawing.Point(8, 26);
+            this.txtNomeFiscal.Name = "txtNomeFiscal";
+            this.txtNomeFiscal.Size = new System.Drawing.Size(649, 23);
+            this.txtNomeFiscal.TabIndex = 22;
             // 
             // tabPage3
             // 
             this.tabPage3.Controls.Add(this.label13);
-            this.tabPage3.Controls.Add(this.textBox10);
+            this.tabPage3.Controls.Add(this.txtReferencia);
             this.tabPage3.Controls.Add(this.label12);
             this.tabPage3.Controls.Add(this.comboBox4);
             this.tabPage3.Controls.Add(this.label11);
@@ -674,10 +653,10 @@
             this.tabPage3.Controls.Add(this.label8);
             this.tabPage3.Controls.Add(this.label9);
             this.tabPage3.Controls.Add(this.label10);
-            this.tabPage3.Controls.Add(this.textBox5);
-            this.tabPage3.Controls.Add(this.textBox6);
-            this.tabPage3.Controls.Add(this.textBox7);
-            this.tabPage3.Controls.Add(this.textBox8);
+            this.tabPage3.Controls.Add(this.txtBairro);
+            this.tabPage3.Controls.Add(this.txtRua);
+            this.tabPage3.Controls.Add(this.txtCidade);
+            this.tabPage3.Controls.Add(this.txtEndereco);
             this.tabPage3.Controls.Add(this.comboBox2);
             this.tabPage3.Location = new System.Drawing.Point(4, 24);
             this.tabPage3.Name = "tabPage3";
@@ -696,12 +675,12 @@
             this.label13.TabIndex = 30;
             this.label13.Text = "Ponto de Referência";
             // 
-            // textBox10
+            // txtReferencia
             // 
-            this.textBox10.Location = new System.Drawing.Point(8, 207);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(693, 23);
-            this.textBox10.TabIndex = 29;
+            this.txtReferencia.Location = new System.Drawing.Point(8, 207);
+            this.txtReferencia.Name = "txtReferencia";
+            this.txtReferencia.Size = new System.Drawing.Size(693, 23);
+            this.txtReferencia.TabIndex = 29;
             // 
             // label12
             // 
@@ -803,33 +782,33 @@
             this.label10.TabIndex = 17;
             this.label10.Text = "Tipo de Endereço";
             // 
-            // textBox5
+            // txtBairro
             // 
-            this.textBox5.Location = new System.Drawing.Point(224, 162);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(210, 23);
-            this.textBox5.TabIndex = 16;
+            this.txtBairro.Location = new System.Drawing.Point(224, 162);
+            this.txtBairro.Name = "txtBairro";
+            this.txtBairro.Size = new System.Drawing.Size(210, 23);
+            this.txtBairro.TabIndex = 16;
             // 
-            // textBox6
+            // txtRua
             // 
-            this.textBox6.Location = new System.Drawing.Point(8, 162);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(210, 23);
-            this.textBox6.TabIndex = 15;
+            this.txtRua.Location = new System.Drawing.Point(8, 162);
+            this.txtRua.Name = "txtRua";
+            this.txtRua.Size = new System.Drawing.Size(210, 23);
+            this.txtRua.TabIndex = 15;
             // 
-            // textBox7
+            // txtCidade
             // 
-            this.textBox7.Location = new System.Drawing.Point(440, 162);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(210, 23);
-            this.textBox7.TabIndex = 14;
+            this.txtCidade.Location = new System.Drawing.Point(440, 162);
+            this.txtCidade.Name = "txtCidade";
+            this.txtCidade.Size = new System.Drawing.Size(210, 23);
+            this.txtCidade.TabIndex = 14;
             // 
-            // textBox8
+            // txtEndereco
             // 
-            this.textBox8.Location = new System.Drawing.Point(8, 118);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(776, 23);
-            this.textBox8.TabIndex = 13;
+            this.txtEndereco.Location = new System.Drawing.Point(8, 118);
+            this.txtEndereco.Name = "txtEndereco";
+            this.txtEndereco.Size = new System.Drawing.Size(776, 23);
+            this.txtEndereco.TabIndex = 13;
             // 
             // comboBox2
             // 
@@ -848,10 +827,10 @@
             this.tabPage4.Controls.Add(this.label3);
             this.tabPage4.Controls.Add(this.label2);
             this.tabPage4.Controls.Add(this.label1);
-            this.tabPage4.Controls.Add(this.textBox3);
-            this.tabPage4.Controls.Add(this.textBox4);
-            this.tabPage4.Controls.Add(this.textBox2);
-            this.tabPage4.Controls.Add(this.textBox1);
+            this.tabPage4.Controls.Add(this.txtSite);
+            this.tabPage4.Controls.Add(this.txtEmail);
+            this.tabPage4.Controls.Add(this.txtTelemovel);
+            this.tabPage4.Controls.Add(this.txtTelefone);
             this.tabPage4.Controls.Add(this.comboBox1);
             this.tabPage4.Location = new System.Drawing.Point(4, 24);
             this.tabPage4.Name = "tabPage4";
@@ -927,33 +906,33 @@
             this.label1.TabIndex = 5;
             this.label1.Text = "Tipo de Contacto";
             // 
-            // textBox3
+            // txtSite
             // 
-            this.textBox3.Location = new System.Drawing.Point(224, 121);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(210, 23);
-            this.textBox3.TabIndex = 4;
+            this.txtSite.Location = new System.Drawing.Point(224, 121);
+            this.txtSite.Name = "txtSite";
+            this.txtSite.Size = new System.Drawing.Size(210, 23);
+            this.txtSite.TabIndex = 4;
             // 
-            // textBox4
+            // txtEmail
             // 
-            this.textBox4.Location = new System.Drawing.Point(8, 121);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(210, 23);
-            this.textBox4.TabIndex = 3;
+            this.txtEmail.Location = new System.Drawing.Point(8, 121);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(210, 23);
+            this.txtEmail.TabIndex = 3;
             // 
-            // textBox2
+            // txtTelemovel
             // 
-            this.textBox2.Location = new System.Drawing.Point(224, 78);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(210, 23);
-            this.textBox2.TabIndex = 2;
+            this.txtTelemovel.Location = new System.Drawing.Point(224, 78);
+            this.txtTelemovel.Name = "txtTelemovel";
+            this.txtTelemovel.Size = new System.Drawing.Size(210, 23);
+            this.txtTelemovel.TabIndex = 2;
             // 
-            // textBox1
+            // txtTelefone
             // 
-            this.textBox1.Location = new System.Drawing.Point(8, 78);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(210, 23);
-            this.textBox1.TabIndex = 1;
+            this.txtTelefone.Location = new System.Drawing.Point(8, 78);
+            this.txtTelefone.Name = "txtTelefone";
+            this.txtTelefone.Size = new System.Drawing.Size(210, 23);
+            this.txtTelefone.TabIndex = 1;
             // 
             // comboBox1
             // 
@@ -968,11 +947,11 @@
             this.tabPage5.Controls.Add(this.button3);
             this.tabPage5.Controls.Add(this.advancedDataGridView3);
             this.tabPage5.Controls.Add(this.label35);
-            this.tabPage5.Controls.Add(this.textBox27);
+            this.tabPage5.Controls.Add(this.txtAgencia);
             this.tabPage5.Controls.Add(this.label33);
-            this.tabPage5.Controls.Add(this.textBox25);
+            this.tabPage5.Controls.Add(this.txtBanco);
             this.tabPage5.Controls.Add(this.label31);
-            this.tabPage5.Controls.Add(this.textBox22);
+            this.tabPage5.Controls.Add(this.txtSiglaBanco);
             this.tabPage5.Location = new System.Drawing.Point(4, 24);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
@@ -981,10 +960,79 @@
             this.tabPage5.Text = "Bancos";
             this.tabPage5.UseVisualStyleBackColor = true;
             // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(709, 24);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 15;
+            this.button3.Text = "Adicionar";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // advancedDataGridView3
+            // 
+            this.advancedDataGridView3.AutoGenerateContextFilters = true;
+            this.advancedDataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.advancedDataGridView3.DateWithTime = false;
+            this.advancedDataGridView3.Location = new System.Drawing.Point(8, 54);
+            this.advancedDataGridView3.Name = "advancedDataGridView3";
+            this.advancedDataGridView3.RowTemplate.Height = 25;
+            this.advancedDataGridView3.Size = new System.Drawing.Size(781, 352);
+            this.advancedDataGridView3.TabIndex = 14;
+            this.advancedDataGridView3.TimeFilter = false;
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.Location = new System.Drawing.Point(319, 7);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(50, 15);
+            this.label35.TabIndex = 13;
+            this.label35.Text = "Agência";
+            // 
+            // txtAgencia
+            // 
+            this.txtAgencia.Location = new System.Drawing.Point(319, 25);
+            this.txtAgencia.Name = "txtAgencia";
+            this.txtAgencia.Size = new System.Drawing.Size(384, 23);
+            this.txtAgencia.TabIndex = 12;
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Location = new System.Drawing.Point(103, 7);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(40, 15);
+            this.label33.TabIndex = 11;
+            this.label33.Text = "Banco";
+            // 
+            // txtBanco
+            // 
+            this.txtBanco.Location = new System.Drawing.Point(103, 25);
+            this.txtBanco.Name = "txtBanco";
+            this.txtBanco.Size = new System.Drawing.Size(210, 23);
+            this.txtBanco.TabIndex = 10;
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Location = new System.Drawing.Point(8, 7);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(32, 15);
+            this.label31.TabIndex = 9;
+            this.label31.Text = "Sigla";
+            // 
+            // txtSiglaBanco
+            // 
+            this.txtSiglaBanco.Location = new System.Drawing.Point(8, 25);
+            this.txtSiglaBanco.Name = "txtSiglaBanco";
+            this.txtSiglaBanco.Size = new System.Drawing.Size(89, 23);
+            this.txtSiglaBanco.TabIndex = 8;
+            // 
             // tabPage6
             // 
             this.tabPage6.Controls.Add(this.label22);
-            this.tabPage6.Controls.Add(this.textBox12);
+            this.tabPage6.Controls.Add(this.txtObservacao);
             this.tabPage6.Location = new System.Drawing.Point(4, 24);
             this.tabPage6.Name = "tabPage6";
             this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
@@ -1002,13 +1050,13 @@
             this.label22.TabIndex = 1;
             this.label22.Text = "Observações";
             // 
-            // textBox12
+            // txtObservacao
             // 
-            this.textBox12.Location = new System.Drawing.Point(8, 35);
-            this.textBox12.Multiline = true;
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(776, 371);
-            this.textBox12.TabIndex = 0;
+            this.txtObservacao.Location = new System.Drawing.Point(8, 35);
+            this.txtObservacao.Multiline = true;
+            this.txtObservacao.Name = "txtObservacao";
+            this.txtObservacao.Size = new System.Drawing.Size(776, 371);
+            this.txtObservacao.TabIndex = 0;
             // 
             // tabPage7
             // 
@@ -1020,74 +1068,28 @@
             this.tabPage7.Text = "Contabilidade";
             this.tabPage7.UseVisualStyleBackColor = true;
             // 
-            // label31
+            // cmbGenero
             // 
-            this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(8, 7);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(32, 15);
-            this.label31.TabIndex = 9;
-            this.label31.Text = "Sigla";
+            this.cmbGenero.FormattingEnabled = true;
+            this.cmbGenero.Location = new System.Drawing.Point(229, 74);
+            this.cmbGenero.Name = "cmbGenero";
+            this.cmbGenero.Size = new System.Drawing.Size(210, 23);
+            this.cmbGenero.TabIndex = 47;
             // 
-            // textBox22
+            // cmbEstadoCivil
             // 
-            this.textBox22.Location = new System.Drawing.Point(8, 25);
-            this.textBox22.Name = "textBox22";
-            this.textBox22.Size = new System.Drawing.Size(89, 23);
-            this.textBox22.TabIndex = 8;
+            this.cmbEstadoCivil.FormattingEnabled = true;
+            this.cmbEstadoCivil.Location = new System.Drawing.Point(445, 74);
+            this.cmbEstadoCivil.Name = "cmbEstadoCivil";
+            this.cmbEstadoCivil.Size = new System.Drawing.Size(210, 23);
+            this.cmbEstadoCivil.TabIndex = 48;
             // 
-            // label33
+            // dateTimePicker1
             // 
-            this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(103, 7);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(40, 15);
-            this.label33.TabIndex = 11;
-            this.label33.Text = "Banco";
-            // 
-            // textBox25
-            // 
-            this.textBox25.Location = new System.Drawing.Point(103, 25);
-            this.textBox25.Name = "textBox25";
-            this.textBox25.Size = new System.Drawing.Size(210, 23);
-            this.textBox25.TabIndex = 10;
-            // 
-            // label35
-            // 
-            this.label35.AutoSize = true;
-            this.label35.Location = new System.Drawing.Point(319, 7);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(50, 15);
-            this.label35.TabIndex = 13;
-            this.label35.Text = "Agência";
-            // 
-            // textBox27
-            // 
-            this.textBox27.Location = new System.Drawing.Point(319, 25);
-            this.textBox27.Name = "textBox27";
-            this.textBox27.Size = new System.Drawing.Size(384, 23);
-            this.textBox27.TabIndex = 12;
-            // 
-            // advancedDataGridView3
-            // 
-            this.advancedDataGridView3.AutoGenerateContextFilters = true;
-            this.advancedDataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.advancedDataGridView3.DateWithTime = false;
-            this.advancedDataGridView3.Location = new System.Drawing.Point(8, 54);
-            this.advancedDataGridView3.Name = "advancedDataGridView3";
-            this.advancedDataGridView3.RowTemplate.Height = 25;
-            this.advancedDataGridView3.Size = new System.Drawing.Size(781, 352);
-            this.advancedDataGridView3.TabIndex = 14;
-            this.advancedDataGridView3.TimeFilter = false;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(709, 24);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 15;
-            this.button3.Text = "Adicionar";
-            this.button3.UseVisualStyleBackColor = true;
+            this.dateTimePicker1.Location = new System.Drawing.Point(13, 74);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(210, 23);
+            this.dateTimePicker1.TabIndex = 49;
             // 
             // FormCadastroClienteFornecedor
             // 
@@ -1119,9 +1121,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.advancedDataGridView1)).EndInit();
             this.tabPage5.ResumeLayout(false);
             this.tabPage5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.advancedDataGridView3)).EndInit();
             this.tabPage6.ResumeLayout(false);
             this.tabPage6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.advancedDataGridView3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1141,52 +1143,49 @@
         private TabPage tabPage2;
         private Panel panel3;
         private CheckBox checkBox2;
-        private TextBox textBox23;
+        private TextBox txtLimiteCredito;
         private Label label32;
-        private TextBox textBox24;
+        private TextBox txtValorDesconto;
         private Label label34;
-        private TextBox textBox26;
+        private TextBox txtPrazoEntrega;
         private Label label36;
         private Panel panel2;
-        private TextBox textBox17;
+        private TextBox txtBI;
         private Label label28;
-        private TextBox textBox18;
+        private TextBox txtNaturalidade;
         private Label label29;
-        private TextBox textBox16;
+        private TextBox txtNacionalidade;
         private Label label30;
         private Label label27;
-        private TextBox textBox19;
         private Label label26;
-        private TextBox textBox20;
         private Label label25;
-        private TextBox textBox21;
         private Label label24;
-        private TextBox textBox15;
+        private TextBox txtCodigoClienteFornecedor;
         private Panel panel1;
         private RadioButton radioButton1;
         private RadioButton radioButton2;
         private CheckBox checkBox1;
         private Label label23;
-        private TextBox textBox14;
+        private TextBox txtNome;
         private Label label21;
-        private ComboBox comboBox9;
+        private ComboBox cmbMoeda;
         private Label label15;
-        private TextBox textBox11;
+        private TextBox txtContribuinteOrigem;
         private Label label20;
-        private ComboBox comboBox8;
+        private ComboBox cmbTipoRegime;
         private Label label19;
-        private ComboBox comboBox7;
+        private ComboBox cmbTipoContribuinte;
         private Label label18;
-        private ComboBox comboBox6;
+        private ComboBox cmbPais;
         private Label label17;
         private ComboBox comboBox5;
         private Label label14;
         private Label label16;
-        private TextBox textBox9;
-        private TextBox textBox13;
+        private TextBox txtNumeroCotribuinte;
+        private TextBox txtNomeFiscal;
         private TabPage tabPage3;
         private Label label13;
-        private TextBox textBox10;
+        private TextBox txtReferencia;
         private Label label12;
         private ComboBox comboBox4;
         private Label label11;
@@ -1198,10 +1197,10 @@
         private Label label8;
         private Label label9;
         private Label label10;
-        private TextBox textBox5;
-        private TextBox textBox6;
-        private TextBox textBox7;
-        private TextBox textBox8;
+        private TextBox txtBairro;
+        private TextBox txtRua;
+        private TextBox txtCidade;
+        private TextBox txtEndereco;
         private ComboBox comboBox2;
         private TabPage tabPage4;
         private ADGV.AdvancedDataGridView advancedDataGridView1;
@@ -1211,23 +1210,26 @@
         private Label label3;
         private Label label2;
         private Label label1;
-        private TextBox textBox3;
-        private TextBox textBox4;
-        private TextBox textBox2;
-        private TextBox textBox1;
+        private TextBox txtSite;
+        private TextBox txtEmail;
+        private TextBox txtTelemovel;
+        private TextBox txtTelefone;
         private ComboBox comboBox1;
         private TabPage tabPage5;
         private TabPage tabPage6;
         private Label label22;
-        private TextBox textBox12;
+        private TextBox txtObservacao;
         private TabPage tabPage7;
         private Button button3;
         private ADGV.AdvancedDataGridView advancedDataGridView3;
         private Label label35;
-        private TextBox textBox27;
+        private TextBox txtAgencia;
         private Label label33;
-        private TextBox textBox25;
+        private TextBox txtBanco;
         private Label label31;
-        private TextBox textBox22;
+        private TextBox txtSiglaBanco;
+        private ComboBox cmbEstadoCivil;
+        private ComboBox cmbGenero;
+        private DateTimePicker dateTimePicker1;
     }
 }

@@ -143,5 +143,21 @@ namespace ERPFacturacao
         {
 
         }
+
+        private void ramoDeActividadeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormRamoActividade frmRamoActividade = new FormRamoActividade();
+            frmRamoActividade.MdiParent= this;  
+            frmRamoActividade.Show();
+            new RamoActividadeController(frmRamoActividade);
+        }
+
+        private void moedaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormMoeda frmMoeda = new FormMoeda();
+            frmMoeda.MdiParent= this;
+            frmMoeda.Show();
+            new MoedaController(frmMoeda);
+        }
     }
 }

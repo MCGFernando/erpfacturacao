@@ -8,11 +8,16 @@ using System.Threading.Tasks;
 
 namespace ERPFacturacao.Model
 {
+    [Serializable]
+    [Table("clientes_fornecedores")]
     public class ClienteFonecedor : Pessoa
     {
         public int Id { get; set; }
         public int? PaisId { get; set; }
         public Pais? Pais { get; set; }
+        public List<Banco>? Bancos { get; set; }
+        public List<Endereco>? Enderecos { get; set; }
+        public List<Contacto>? Contactos { get; set; }
         public string CodigoClienteFornecedor { get; set; }
         public string Nome { get; set; }
         public string? NomeFiscal { get; set; }

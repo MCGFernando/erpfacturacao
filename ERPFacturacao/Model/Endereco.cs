@@ -7,6 +7,8 @@ using System.Threading.Tasks;
 
 namespace ERPFacturacao.Model
 {
+    [Serializable]
+    [Table("enderecos")]
     public class Endereco
     {
         public int Id { get; set; }
@@ -14,6 +16,9 @@ namespace ERPFacturacao.Model
         public TipoEndereco? TipoEndereco { get; set; }
         public int? MunicipioId { get; set; }
         public Municipio? Municipio { get; set; }
+        public int ClienteFonecedorId { get; set; }
+        public ClienteFonecedor ClienteFonecedor { get; set; }
+        [Column("endereco")]
         public string _Endereco { get; set; }
         public string? Rua { get; set; }
         public string? Bairro { get; set; }
