@@ -159,5 +159,12 @@ namespace ERPFacturacao
             frmMoeda.Show();
             new MoedaController(frmMoeda);
         }
+
+        private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormCadastroClienteFornecedor frmClienteFornecedor = new FormCadastroClienteFornecedor();   
+            frmClienteFornecedor.MdiParent= this;   
+            frmClienteFornecedor.Show();
+        }
     }
 }

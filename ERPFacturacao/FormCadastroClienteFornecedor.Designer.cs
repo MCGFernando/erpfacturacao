@@ -47,6 +47,9 @@
             this.txtPrazoEntrega = new System.Windows.Forms.TextBox();
             this.label36 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.cmbEstadoCivil = new System.Windows.Forms.ComboBox();
+            this.cmbGenero = new System.Windows.Forms.ComboBox();
             this.txtBI = new System.Windows.Forms.TextBox();
             this.label28 = new System.Windows.Forms.Label();
             this.txtNaturalidade = new System.Windows.Forms.TextBox();
@@ -126,9 +129,6 @@
             this.label22 = new System.Windows.Forms.Label();
             this.txtObservacao = new System.Windows.Forms.TextBox();
             this.tabPage7 = new System.Windows.Forms.TabPage();
-            this.cmbGenero = new System.Windows.Forms.ComboBox();
-            this.cmbEstadoCivil = new System.Windows.Forms.ComboBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.toolStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -159,6 +159,7 @@
             this.toolStrip1.Size = new System.Drawing.Size(800, 25);
             this.toolStrip1.TabIndex = 8;
             this.toolStrip1.Text = "toolStrip1";
+            this.toolStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.toolStrip1_ItemClicked);
             // 
             // btnGravar
             // 
@@ -329,6 +330,29 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(696, 124);
             this.panel2.TabIndex = 47;
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(13, 74);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(210, 23);
+            this.dateTimePicker1.TabIndex = 49;
+            // 
+            // cmbEstadoCivil
+            // 
+            this.cmbEstadoCivil.FormattingEnabled = true;
+            this.cmbEstadoCivil.Location = new System.Drawing.Point(445, 74);
+            this.cmbEstadoCivil.Name = "cmbEstadoCivil";
+            this.cmbEstadoCivil.Size = new System.Drawing.Size(210, 23);
+            this.cmbEstadoCivil.TabIndex = 48;
+            // 
+            // cmbGenero
+            // 
+            this.cmbGenero.FormattingEnabled = true;
+            this.cmbGenero.Location = new System.Drawing.Point(229, 74);
+            this.cmbGenero.Name = "cmbGenero";
+            this.cmbGenero.Size = new System.Drawing.Size(210, 23);
+            this.cmbGenero.TabIndex = 47;
             // 
             // txtBI
             // 
@@ -1067,29 +1091,6 @@
             this.tabPage7.TabIndex = 6;
             this.tabPage7.Text = "Contabilidade";
             this.tabPage7.UseVisualStyleBackColor = true;
-            // 
-            // cmbGenero
-            // 
-            this.cmbGenero.FormattingEnabled = true;
-            this.cmbGenero.Location = new System.Drawing.Point(229, 74);
-            this.cmbGenero.Name = "cmbGenero";
-            this.cmbGenero.Size = new System.Drawing.Size(210, 23);
-            this.cmbGenero.TabIndex = 47;
-            // 
-            // cmbEstadoCivil
-            // 
-            this.cmbEstadoCivil.FormattingEnabled = true;
-            this.cmbEstadoCivil.Location = new System.Drawing.Point(445, 74);
-            this.cmbEstadoCivil.Name = "cmbEstadoCivil";
-            this.cmbEstadoCivil.Size = new System.Drawing.Size(210, 23);
-            this.cmbEstadoCivil.TabIndex = 48;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(13, 74);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(210, 23);
-            this.dateTimePicker1.TabIndex = 49;
             // 
             // FormCadastroClienteFornecedor
             // 

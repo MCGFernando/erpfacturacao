@@ -35,6 +35,7 @@
             this.btnEditar = new System.Windows.Forms.ToolStripButton();
             this.btnAnular = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.btnListar = new System.Windows.Forms.ToolStripButton();
             this.dataGridMoeda = new System.Windows.Forms.DataGridView();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -44,7 +45,6 @@
             this.txtId = new System.Windows.Forms.TextBox();
             this.cmbPais = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.btnListar = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridMoeda)).BeginInit();
             this.SuspendLayout();
@@ -100,6 +100,14 @@
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
+            // 
+            // btnListar
+            // 
+            this.btnListar.Image = ((System.Drawing.Image)(resources.GetObject("btnListar.Image")));
+            this.btnListar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnListar.Name = "btnListar";
+            this.btnListar.Size = new System.Drawing.Size(55, 22);
+            this.btnListar.Text = "Listar";
             // 
             // dataGridMoeda
             // 
@@ -176,14 +184,6 @@
             this.label4.TabIndex = 23;
             this.label4.Text = "País";
             // 
-            // btnListar
-            // 
-            this.btnListar.Image = ((System.Drawing.Image)(resources.GetObject("btnListar.Image")));
-            this.btnListar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnListar.Name = "btnListar";
-            this.btnListar.Size = new System.Drawing.Size(55, 22);
-            this.btnListar.Text = "Listar";
-            // 
             // FormMoeda
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -201,6 +201,7 @@
             this.Controls.Add(this.toolStrip1);
             this.Name = "FormMoeda";
             this.Text = "Moeda";
+            this.Load += new System.EventHandler(this.FormMoeda_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridMoeda)).EndInit();
