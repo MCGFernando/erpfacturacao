@@ -39,7 +39,7 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.chkDesconto = new System.Windows.Forms.CheckBox();
             this.txtLimiteCredito = new System.Windows.Forms.TextBox();
             this.label32 = new System.Windows.Forms.Label();
             this.txtValorDesconto = new System.Windows.Forms.TextBox();
@@ -47,7 +47,7 @@
             this.txtPrazoEntrega = new System.Windows.Forms.TextBox();
             this.label36 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.datePickerNascimento = new System.Windows.Forms.DateTimePicker();
             this.cmbEstadoCivil = new System.Windows.Forms.ComboBox();
             this.cmbGenero = new System.Windows.Forms.ComboBox();
             this.txtBI = new System.Windows.Forms.TextBox();
@@ -62,9 +62,9 @@
             this.label24 = new System.Windows.Forms.Label();
             this.txtCodigoClienteFornecedor = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.rdBtnPessoFisica = new System.Windows.Forms.RadioButton();
+            this.rdBtnPessoJuridica = new System.Windows.Forms.RadioButton();
+            this.chkEstado = new System.Windows.Forms.CheckBox();
             this.label23 = new System.Windows.Forms.Label();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
@@ -229,7 +229,7 @@
             this.tabPage1.Controls.Add(this.label24);
             this.tabPage1.Controls.Add(this.txtCodigoClienteFornecedor);
             this.tabPage1.Controls.Add(this.panel1);
-            this.tabPage1.Controls.Add(this.checkBox1);
+            this.tabPage1.Controls.Add(this.chkEstado);
             this.tabPage1.Controls.Add(this.label23);
             this.tabPage1.Controls.Add(this.txtNome);
             this.tabPage1.Location = new System.Drawing.Point(4, 24);
@@ -242,7 +242,7 @@
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.checkBox2);
+            this.panel3.Controls.Add(this.chkDesconto);
             this.panel3.Controls.Add(this.txtLimiteCredito);
             this.panel3.Controls.Add(this.label32);
             this.panel3.Controls.Add(this.txtValorDesconto);
@@ -254,15 +254,15 @@
             this.panel3.Size = new System.Drawing.Size(696, 124);
             this.panel3.TabIndex = 48;
             // 
-            // checkBox2
+            // chkDesconto
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(15, 33);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(76, 19);
-            this.checkBox2.TabIndex = 49;
-            this.checkBox2.Text = "Desconto";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.chkDesconto.AutoSize = true;
+            this.chkDesconto.Location = new System.Drawing.Point(15, 33);
+            this.chkDesconto.Name = "chkDesconto";
+            this.chkDesconto.Size = new System.Drawing.Size(76, 19);
+            this.chkDesconto.TabIndex = 49;
+            this.chkDesconto.Text = "Desconto";
+            this.chkDesconto.UseVisualStyleBackColor = true;
             // 
             // txtLimiteCredito
             // 
@@ -314,7 +314,7 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.dateTimePicker1);
+            this.panel2.Controls.Add(this.datePickerNascimento);
             this.panel2.Controls.Add(this.cmbEstadoCivil);
             this.panel2.Controls.Add(this.cmbGenero);
             this.panel2.Controls.Add(this.txtBI);
@@ -331,12 +331,12 @@
             this.panel2.Size = new System.Drawing.Size(696, 124);
             this.panel2.TabIndex = 47;
             // 
-            // dateTimePicker1
+            // datePickerNascimento
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(13, 74);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(210, 23);
-            this.dateTimePicker1.TabIndex = 49;
+            this.datePickerNascimento.Location = new System.Drawing.Point(13, 74);
+            this.datePickerNascimento.Name = "datePickerNascimento";
+            this.datePickerNascimento.Size = new System.Drawing.Size(210, 23);
+            this.datePickerNascimento.TabIndex = 49;
             // 
             // cmbEstadoCivil
             // 
@@ -448,44 +448,44 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.radioButton1);
-            this.panel1.Controls.Add(this.radioButton2);
+            this.panel1.Controls.Add(this.rdBtnPessoFisica);
+            this.panel1.Controls.Add(this.rdBtnPessoJuridica);
             this.panel1.Location = new System.Drawing.Point(8, 52);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(696, 39);
             this.panel1.TabIndex = 32;
             // 
-            // radioButton1
+            // rdBtnPessoFisica
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(12, 10);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(93, 19);
-            this.radioButton1.TabIndex = 30;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Pessoa Física";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.rdBtnPessoFisica.AutoSize = true;
+            this.rdBtnPessoFisica.Location = new System.Drawing.Point(12, 10);
+            this.rdBtnPessoFisica.Name = "rdBtnPessoFisica";
+            this.rdBtnPessoFisica.Size = new System.Drawing.Size(93, 19);
+            this.rdBtnPessoFisica.TabIndex = 30;
+            this.rdBtnPessoFisica.TabStop = true;
+            this.rdBtnPessoFisica.Text = "Pessoa Física";
+            this.rdBtnPessoFisica.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // rdBtnPessoJuridica
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(130, 10);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(104, 19);
-            this.radioButton2.TabIndex = 31;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Pessoa Jurídica";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.rdBtnPessoJuridica.AutoSize = true;
+            this.rdBtnPessoJuridica.Location = new System.Drawing.Point(130, 10);
+            this.rdBtnPessoJuridica.Name = "rdBtnPessoJuridica";
+            this.rdBtnPessoJuridica.Size = new System.Drawing.Size(104, 19);
+            this.rdBtnPessoJuridica.TabIndex = 31;
+            this.rdBtnPessoJuridica.TabStop = true;
+            this.rdBtnPessoJuridica.Text = "Pessoa Jurídica";
+            this.rdBtnPessoJuridica.UseVisualStyleBackColor = true;
             // 
-            // checkBox1
+            // chkEstado
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(710, 25);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(74, 19);
-            this.checkBox1.TabIndex = 29;
-            this.checkBox1.Text = "Desativar";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.chkEstado.AutoSize = true;
+            this.chkEstado.Location = new System.Drawing.Point(710, 25);
+            this.chkEstado.Name = "chkEstado";
+            this.chkEstado.Size = new System.Drawing.Size(74, 19);
+            this.chkEstado.TabIndex = 29;
+            this.chkEstado.Text = "Desativar";
+            this.chkEstado.UseVisualStyleBackColor = true;
             // 
             // label23
             // 
@@ -1143,7 +1143,7 @@
         private TabPage tabPage1;
         private TabPage tabPage2;
         private Panel panel3;
-        private CheckBox checkBox2;
+        private CheckBox chkDesconto;
         private TextBox txtLimiteCredito;
         private Label label32;
         private TextBox txtValorDesconto;
@@ -1163,9 +1163,9 @@
         private Label label24;
         private TextBox txtCodigoClienteFornecedor;
         private Panel panel1;
-        private RadioButton radioButton1;
-        private RadioButton radioButton2;
-        private CheckBox checkBox1;
+        private RadioButton rdBtnPessoFisica;
+        private RadioButton rdBtnPessoJuridica;
+        private CheckBox chkEstado;
         private Label label23;
         private TextBox txtNome;
         private Label label21;
@@ -1231,6 +1231,6 @@
         private TextBox txtSiglaBanco;
         private ComboBox cmbEstadoCivil;
         private ComboBox cmbGenero;
-        private DateTimePicker dateTimePicker1;
+        private DateTimePicker datePickerNascimento;
     }
 }

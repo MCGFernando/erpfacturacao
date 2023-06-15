@@ -15,14 +15,18 @@ namespace ERPFacturacao.Model
         public int Id { get; set; }
         public int? PaisId { get; set; }
         public Pais? Pais { get; set; }
+        public int? RamoActividadeId { get; set; }
+        public RamoActividade? RamoActividade { get; set; }
+        
         public List<Banco>? Bancos { get; set; }
         public List<Endereco>? Enderecos { get; set; }
         public List<Contacto>? Contactos { get; set; }
+        
         public string CodigoClienteFornecedor { get; set; }
         public string Nome { get; set; }
         public string? NomeFiscal { get; set; }
+        public string? ContribuinteOrigem { get; set; }
         public string Nif { get; set; }
-        public string RamoActividade { get; set; }
         public string Obs { get; set; }
 
         public bool? Desconto { get; set; }
