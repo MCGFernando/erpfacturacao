@@ -1,4 +1,5 @@
 ﻿using ERPFacturacao.Model.Enum;
+using ERPFacturacao.Service;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,6 +15,7 @@ namespace ERPFacturacao
 {
     public partial class FormCadastroClienteFornecedor : Form
     {
+        public string cliente { get; set; }
         public string CodigoClienteFornecedorTextBox
         {
             get
@@ -102,6 +104,183 @@ namespace ERPFacturacao
                 txtPrazoEntrega.Text = value;
             }
         }
+        public string NomeFiscalTextBox
+        {
+            get
+            {
+                return txtNomeFiscal.Text;
+            }
+            set
+            {
+                txtNomeFiscal.Text = value;
+            }
+        }
+        public string NumeroContribuinteTextBox
+        {
+            get
+            {
+                return txtNumeroCotribuinte.Text;
+            }
+            set
+            {
+                txtNumeroCotribuinte.Text = value;
+            }
+        }
+        public string ContribuiteOrigemTextBox
+        {
+            get
+            {
+                return txtContribuinteOrigem.Text;
+            }
+            set
+            {
+                txtContribuinteOrigem.Text = value;
+            }
+        }
+        public string EnderecoTextBox
+        {
+            get
+            {
+                return txtEndereco.Text;
+            }
+            set
+            {
+                txtEndereco.Text = value;
+            }
+        }
+        public string RuaTextBox
+        {
+            get
+            {
+                return txtRua.Text;
+            }
+            set
+            {
+                txtRua.Text = value;
+            }
+        }
+        public string BairroTextBox
+        {
+            get
+            {
+                return txtBairro.Text;
+            }
+            set
+            {
+                txtBairro.Text = value;
+            }
+        }
+        public string CidadeTextBox
+        {
+            get
+            {
+                return txtCidade.Text;
+            }
+            set
+            {
+                txtCidade.Text = value;
+            }
+        }
+        public string ReferenciaTextBox
+        {
+            get
+            {
+                return txtReferencia.Text;
+            }
+            set
+            {
+                txtReferencia.Text = value;
+            }
+        }
+        public string TelefoneTextBox
+        {
+            get
+            {
+                return txtTelefone.Text;
+            }
+            set
+            {
+                txtTelefone.Text = value;
+            }
+        }
+        public string TelemovelTextBox
+        {
+            get
+            {
+                return txtTelemovel.Text;
+            }
+            set
+            {
+                txtTelemovel.Text = value;
+            }
+        }
+        public string EmailTextBox
+        {
+            get
+            {
+                return txtEmail.Text;
+            }
+            set
+            {
+                txtEmail.Text = value;
+            }
+        }
+        public string SiteTextBox
+        {
+            get
+            {
+                return txtSite.Text;
+            }
+            set
+            {
+                txtSite.Text = value;
+            }
+        }
+        public string SiglaBancoTextBox
+        {
+            get
+            {
+                return txtSiglaBanco.Text;
+            }
+            set
+            {
+                txtSiglaBanco.Text = value;
+            }
+        }
+        public string BancoTextBox
+        {
+            get
+            {
+                return txtBanco.Text;
+            }
+            set
+            {
+                txtBanco.Text = value;
+            }
+        }
+        public string AgenciaTextBox
+        {
+            get
+            {
+                return txtAgencia.Text;
+            }
+            set
+            {
+                txtAgencia.Text = value;
+            }
+        }
+        public string ObservacoTextBox
+        {
+            get
+            {
+                return txtObservacao.Text;
+            }
+            set
+            {
+                txtObservacao.Text = value;
+            }
+        }
+        /**/
         public string NascimentoDatePicker
         {
             get
@@ -113,6 +292,9 @@ namespace ERPFacturacao
                 datePickerNascimento.Value = DateTime.ParseExact(value, "yyyy-MM-dd", CultureInfo.InvariantCulture);
             }
         }
+
+
+        /**/
         public bool DescontoCheckBox
         {
             get
@@ -135,6 +317,8 @@ namespace ERPFacturacao
                 chkEstado.Checked = value;
             }
         }
+
+        /**/
         public ComboBox GeneroComboBox
         {
             get
@@ -168,12 +352,93 @@ namespace ERPFacturacao
                 cmbTipoContribuinte = value;
             }
         }
+       
+        public ComboBox RamoActividadeComboBox
+        {
+            get
+            {
+                return cmbRamoActividade;
+            }
+            set
+            {
+                cmbRamoActividade = value;
+            }
+        }
+        public ComboBox cmbPaisDadoFiscalComboBox
+        {
+            get
+            {
+                return cmbPaisDadoFiscal;
+            }
+            set
+            {
+                cmbPaisDadoFiscal = value;
+            }
+        }
+        public ComboBox TipoRegimeComboBox
+        {
+            get
+            {
+                return cmbTipoRegime;
+            }
+            set
+            {
+                cmbTipoRegime = value;
+            }
+        }
+        public ComboBox MoedaComboBox
+        {
+            get
+            {
+                return cmbMoeda;
+            }
+            set
+            {
+                cmbMoeda = value;
+            }
+        }
+        public ComboBox TipoenderecoComboBox
+        {
+            get
+            {
+                return cmbTipoEndereco;
+            }
+            set
+            {
+                cmbTipoEndereco = value;
+            }
+        }
+        public ComboBox TipoContactoComboBox
+        {
+            get
+            {
+                return cmbTipoContacto;
+            }
+            set
+            {
+                cmbTipoContacto = value;
+            }
+        }
+        public event EventHandler Gravar;
+        public event EventHandler Novo;
+        public event EventHandler Editar;
+        public event EventHandler Anular;
+        public event EventHandler Listar;
         public FormCadastroClienteFornecedor()
         {
             InitializeComponent();
             cmbGenero.DataSource = Enum.GetValues(typeof(Genero));
             cmbEstadoCivil.DataSource = Enum.GetValues(typeof(EstadoCivil));
             cmbTipoContribuinte.DataSource = Enum.GetValues(typeof(TipoContribuinte));
+            cmbPaisDadoFiscalComboBox.DataSource = new PaisService(new Data.EFContext()).findAll();
+            cmbPaisDadoFiscalComboBox.DisplayMember = "_Pais";
+            cmbPaisDadoFiscalComboBox.ValueMember = "Id";
+            RamoActividadeComboBox.DataSource = new RamoActividadeService(new Data.EFContext()).findAll();
+            RamoActividadeComboBox.DisplayMember = "Ramo";
+            RamoActividadeComboBox.ValueMember = "Id";   
+            MoedaComboBox.DataSource = new MoedaService(new Data.EFContext()).findAll();
+            MoedaComboBox.DisplayMember = "_Moeda";
+            MoedaComboBox.ValueMember= "Id";    
         }
 
         private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)

@@ -68,6 +68,7 @@
             this.label23 = new System.Windows.Forms.Label();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.cmbPaisDadoFiscal = new System.Windows.Forms.ComboBox();
             this.label21 = new System.Windows.Forms.Label();
             this.cmbMoeda = new System.Windows.Forms.ComboBox();
             this.label15 = new System.Windows.Forms.Label();
@@ -77,9 +78,8 @@
             this.label19 = new System.Windows.Forms.Label();
             this.cmbTipoContribuinte = new System.Windows.Forms.ComboBox();
             this.label18 = new System.Windows.Forms.Label();
-            this.cmbPais = new System.Windows.Forms.ComboBox();
             this.label17 = new System.Windows.Forms.Label();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
+            this.cmbRamoActividade = new System.Windows.Forms.ComboBox();
             this.label14 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.txtNumeroCotribuinte = new System.Windows.Forms.TextBox();
@@ -88,11 +88,11 @@
             this.label13 = new System.Windows.Forms.Label();
             this.txtReferencia = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.cmbMunicipio = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.cmbProvincia = new System.Windows.Forms.ComboBox();
             this.advancedDataGridView2 = new ADGV.AdvancedDataGridView();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnAddEndereco = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -102,10 +102,10 @@
             this.txtRua = new System.Windows.Forms.TextBox();
             this.txtCidade = new System.Windows.Forms.TextBox();
             this.txtEndereco = new System.Windows.Forms.TextBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.cmbTipoEndereco = new System.Windows.Forms.ComboBox();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.advancedDataGridView1 = new ADGV.AdvancedDataGridView();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnAddContacto = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -115,9 +115,9 @@
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtTelemovel = new System.Windows.Forms.TextBox();
             this.txtTelefone = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmbTipoContacto = new System.Windows.Forms.ComboBox();
             this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnAddBanco = new System.Windows.Forms.Button();
             this.advancedDataGridView3 = new ADGV.AdvancedDataGridView();
             this.label35 = new System.Windows.Forms.Label();
             this.txtAgencia = new System.Windows.Forms.TextBox();
@@ -505,6 +505,7 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.cmbPaisDadoFiscal);
             this.tabPage2.Controls.Add(this.label21);
             this.tabPage2.Controls.Add(this.cmbMoeda);
             this.tabPage2.Controls.Add(this.label15);
@@ -514,9 +515,8 @@
             this.tabPage2.Controls.Add(this.label19);
             this.tabPage2.Controls.Add(this.cmbTipoContribuinte);
             this.tabPage2.Controls.Add(this.label18);
-            this.tabPage2.Controls.Add(this.cmbPais);
             this.tabPage2.Controls.Add(this.label17);
-            this.tabPage2.Controls.Add(this.comboBox5);
+            this.tabPage2.Controls.Add(this.cmbRamoActividade);
             this.tabPage2.Controls.Add(this.label14);
             this.tabPage2.Controls.Add(this.label16);
             this.tabPage2.Controls.Add(this.txtNumeroCotribuinte);
@@ -528,6 +528,14 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Dados Fiscais";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // cmbPaisDadoFiscal
+            // 
+            this.cmbPaisDadoFiscal.FormattingEnabled = true;
+            this.cmbPaisDadoFiscal.Location = new System.Drawing.Point(8, 70);
+            this.cmbPaisDadoFiscal.Name = "cmbPaisDadoFiscal";
+            this.cmbPaisDadoFiscal.Size = new System.Drawing.Size(210, 23);
+            this.cmbPaisDadoFiscal.TabIndex = 41;
             // 
             // label21
             // 
@@ -605,14 +613,6 @@
             this.label18.TabIndex = 32;
             this.label18.Text = "País";
             // 
-            // cmbPais
-            // 
-            this.cmbPais.FormattingEnabled = true;
-            this.cmbPais.Location = new System.Drawing.Point(8, 70);
-            this.cmbPais.Name = "cmbPais";
-            this.cmbPais.Size = new System.Drawing.Size(210, 23);
-            this.cmbPais.TabIndex = 31;
-            // 
             // label17
             // 
             this.label17.AutoSize = true;
@@ -622,13 +622,13 @@
             this.label17.TabIndex = 30;
             this.label17.Text = "Ramo de Actividade";
             // 
-            // comboBox5
+            // cmbRamoActividade
             // 
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Location = new System.Drawing.Point(663, 26);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(121, 23);
-            this.comboBox5.TabIndex = 29;
+            this.cmbRamoActividade.FormattingEnabled = true;
+            this.cmbRamoActividade.Location = new System.Drawing.Point(663, 26);
+            this.cmbRamoActividade.Name = "cmbRamoActividade";
+            this.cmbRamoActividade.Size = new System.Drawing.Size(121, 23);
+            this.cmbRamoActividade.TabIndex = 29;
             // 
             // label14
             // 
@@ -667,11 +667,11 @@
             this.tabPage3.Controls.Add(this.label13);
             this.tabPage3.Controls.Add(this.txtReferencia);
             this.tabPage3.Controls.Add(this.label12);
-            this.tabPage3.Controls.Add(this.comboBox4);
+            this.tabPage3.Controls.Add(this.cmbMunicipio);
             this.tabPage3.Controls.Add(this.label11);
-            this.tabPage3.Controls.Add(this.comboBox3);
+            this.tabPage3.Controls.Add(this.cmbProvincia);
             this.tabPage3.Controls.Add(this.advancedDataGridView2);
-            this.tabPage3.Controls.Add(this.button2);
+            this.tabPage3.Controls.Add(this.btnAddEndereco);
             this.tabPage3.Controls.Add(this.label6);
             this.tabPage3.Controls.Add(this.label7);
             this.tabPage3.Controls.Add(this.label8);
@@ -681,7 +681,7 @@
             this.tabPage3.Controls.Add(this.txtRua);
             this.tabPage3.Controls.Add(this.txtCidade);
             this.tabPage3.Controls.Add(this.txtEndereco);
-            this.tabPage3.Controls.Add(this.comboBox2);
+            this.tabPage3.Controls.Add(this.cmbTipoEndereco);
             this.tabPage3.Location = new System.Drawing.Point(4, 24);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
@@ -715,13 +715,13 @@
             this.label12.TabIndex = 28;
             this.label12.Text = "Município";
             // 
-            // comboBox4
+            // cmbMunicipio
             // 
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(135, 74);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(121, 23);
-            this.comboBox4.TabIndex = 27;
+            this.cmbMunicipio.FormattingEnabled = true;
+            this.cmbMunicipio.Location = new System.Drawing.Point(135, 74);
+            this.cmbMunicipio.Name = "cmbMunicipio";
+            this.cmbMunicipio.Size = new System.Drawing.Size(121, 23);
+            this.cmbMunicipio.TabIndex = 27;
             // 
             // label11
             // 
@@ -732,13 +732,13 @@
             this.label11.TabIndex = 26;
             this.label11.Text = "Província";
             // 
-            // comboBox3
+            // cmbProvincia
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(8, 74);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(121, 23);
-            this.comboBox3.TabIndex = 25;
+            this.cmbProvincia.FormattingEnabled = true;
+            this.cmbProvincia.Location = new System.Drawing.Point(8, 74);
+            this.cmbProvincia.Name = "cmbProvincia";
+            this.cmbProvincia.Size = new System.Drawing.Size(121, 23);
+            this.cmbProvincia.TabIndex = 25;
             // 
             // advancedDataGridView2
             // 
@@ -752,14 +752,14 @@
             this.advancedDataGridView2.TabIndex = 23;
             this.advancedDataGridView2.TimeFilter = false;
             // 
-            // button2
+            // btnAddEndereco
             // 
-            this.button2.Location = new System.Drawing.Point(707, 207);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 22;
-            this.button2.Text = "Adicionar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnAddEndereco.Location = new System.Drawing.Point(707, 207);
+            this.btnAddEndereco.Name = "btnAddEndereco";
+            this.btnAddEndereco.Size = new System.Drawing.Size(75, 23);
+            this.btnAddEndereco.TabIndex = 22;
+            this.btnAddEndereco.Text = "Adicionar";
+            this.btnAddEndereco.UseVisualStyleBackColor = true;
             // 
             // label6
             // 
@@ -834,18 +834,18 @@
             this.txtEndereco.Size = new System.Drawing.Size(776, 23);
             this.txtEndereco.TabIndex = 13;
             // 
-            // comboBox2
+            // cmbTipoEndereco
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(8, 30);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 23);
-            this.comboBox2.TabIndex = 12;
+            this.cmbTipoEndereco.FormattingEnabled = true;
+            this.cmbTipoEndereco.Location = new System.Drawing.Point(8, 30);
+            this.cmbTipoEndereco.Name = "cmbTipoEndereco";
+            this.cmbTipoEndereco.Size = new System.Drawing.Size(121, 23);
+            this.cmbTipoEndereco.TabIndex = 12;
             // 
             // tabPage4
             // 
             this.tabPage4.Controls.Add(this.advancedDataGridView1);
-            this.tabPage4.Controls.Add(this.button1);
+            this.tabPage4.Controls.Add(this.btnAddContacto);
             this.tabPage4.Controls.Add(this.label5);
             this.tabPage4.Controls.Add(this.label4);
             this.tabPage4.Controls.Add(this.label3);
@@ -855,7 +855,7 @@
             this.tabPage4.Controls.Add(this.txtEmail);
             this.tabPage4.Controls.Add(this.txtTelemovel);
             this.tabPage4.Controls.Add(this.txtTelefone);
-            this.tabPage4.Controls.Add(this.comboBox1);
+            this.tabPage4.Controls.Add(this.cmbTipoContacto);
             this.tabPage4.Location = new System.Drawing.Point(4, 24);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
@@ -876,14 +876,14 @@
             this.advancedDataGridView1.TabIndex = 11;
             this.advancedDataGridView1.TimeFilter = false;
             // 
-            // button1
+            // btnAddContacto
             // 
-            this.button1.Location = new System.Drawing.Point(709, 120);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "Adicionar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnAddContacto.Location = new System.Drawing.Point(709, 120);
+            this.btnAddContacto.Name = "btnAddContacto";
+            this.btnAddContacto.Size = new System.Drawing.Size(75, 23);
+            this.btnAddContacto.TabIndex = 10;
+            this.btnAddContacto.Text = "Adicionar";
+            this.btnAddContacto.UseVisualStyleBackColor = true;
             // 
             // label5
             // 
@@ -958,17 +958,17 @@
             this.txtTelefone.Size = new System.Drawing.Size(210, 23);
             this.txtTelefone.TabIndex = 1;
             // 
-            // comboBox1
+            // cmbTipoContacto
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(8, 36);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 23);
-            this.comboBox1.TabIndex = 0;
+            this.cmbTipoContacto.FormattingEnabled = true;
+            this.cmbTipoContacto.Location = new System.Drawing.Point(8, 36);
+            this.cmbTipoContacto.Name = "cmbTipoContacto";
+            this.cmbTipoContacto.Size = new System.Drawing.Size(121, 23);
+            this.cmbTipoContacto.TabIndex = 0;
             // 
             // tabPage5
             // 
-            this.tabPage5.Controls.Add(this.button3);
+            this.tabPage5.Controls.Add(this.btnAddBanco);
             this.tabPage5.Controls.Add(this.advancedDataGridView3);
             this.tabPage5.Controls.Add(this.label35);
             this.tabPage5.Controls.Add(this.txtAgencia);
@@ -984,14 +984,14 @@
             this.tabPage5.Text = "Bancos";
             this.tabPage5.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // btnAddBanco
             // 
-            this.button3.Location = new System.Drawing.Point(709, 24);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 15;
-            this.button3.Text = "Adicionar";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnAddBanco.Location = new System.Drawing.Point(709, 24);
+            this.btnAddBanco.Name = "btnAddBanco";
+            this.btnAddBanco.Size = new System.Drawing.Size(75, 23);
+            this.btnAddBanco.TabIndex = 15;
+            this.btnAddBanco.Text = "Adicionar";
+            this.btnAddBanco.UseVisualStyleBackColor = true;
             // 
             // advancedDataGridView3
             // 
@@ -1177,9 +1177,9 @@
         private Label label19;
         private ComboBox cmbTipoContribuinte;
         private Label label18;
-        private ComboBox cmbPais;
+        private ComboBox cmbRamoActividade;
         private Label label17;
-        private ComboBox comboBox5;
+        //private ComboBox cmbRamoActividade;
         private Label label14;
         private Label label16;
         private TextBox txtNumeroCotribuinte;
@@ -1188,11 +1188,11 @@
         private Label label13;
         private TextBox txtReferencia;
         private Label label12;
-        private ComboBox comboBox4;
+        private ComboBox cmbMunicipio;
         private Label label11;
-        private ComboBox comboBox3;
+        private ComboBox cmbProvincia;
         private ADGV.AdvancedDataGridView advancedDataGridView2;
-        private Button button2;
+        private Button btnAddEndereco;
         private Label label6;
         private Label label7;
         private Label label8;
@@ -1202,10 +1202,10 @@
         private TextBox txtRua;
         private TextBox txtCidade;
         private TextBox txtEndereco;
-        private ComboBox comboBox2;
+        private ComboBox cmbTipoEndereco;
         private TabPage tabPage4;
         private ADGV.AdvancedDataGridView advancedDataGridView1;
-        private Button button1;
+        private Button btnAddContacto;
         private Label label5;
         private Label label4;
         private Label label3;
@@ -1215,13 +1215,13 @@
         private TextBox txtEmail;
         private TextBox txtTelemovel;
         private TextBox txtTelefone;
-        private ComboBox comboBox1;
+        private ComboBox cmbTipoContacto;
         private TabPage tabPage5;
         private TabPage tabPage6;
         private Label label22;
         private TextBox txtObservacao;
         private TabPage tabPage7;
-        private Button button3;
+        private Button btnAddBanco;
         private ADGV.AdvancedDataGridView advancedDataGridView3;
         private Label label35;
         private TextBox txtAgencia;
@@ -1232,5 +1232,6 @@
         private ComboBox cmbEstadoCivil;
         private ComboBox cmbGenero;
         private DateTimePicker datePickerNascimento;
+        private ComboBox cmbPaisDadoFiscal;
     }
 }

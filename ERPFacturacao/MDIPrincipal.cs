@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.Versioning;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -165,6 +166,7 @@ namespace ERPFacturacao
             FormCadastroClienteFornecedor frmClienteFornecedor = new FormCadastroClienteFornecedor();   
             frmClienteFornecedor.MdiParent= this;   
             frmClienteFornecedor.Show();
+            new ClienteFornecedorController(frmClienteFornecedor);
         }
     }
 }

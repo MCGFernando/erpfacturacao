@@ -16,7 +16,7 @@ namespace ERPFacturacao.Model
         public int Id { get; set; }
 
         [Required]
-        public string Nome { get; set; }
+        public string _Moeda { get; set; }
 
         [Required]
         public string Simbolo { get; set; }
