@@ -12,7 +12,7 @@ namespace ERPFacturacao.Model
     public class TipoContacto
     {
         public int Id { get; set; }
-        public int Tipo { get; set; }
+        public int _TipoContacto { get; set; }
         [Column("data_registo")]
         public DateTime DataRegisto { get; set; }
         [Column("data_actualizacao")]
