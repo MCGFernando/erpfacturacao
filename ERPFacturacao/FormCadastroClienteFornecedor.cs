@@ -1,4 +1,5 @@
-﻿using ERPFacturacao.Model.Enum;
+﻿using ADGV;
+using ERPFacturacao.Model.Enum;
 using ERPFacturacao.Service;
 using System;
 using System.Collections.Generic;
@@ -397,7 +398,7 @@ namespace ERPFacturacao
                 cmbMoeda = value;
             }
         }
-        public ComboBox TipoenderecoComboBox
+        public ComboBox TipoEnderecoComboBox
         {
             get
             {
@@ -419,11 +420,74 @@ namespace ERPFacturacao
                 cmbTipoContacto = value;
             }
         }
+        public ComboBox ProvinciaEnderecoComboBox
+        {
+            get
+            {
+                return cmbProvincia;
+            }
+            set
+            {
+                cmbProvincia = value;
+            }
+        }
+        
+        public ComboBox MunicipioEnderecoComboBox
+        {
+            get
+            {
+                return cmbMunicipio;
+            }
+            set
+            {
+                cmbMunicipio = value;
+            }
+        }
+
+        public AdvancedDataGridView EnderecoDataGrid
+        {
+            get
+            {
+                return dataGridEndereco;
+            }
+            set
+            {
+                dataGridEndereco = value;
+            }
+        }
+        public AdvancedDataGridView ContactoDataGrid
+        {
+            get
+            {
+                return dataGridContacto;
+            }
+            set
+            {
+                dataGridContacto = value;
+            }
+        }
+        public AdvancedDataGridView BancoDataGrid
+        {
+            get
+            {
+                return dataGridBanco;
+            }
+            set
+            {
+                dataGridBanco = value;
+            }
+        }
+
+
         public event EventHandler Gravar;
         public event EventHandler Novo;
         public event EventHandler Editar;
         public event EventHandler Anular;
         public event EventHandler Listar;
+        public event EventHandler ProvinciaChange;
+        public event EventHandler AdicionarBanco;
+        public event EventHandler AdicionarEndereco;
+        public event EventHandler AdicionarContacto;
         public FormCadastroClienteFornecedor()
         {
             InitializeComponent();
@@ -438,7 +502,29 @@ namespace ERPFacturacao
             RamoActividadeComboBox.ValueMember = "Id";   
             MoedaComboBox.DataSource = new MoedaService(new Data.EFContext()).findAll();
             MoedaComboBox.DisplayMember = "_Moeda";
-            MoedaComboBox.ValueMember= "Id";    
+            MoedaComboBox.ValueMember= "Id";
+            TipoContactoComboBox.DataSource = new TipoContactoService(new Data.EFContext()).findAll();
+            TipoContactoComboBox.DisplayMember = "_TipoContacto";
+            TipoContactoComboBox.ValueMember = "Id";
+            TipoEnderecoComboBox.DataSource = new TipoEnderecoService(new Data.EFContext()).findAll();
+            TipoEnderecoComboBox.DisplayMember = "_TipoEndereco";
+            TipoEnderecoComboBox.ValueMember = "Id";
+            ProvinciaEnderecoComboBox.DataSource = new ProvinciaService(new Data.EFContext()).findByPaisId(1);
+            ProvinciaEnderecoComboBox.DisplayMember = "_Provincia";
+            ProvinciaEnderecoComboBox.ValueMember = "Id";
+
+            btnGravar.Click += (sender, e) =>
+            {
+                Gravar?.Invoke(sender, e);
+            };
+            btnNovo.Click += (sender, e) => Novo?.Invoke(sender, e);
+            btnEditar.Click += (sender, e) => Editar?.Invoke(sender, e);
+            btnAnular.Click += (sender, e) => Anular?.Invoke(sender, e);
+            btnListar.Click += (sender, e) => Listar?.Invoke(sender, e);
+            cmbProvincia.SelectedIndexChanged += (sender, e) => ProvinciaChange?.Invoke(sender, e);
+            btnAddBanco.Click += (sender, e) => AdicionarBanco?.Invoke(sender, e);
+            btnAddContacto.Click += (sender, e) => AdicionarContacto?.Invoke(sender, e);
+            btnAddEndereco.Click += (sender, e) => AdicionarEndereco?.Invoke(sender, e);
         }
 
         private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)

@@ -91,7 +91,7 @@
             this.cmbMunicipio = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
             this.cmbProvincia = new System.Windows.Forms.ComboBox();
-            this.advancedDataGridView2 = new ADGV.AdvancedDataGridView();
+            this.dataGridEndereco = new ADGV.AdvancedDataGridView();
             this.btnAddEndereco = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -104,7 +104,7 @@
             this.txtEndereco = new System.Windows.Forms.TextBox();
             this.cmbTipoEndereco = new System.Windows.Forms.ComboBox();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.advancedDataGridView1 = new ADGV.AdvancedDataGridView();
+            this.dataGridContacto = new ADGV.AdvancedDataGridView();
             this.btnAddContacto = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -118,7 +118,7 @@
             this.cmbTipoContacto = new System.Windows.Forms.ComboBox();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.btnAddBanco = new System.Windows.Forms.Button();
-            this.advancedDataGridView3 = new ADGV.AdvancedDataGridView();
+            this.dataGridBanco = new ADGV.AdvancedDataGridView();
             this.label35 = new System.Windows.Forms.Label();
             this.txtAgencia = new System.Windows.Forms.TextBox();
             this.label33 = new System.Windows.Forms.Label();
@@ -137,11 +137,11 @@
             this.panel1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.advancedDataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridEndereco)).BeginInit();
             this.tabPage4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.advancedDataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridContacto)).BeginInit();
             this.tabPage5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.advancedDataGridView3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridBanco)).BeginInit();
             this.tabPage6.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -670,7 +670,7 @@
             this.tabPage3.Controls.Add(this.cmbMunicipio);
             this.tabPage3.Controls.Add(this.label11);
             this.tabPage3.Controls.Add(this.cmbProvincia);
-            this.tabPage3.Controls.Add(this.advancedDataGridView2);
+            this.tabPage3.Controls.Add(this.dataGridEndereco);
             this.tabPage3.Controls.Add(this.btnAddEndereco);
             this.tabPage3.Controls.Add(this.label6);
             this.tabPage3.Controls.Add(this.label7);
@@ -740,17 +740,17 @@
             this.cmbProvincia.Size = new System.Drawing.Size(121, 23);
             this.cmbProvincia.TabIndex = 25;
             // 
-            // advancedDataGridView2
+            // dataGridEndereco
             // 
-            this.advancedDataGridView2.AutoGenerateContextFilters = true;
-            this.advancedDataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.advancedDataGridView2.DateWithTime = false;
-            this.advancedDataGridView2.Location = new System.Drawing.Point(6, 236);
-            this.advancedDataGridView2.Name = "advancedDataGridView2";
-            this.advancedDataGridView2.RowTemplate.Height = 25;
-            this.advancedDataGridView2.Size = new System.Drawing.Size(776, 170);
-            this.advancedDataGridView2.TabIndex = 23;
-            this.advancedDataGridView2.TimeFilter = false;
+            this.dataGridEndereco.AutoGenerateContextFilters = true;
+            this.dataGridEndereco.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridEndereco.DateWithTime = false;
+            this.dataGridEndereco.Location = new System.Drawing.Point(6, 236);
+            this.dataGridEndereco.Name = "dataGridEndereco";
+            this.dataGridEndereco.RowTemplate.Height = 25;
+            this.dataGridEndereco.Size = new System.Drawing.Size(776, 170);
+            this.dataGridEndereco.TabIndex = 23;
+            this.dataGridEndereco.TimeFilter = false;
             // 
             // btnAddEndereco
             // 
@@ -844,7 +844,7 @@
             // 
             // tabPage4
             // 
-            this.tabPage4.Controls.Add(this.advancedDataGridView1);
+            this.tabPage4.Controls.Add(this.dataGridContacto);
             this.tabPage4.Controls.Add(this.btnAddContacto);
             this.tabPage4.Controls.Add(this.label5);
             this.tabPage4.Controls.Add(this.label4);
@@ -864,17 +864,17 @@
             this.tabPage4.Text = "Contactos";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
-            // advancedDataGridView1
+            // dataGridContacto
             // 
-            this.advancedDataGridView1.AutoGenerateContextFilters = true;
-            this.advancedDataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.advancedDataGridView1.DateWithTime = false;
-            this.advancedDataGridView1.Location = new System.Drawing.Point(8, 150);
-            this.advancedDataGridView1.Name = "advancedDataGridView1";
-            this.advancedDataGridView1.RowTemplate.Height = 25;
-            this.advancedDataGridView1.Size = new System.Drawing.Size(776, 226);
-            this.advancedDataGridView1.TabIndex = 11;
-            this.advancedDataGridView1.TimeFilter = false;
+            this.dataGridContacto.AutoGenerateContextFilters = true;
+            this.dataGridContacto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridContacto.DateWithTime = false;
+            this.dataGridContacto.Location = new System.Drawing.Point(8, 150);
+            this.dataGridContacto.Name = "dataGridContacto";
+            this.dataGridContacto.RowTemplate.Height = 25;
+            this.dataGridContacto.Size = new System.Drawing.Size(776, 226);
+            this.dataGridContacto.TabIndex = 11;
+            this.dataGridContacto.TimeFilter = false;
             // 
             // btnAddContacto
             // 
@@ -969,7 +969,7 @@
             // tabPage5
             // 
             this.tabPage5.Controls.Add(this.btnAddBanco);
-            this.tabPage5.Controls.Add(this.advancedDataGridView3);
+            this.tabPage5.Controls.Add(this.dataGridBanco);
             this.tabPage5.Controls.Add(this.label35);
             this.tabPage5.Controls.Add(this.txtAgencia);
             this.tabPage5.Controls.Add(this.label33);
@@ -993,17 +993,17 @@
             this.btnAddBanco.Text = "Adicionar";
             this.btnAddBanco.UseVisualStyleBackColor = true;
             // 
-            // advancedDataGridView3
+            // dataGridBanco
             // 
-            this.advancedDataGridView3.AutoGenerateContextFilters = true;
-            this.advancedDataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.advancedDataGridView3.DateWithTime = false;
-            this.advancedDataGridView3.Location = new System.Drawing.Point(8, 54);
-            this.advancedDataGridView3.Name = "advancedDataGridView3";
-            this.advancedDataGridView3.RowTemplate.Height = 25;
-            this.advancedDataGridView3.Size = new System.Drawing.Size(781, 352);
-            this.advancedDataGridView3.TabIndex = 14;
-            this.advancedDataGridView3.TimeFilter = false;
+            this.dataGridBanco.AutoGenerateContextFilters = true;
+            this.dataGridBanco.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridBanco.DateWithTime = false;
+            this.dataGridBanco.Location = new System.Drawing.Point(8, 54);
+            this.dataGridBanco.Name = "dataGridBanco";
+            this.dataGridBanco.RowTemplate.Height = 25;
+            this.dataGridBanco.Size = new System.Drawing.Size(781, 352);
+            this.dataGridBanco.TabIndex = 14;
+            this.dataGridBanco.TimeFilter = false;
             // 
             // label35
             // 
@@ -1116,13 +1116,13 @@
             this.tabPage2.PerformLayout();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.advancedDataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridEndereco)).EndInit();
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.advancedDataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridContacto)).EndInit();
             this.tabPage5.ResumeLayout(false);
             this.tabPage5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.advancedDataGridView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridBanco)).EndInit();
             this.tabPage6.ResumeLayout(false);
             this.tabPage6.PerformLayout();
             this.ResumeLayout(false);
@@ -1191,7 +1191,7 @@
         private ComboBox cmbMunicipio;
         private Label label11;
         private ComboBox cmbProvincia;
-        private ADGV.AdvancedDataGridView advancedDataGridView2;
+        private ADGV.AdvancedDataGridView dataGridEndereco;
         private Button btnAddEndereco;
         private Label label6;
         private Label label7;
@@ -1204,7 +1204,7 @@
         private TextBox txtEndereco;
         private ComboBox cmbTipoEndereco;
         private TabPage tabPage4;
-        private ADGV.AdvancedDataGridView advancedDataGridView1;
+        private ADGV.AdvancedDataGridView dataGridContacto;
         private Button btnAddContacto;
         private Label label5;
         private Label label4;
@@ -1222,7 +1222,7 @@
         private TextBox txtObservacao;
         private TabPage tabPage7;
         private Button btnAddBanco;
-        private ADGV.AdvancedDataGridView advancedDataGridView3;
+        private ADGV.AdvancedDataGridView dataGridBanco;
         private Label label35;
         private TextBox txtAgencia;
         private Label label33;

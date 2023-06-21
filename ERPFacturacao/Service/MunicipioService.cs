@@ -32,6 +32,10 @@ namespace ERPFacturacao.Service
         {
             throw new NotImplementedException();
         }
+        public List<Municipio> findByProvinciaId(int? id)
+        {
+            return _context.Municipio.Where(m => m.ProvinciaId == id).ToList();  
+        }
 
         public void insert(Municipio obj)
         {
