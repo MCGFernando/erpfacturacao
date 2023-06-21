@@ -1,4 +1,5 @@
-﻿using ERPFacturacao.Model;
+﻿using ERPFacturacao.Data;
+using ERPFacturacao.Model;
 using ERPFacturacao.Service.impl;
 using System;
 using System.Collections.Generic;
@@ -10,6 +11,13 @@ namespace ERPFacturacao.Service
 {
     public class TipoEnderecoService : IRepository<TipoEndereco>
     {
+        private readonly EFContext _context;
+
+        public TipoEnderecoService(EFContext context)
+        {
+            _context = context;
+        }
+
         public void delete(int id)
         {
             throw new NotImplementedException();
@@ -17,7 +25,7 @@ namespace ERPFacturacao.Service
 
         public List<TipoEndereco> findAll()
         {
-            throw new NotImplementedException();
+            return _context.TipoEndereco.ToList();
         }
 
         public TipoEndereco findById(int? id)
@@ -27,7 +35,8 @@ namespace ERPFacturacao.Service
 
         public void insert(TipoEndereco obj)
         {
-            throw new NotImplementedException();
+            _context.Add(obj);
+            _context.SaveChanges();
         }
 
         public void update(TipoEndereco obj)

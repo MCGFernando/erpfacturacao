@@ -12,7 +12,8 @@ namespace ERPFacturacao.Model
     public class TipoEndereco
     {
         public int Id { get; set; }
-        public int _TipoEndereco { get; set; }
+        [Column("tipo_endereco")]
+        public string _TipoEndereco { get; set; }
         [Column("data_registo")]
         public DateTime DataRegisto { get; set; }
         [Column("data_actualizacao")]

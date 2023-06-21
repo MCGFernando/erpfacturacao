@@ -168,5 +168,21 @@ namespace ERPFacturacao
             frmClienteFornecedor.Show();
             new ClienteFornecedorController(frmClienteFornecedor);
         }
+
+        private void tipoContactoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormTipoContacto frmTipoContacto = new FormTipoContacto();
+            frmTipoContacto.MdiParent = this;
+            frmTipoContacto.Show();
+            new TipoContactoController(frmTipoContacto);
+        }
+
+        private void tipoEnderecoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormTipoEndereco frmTipoEndereco = new FormTipoEndereco();
+            frmTipoEndereco.MdiParent = this;
+            frmTipoEndereco.Show();
+            new TipoEnderecoController(frmTipoEndereco);
+        }
     }
 }

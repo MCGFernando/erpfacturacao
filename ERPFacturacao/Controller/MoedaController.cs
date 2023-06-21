@@ -47,7 +47,7 @@ namespace ERPFacturacao.Controller
             var pais = (Pais)this.frmMoeda.PaisComboBox.SelectedItem;
             var moeda = new Moeda()
             {
-                Nome = this.frmMoeda.MoedaTextBox,
+                _Moeda = this.frmMoeda.MoedaTextBox,
                 Simbolo = this.frmMoeda.SimboloTextBox,
                 PaisId = pais.Id,
                 Pais = pais,

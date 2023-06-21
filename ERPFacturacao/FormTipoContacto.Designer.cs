@@ -36,11 +36,11 @@
             this.btnAnular = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.btnListar = new System.Windows.Forms.ToolStripButton();
-            this.dataGridTipoContacto = new ADGV.AdvancedDataGridView();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtTipoContacto = new System.Windows.Forms.TextBox();
             this.txtId = new System.Windows.Forms.TextBox();
+            this.dataGridTipoContacto = new ADGV.AdvancedDataGridView();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridTipoContacto)).BeginInit();
             this.SuspendLayout();
@@ -105,18 +105,6 @@
             this.btnListar.Size = new System.Drawing.Size(55, 22);
             this.btnListar.Text = "Listar";
             // 
-            // dataGridTipoContacto
-            // 
-            this.dataGridTipoContacto.AutoGenerateContextFilters = true;
-            this.dataGridTipoContacto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridTipoContacto.DateWithTime = false;
-            this.dataGridTipoContacto.Location = new System.Drawing.Point(13, 88);
-            this.dataGridTipoContacto.Name = "dataGridTipoContacto";
-            this.dataGridTipoContacto.RowTemplate.Height = 25;
-            this.dataGridTipoContacto.Size = new System.Drawing.Size(535, 340);
-            this.dataGridTipoContacto.TabIndex = 25;
-            this.dataGridTipoContacto.TimeFilter = false;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -149,6 +137,18 @@
             this.txtId.Size = new System.Drawing.Size(100, 23);
             this.txtId.TabIndex = 21;
             // 
+            // dataGridTipoContacto
+            // 
+            this.dataGridTipoContacto.AutoGenerateContextFilters = true;
+            this.dataGridTipoContacto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridTipoContacto.DateWithTime = false;
+            this.dataGridTipoContacto.Location = new System.Drawing.Point(13, 92);
+            this.dataGridTipoContacto.Name = "dataGridTipoContacto";
+            this.dataGridTipoContacto.RowTemplate.Height = 25;
+            this.dataGridTipoContacto.Size = new System.Drawing.Size(535, 346);
+            this.dataGridTipoContacto.TabIndex = 25;
+            this.dataGridTipoContacto.TimeFilter = false;
+            // 
             // FormTipoContacto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -179,10 +179,10 @@
         private ToolStripButton btnAnular;
         private ToolStripSeparator toolStripSeparator1;
         private ToolStripButton btnListar;
-        private ADGV.AdvancedDataGridView dataGridTipoContacto;
         private Label label3;
         private Label label2;
         private TextBox txtTipoContacto;
         private TextBox txtId;
+        private ADGV.AdvancedDataGridView dataGridTipoContacto;
     }
 }
