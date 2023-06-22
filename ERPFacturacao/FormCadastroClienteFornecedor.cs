@@ -319,6 +319,18 @@ namespace ERPFacturacao
             }
         }
 
+        /*public bool TipoPessoaRadioButton
+        {
+            get
+            {
+                return rd.Checked;
+            }
+            set
+            {
+                chkEstado.Checked = value;
+            }
+        }*/
+
         /**/
         public ComboBox GeneroComboBox
         {
