@@ -18,7 +18,7 @@ namespace ERPFacturacao.Model
         public int? RamoActividadeId { get; set; }
         public RamoActividade? RamoActividade { get; set; }
         
-        public List<Banco>? Bancos { get; set; }
+        public List<ContaBancaria>? ContasBancarias { get; set; }
         public List<Endereco>? Enderecos { get; set; }
         public List<Contacto>? Contactos { get; set; }
         

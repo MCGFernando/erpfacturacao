@@ -9,11 +9,11 @@ using System.Threading.Tasks;
 
 namespace ERPFacturacao.Service
 {
-    public class BancoService : IRepository<Banco>
+    public class ContaBancariaService : IRepository<ContaBancaria>
     {
         private readonly EFContext _context;
 
-        public BancoService(EFContext context)
+        public ContaBancariaService(EFContext context)
         {
             _context = context;
         }
@@ -23,23 +23,23 @@ namespace ERPFacturacao.Service
             throw new NotImplementedException();
         }
 
-        public List<Banco> findAll()
+        public List<ContaBancaria> findAll()
         {
-            return _context.Banco.ToList();
+            return _context.ContaBancaria.ToList();
         }
 
-        public Banco findById(int? id)
+        public ContaBancaria findById(int? id)
         {
             throw new NotImplementedException();
         }
 
-        public void insert(Banco obj)
+        public void insert(ContaBancaria obj)
         {
             _context.Add(obj);
             _context.SaveChanges();
         }
 
-        public void update(Banco obj)
+        public void update(ContaBancaria obj)
         {
             throw new NotImplementedException();
         }

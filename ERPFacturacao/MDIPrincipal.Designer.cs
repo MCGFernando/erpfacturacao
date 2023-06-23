@@ -76,6 +76,7 @@
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.bancosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
             this.SuspendLayout();
@@ -292,7 +293,8 @@
             this.ramoDeActividadeToolStripMenuItem,
             this.moedaToolStripMenuItem,
             this.tipoContactoToolStripMenuItem,
-            this.tipoEnderecoToolStripMenuItem});
+            this.tipoEnderecoToolStripMenuItem,
+            this.bancosToolStripMenuItem});
             this.tabelasToolStripMenuItem.Name = "tabelasToolStripMenuItem";
             this.tabelasToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
             this.tabelasToolStripMenuItem.Text = "Tabelas";
@@ -440,6 +442,13 @@
             this.toolStripStatusLabel1.Size = new System.Drawing.Size(105, 17);
             this.toolStripStatusLabel1.Text = "Seja bem vindo(a):";
             // 
+            // bancosToolStripMenuItem
+            // 
+            this.bancosToolStripMenuItem.Name = "bancosToolStripMenuItem";
+            this.bancosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.bancosToolStripMenuItem.Text = "Bancos";
+            this.bancosToolStripMenuItem.Click += new System.EventHandler(this.bancosToolStripMenuItem_Click);
+            // 
             // MDIPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -510,6 +519,7 @@
         private ToolStripMenuItem moedaToolStripMenuItem;
         private ToolStripMenuItem tipoContactoToolStripMenuItem;
         private ToolStripMenuItem tipoEnderecoToolStripMenuItem;
+        private ToolStripMenuItem bancosToolStripMenuItem;
     }
 }
 

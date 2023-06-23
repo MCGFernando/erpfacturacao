@@ -237,26 +237,26 @@ namespace ERPFacturacao
                 txtSite.Text = value;
             }
         }
-        public string SiglaBancoTextBox
+        public string NumeroContaTextBox
         {
             get
             {
-                return txtSiglaBanco.Text;
+                return txtNumeroConta.Text;
             }
             set
             {
-                txtSiglaBanco.Text = value;
+                txtNumeroConta.Text = value;
             }
         }
-        public string BancoTextBox
+        public string IbanTextBox
         {
             get
             {
-                return txtBanco.Text;
+                return txtIban.Text;
             }
             set
             {
-                txtBanco.Text = value;
+                txtIban.Text = value;
             }
         }
         public string AgenciaTextBox
@@ -268,6 +268,61 @@ namespace ERPFacturacao
             set
             {
                 txtAgencia.Text = value;
+            }
+        }
+        public string GestorTextBox
+        {
+            get
+            {
+                return txtGestor.Text;
+            }
+            set
+            {
+                txtGestor.Text = value;
+            }
+        }
+        public string EmailGestorTextBox
+        {
+            get
+            {
+                return txtEmailGestor.Text;
+            }
+            set
+            {
+                txtEmailGestor.Text = value;
+            }
+        }
+        public string EmailAlternantivoGestorTextBox
+        {
+            get
+            {
+                return txtEmailAlternativoGestor.Text;
+            }
+            set
+            {
+                txtEmailAlternativoGestor.Text = value;
+            }
+        }
+        public string TelefoneGestorTextBox
+        {
+            get
+            {
+                return txtTelefoneGestor.Text;
+            }
+            set
+            {
+                txtTelefoneGestor.Text = value;
+            }
+        }
+        public string TelefoneAlternativoGestorTextBox
+        {
+            get
+            {
+                return txtTelefoneAlternativoGestor.Text;
+            }
+            set
+            {
+                txtTelefoneAlternativoGestor.Text = value;
             }
         }
         public string ObservacoTextBox
@@ -455,6 +510,17 @@ namespace ERPFacturacao
                 cmbMunicipio = value;
             }
         }
+        public ComboBox BancoComboBox
+        {
+            get
+            {
+                return cmbBanco;
+            }
+            set
+            {
+                cmbBanco = value;
+            }
+        }
 
         public AdvancedDataGridView EnderecoDataGrid
         {
@@ -524,6 +590,9 @@ namespace ERPFacturacao
             ProvinciaEnderecoComboBox.DataSource = new ProvinciaService(new Data.EFContext()).findByPaisId(1);
             ProvinciaEnderecoComboBox.DisplayMember = "_Provincia";
             ProvinciaEnderecoComboBox.ValueMember = "Id";
+            BancoComboBox.DataSource = new BancoService(new Data.EFContext()).findAll();
+            BancoComboBox.DisplayMember = "_Banco";
+            BancoComboBox.ValueMember = "Id";
 
             btnGravar.Click += (sender, e) =>
             {

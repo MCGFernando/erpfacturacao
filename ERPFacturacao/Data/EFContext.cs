@@ -24,6 +24,8 @@ namespace ERPFacturacao.Data
         public DbSet<Endereco> Endereco { get; set; }
         public DbSet<Contacto> Contacto { get; set; }
         public DbSet<Moeda> Moeda { get; set; }
+        public DbSet<Banco> Banco { get; set; }
+        public DbSet<ContaBancaria> ContaBancaria { get; set; }
         public DbSet<RamoActividade> RamoActividade { get; set; }
         public DbSet<TipoContacto> TipoContacto { get; set; }
         public DbSet<TipoEndereco> TipoEndereco { get; set; }

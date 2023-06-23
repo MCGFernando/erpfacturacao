@@ -12,11 +12,14 @@ namespace ERPFacturacao.Model
     public class Banco
     {
         public int Id { get; set; }
-        public int ClienteFonecedorId { get; set; }
-        public ClienteFonecedor ClienteFonecedor { get; set; }
-        public string? Sigla { get; set; }
+        public string Sigla { get; set; }
         [Column("banco")]
         public string _Banco { get; set; }
-        public string? Agencia { get; set; }
+        [Column("data_registo")]
+        public DateTime DataRegisto { get; set; }
+        [Column("data_actualizacao")]
+        public DateTime DataActualizacao { get; set; }
+        [Column("data_anulacao")]
+        public DateTime DataAnulacao { get; set; }
     }
 }

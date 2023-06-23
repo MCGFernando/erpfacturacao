@@ -122,13 +122,25 @@
             this.label35 = new System.Windows.Forms.Label();
             this.txtAgencia = new System.Windows.Forms.TextBox();
             this.label33 = new System.Windows.Forms.Label();
-            this.txtBanco = new System.Windows.Forms.TextBox();
+            this.txtIban = new System.Windows.Forms.TextBox();
             this.label31 = new System.Windows.Forms.Label();
-            this.txtSiglaBanco = new System.Windows.Forms.TextBox();
+            this.txtNumeroConta = new System.Windows.Forms.TextBox();
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.label22 = new System.Windows.Forms.Label();
             this.txtObservacao = new System.Windows.Forms.TextBox();
             this.tabPage7 = new System.Windows.Forms.TabPage();
+            this.label37 = new System.Windows.Forms.Label();
+            this.cmbBanco = new System.Windows.Forms.ComboBox();
+            this.label38 = new System.Windows.Forms.Label();
+            this.txtEmailGestor = new System.Windows.Forms.TextBox();
+            this.label39 = new System.Windows.Forms.Label();
+            this.txtGestor = new System.Windows.Forms.TextBox();
+            this.label40 = new System.Windows.Forms.Label();
+            this.txtTelefoneAlternativoGestor = new System.Windows.Forms.TextBox();
+            this.label41 = new System.Windows.Forms.Label();
+            this.txtTelefoneGestor = new System.Windows.Forms.TextBox();
+            this.label42 = new System.Windows.Forms.Label();
+            this.txtEmailAlternativoGestor = new System.Windows.Forms.TextBox();
             this.toolStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -968,14 +980,26 @@
             // 
             // tabPage5
             // 
+            this.tabPage5.Controls.Add(this.label42);
+            this.tabPage5.Controls.Add(this.txtEmailAlternativoGestor);
+            this.tabPage5.Controls.Add(this.label40);
+            this.tabPage5.Controls.Add(this.txtTelefoneAlternativoGestor);
+            this.tabPage5.Controls.Add(this.label41);
+            this.tabPage5.Controls.Add(this.txtTelefoneGestor);
+            this.tabPage5.Controls.Add(this.label38);
+            this.tabPage5.Controls.Add(this.txtEmailGestor);
+            this.tabPage5.Controls.Add(this.label39);
+            this.tabPage5.Controls.Add(this.txtGestor);
+            this.tabPage5.Controls.Add(this.label37);
+            this.tabPage5.Controls.Add(this.cmbBanco);
             this.tabPage5.Controls.Add(this.btnAddBanco);
             this.tabPage5.Controls.Add(this.dataGridBanco);
             this.tabPage5.Controls.Add(this.label35);
             this.tabPage5.Controls.Add(this.txtAgencia);
             this.tabPage5.Controls.Add(this.label33);
-            this.tabPage5.Controls.Add(this.txtBanco);
+            this.tabPage5.Controls.Add(this.txtIban);
             this.tabPage5.Controls.Add(this.label31);
-            this.tabPage5.Controls.Add(this.txtSiglaBanco);
+            this.tabPage5.Controls.Add(this.txtNumeroConta);
             this.tabPage5.Location = new System.Drawing.Point(4, 24);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
@@ -986,7 +1010,7 @@
             // 
             // btnAddBanco
             // 
-            this.btnAddBanco.Location = new System.Drawing.Point(709, 24);
+            this.btnAddBanco.Location = new System.Drawing.Point(709, 166);
             this.btnAddBanco.Name = "btnAddBanco";
             this.btnAddBanco.Size = new System.Drawing.Size(75, 23);
             this.btnAddBanco.TabIndex = 15;
@@ -998,17 +1022,17 @@
             this.dataGridBanco.AutoGenerateContextFilters = true;
             this.dataGridBanco.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridBanco.DateWithTime = false;
-            this.dataGridBanco.Location = new System.Drawing.Point(8, 54);
+            this.dataGridBanco.Location = new System.Drawing.Point(8, 195);
             this.dataGridBanco.Name = "dataGridBanco";
             this.dataGridBanco.RowTemplate.Height = 25;
-            this.dataGridBanco.Size = new System.Drawing.Size(781, 352);
+            this.dataGridBanco.Size = new System.Drawing.Size(781, 211);
             this.dataGridBanco.TabIndex = 14;
             this.dataGridBanco.TimeFilter = false;
             // 
             // label35
             // 
             this.label35.AutoSize = true;
-            this.label35.Location = new System.Drawing.Point(319, 7);
+            this.label35.Location = new System.Drawing.Point(8, 62);
             this.label35.Name = "label35";
             this.label35.Size = new System.Drawing.Size(50, 15);
             this.label35.TabIndex = 13;
@@ -1016,42 +1040,42 @@
             // 
             // txtAgencia
             // 
-            this.txtAgencia.Location = new System.Drawing.Point(319, 25);
+            this.txtAgencia.Location = new System.Drawing.Point(8, 80);
             this.txtAgencia.Name = "txtAgencia";
-            this.txtAgencia.Size = new System.Drawing.Size(384, 23);
+            this.txtAgencia.Size = new System.Drawing.Size(695, 23);
             this.txtAgencia.TabIndex = 12;
             // 
             // label33
             // 
             this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(103, 7);
+            this.label33.Location = new System.Drawing.Point(468, 18);
             this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(40, 15);
+            this.label33.Size = new System.Drawing.Size(30, 15);
             this.label33.TabIndex = 11;
-            this.label33.Text = "Banco";
+            this.label33.Text = "Iban";
             // 
-            // txtBanco
+            // txtIban
             // 
-            this.txtBanco.Location = new System.Drawing.Point(103, 25);
-            this.txtBanco.Name = "txtBanco";
-            this.txtBanco.Size = new System.Drawing.Size(210, 23);
-            this.txtBanco.TabIndex = 10;
+            this.txtIban.Location = new System.Drawing.Point(468, 36);
+            this.txtIban.Name = "txtIban";
+            this.txtIban.Size = new System.Drawing.Size(235, 23);
+            this.txtIban.TabIndex = 10;
             // 
             // label31
             // 
             this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(8, 7);
+            this.label31.Location = new System.Drawing.Point(227, 18);
             this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(32, 15);
+            this.label31.Size = new System.Drawing.Size(102, 15);
             this.label31.TabIndex = 9;
-            this.label31.Text = "Sigla";
+            this.label31.Text = "Número de Conta";
             // 
-            // txtSiglaBanco
+            // txtNumeroConta
             // 
-            this.txtSiglaBanco.Location = new System.Drawing.Point(8, 25);
-            this.txtSiglaBanco.Name = "txtSiglaBanco";
-            this.txtSiglaBanco.Size = new System.Drawing.Size(89, 23);
-            this.txtSiglaBanco.TabIndex = 8;
+            this.txtNumeroConta.Location = new System.Drawing.Point(227, 36);
+            this.txtNumeroConta.Name = "txtNumeroConta";
+            this.txtNumeroConta.Size = new System.Drawing.Size(235, 23);
+            this.txtNumeroConta.TabIndex = 8;
             // 
             // tabPage6
             // 
@@ -1091,6 +1115,103 @@
             this.tabPage7.TabIndex = 6;
             this.tabPage7.Text = "Contabilidade";
             this.tabPage7.UseVisualStyleBackColor = true;
+            // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.Location = new System.Drawing.Point(8, 18);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(40, 15);
+            this.label37.TabIndex = 17;
+            this.label37.Text = "Banco";
+            // 
+            // cmbBanco
+            // 
+            this.cmbBanco.FormattingEnabled = true;
+            this.cmbBanco.Location = new System.Drawing.Point(8, 36);
+            this.cmbBanco.Name = "cmbBanco";
+            this.cmbBanco.Size = new System.Drawing.Size(213, 23);
+            this.cmbBanco.TabIndex = 16;
+            // 
+            // label38
+            // 
+            this.label38.AutoSize = true;
+            this.label38.Location = new System.Drawing.Point(227, 106);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(95, 15);
+            this.label38.TabIndex = 21;
+            this.label38.Text = "E-mail do Gestor";
+            // 
+            // txtEmailGestor
+            // 
+            this.txtEmailGestor.Location = new System.Drawing.Point(227, 124);
+            this.txtEmailGestor.Name = "txtEmailGestor";
+            this.txtEmailGestor.Size = new System.Drawing.Size(235, 23);
+            this.txtEmailGestor.TabIndex = 20;
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.Location = new System.Drawing.Point(8, 106);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(92, 15);
+            this.label39.TabIndex = 19;
+            this.label39.Text = "Gestor da Conta";
+            // 
+            // txtGestor
+            // 
+            this.txtGestor.Location = new System.Drawing.Point(8, 124);
+            this.txtGestor.Name = "txtGestor";
+            this.txtGestor.Size = new System.Drawing.Size(213, 23);
+            this.txtGestor.TabIndex = 18;
+            // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.Location = new System.Drawing.Point(249, 148);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(112, 15);
+            this.label40.TabIndex = 25;
+            this.label40.Text = "Telefone Alternativo";
+            // 
+            // txtTelefoneAlternativoGestor
+            // 
+            this.txtTelefoneAlternativoGestor.Location = new System.Drawing.Point(249, 166);
+            this.txtTelefoneAlternativoGestor.Name = "txtTelefoneAlternativoGestor";
+            this.txtTelefoneAlternativoGestor.Size = new System.Drawing.Size(235, 23);
+            this.txtTelefoneAlternativoGestor.TabIndex = 24;
+            // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.Location = new System.Drawing.Point(8, 148);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(105, 15);
+            this.label41.TabIndex = 23;
+            this.label41.Text = "Telefone do Gestor";
+            // 
+            // txtTelefoneGestor
+            // 
+            this.txtTelefoneGestor.Location = new System.Drawing.Point(8, 166);
+            this.txtTelefoneGestor.Name = "txtTelefoneGestor";
+            this.txtTelefoneGestor.Size = new System.Drawing.Size(235, 23);
+            this.txtTelefoneGestor.TabIndex = 22;
+            // 
+            // label42
+            // 
+            this.label42.AutoSize = true;
+            this.label42.Location = new System.Drawing.Point(468, 106);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(102, 15);
+            this.label42.TabIndex = 27;
+            this.label42.Text = "E-mail Alternativo";
+            // 
+            // txtEmailAlternativoGestor
+            // 
+            this.txtEmailAlternativoGestor.Location = new System.Drawing.Point(468, 124);
+            this.txtEmailAlternativoGestor.Name = "txtEmailAlternativoGestor";
+            this.txtEmailAlternativoGestor.Size = new System.Drawing.Size(235, 23);
+            this.txtEmailAlternativoGestor.TabIndex = 26;
             // 
             // FormCadastroClienteFornecedor
             // 
@@ -1226,12 +1347,24 @@
         private Label label35;
         private TextBox txtAgencia;
         private Label label33;
-        private TextBox txtBanco;
+        private TextBox txtIban;
         private Label label31;
-        private TextBox txtSiglaBanco;
+        private TextBox txtNumeroConta;
         private ComboBox cmbEstadoCivil;
         private ComboBox cmbGenero;
         private DateTimePicker datePickerNascimento;
         private ComboBox cmbPaisDadoFiscal;
+        private Label label42;
+        private TextBox txtEmailAlternativoGestor;
+        private Label label40;
+        private TextBox txtTelefoneAlternativoGestor;
+        private Label label41;
+        private TextBox txtTelefoneGestor;
+        private Label label38;
+        private TextBox txtEmailGestor;
+        private Label label39;
+        private TextBox txtGestor;
+        private Label label37;
+        private ComboBox cmbBanco;
     }
 }

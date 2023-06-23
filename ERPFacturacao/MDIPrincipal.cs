@@ -184,5 +184,13 @@ namespace ERPFacturacao
             frmTipoEndereco.Show();
             new TipoEnderecoController(frmTipoEndereco);
         }
+
+        private void bancosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormBanco frmBanco = new FormBanco();
+            frmBanco.MdiParent = this;
+            frmBanco.Show();
+            new BancoController(frmBanco);
+        }
     }
 }
