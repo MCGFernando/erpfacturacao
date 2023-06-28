@@ -15,10 +15,11 @@ namespace ERPFacturacao.Model
         public TipoContacto TipoContacto { get; set; }
         public int ClienteFonecedorId { get; set; }
         public ClienteFonecedor ClienteFonecedor { get; set; }
-        public string Telefone { get; set; }
-        public string Telemovel { get; set; }
-        public string Email { get; set; }
-        public string Site { get; set; }
+        public string? Telefone { get; set; }
+        public string? Telemovel { get; set; }
+        public string? Email { get; set; }
+        public string? Site { get; set; }
+        public bool Principal { get; set; } = false;
         [Column("data_registo")]
         public DateTime DataRegisto { get; set; }
         [Column("data_actualizacao")]
