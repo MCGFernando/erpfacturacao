@@ -10,7 +10,7 @@ namespace ERPFacturacao.Model
 {
     [Serializable]
     [Table("cargos")]
-    public class Cargo
+    public class Cargo 
     {
         public int Id { get; set; }
         [Column("utilizadores_cargos_id")]
@@ -23,10 +23,12 @@ namespace ERPFacturacao.Model
         public string Sigla { get; set; }
 
         [Column("data_registo")]
-        public DateTime DataRegisto { get; set; }
+        public DateTime DataRegisto { get; set; } 
         [Column("data_actualizacao")]
         public DateTime DataActualizacao { get; set; }
         [Column("data_anulacao")]
         public DateTime DataAnulacao { get; set; }
+
+       
     }
 }

@@ -30,18 +30,35 @@ namespace ERPFacturacao.Service
 
         public Cargo findById(int? id)
         {
-            return _context.Cargo.FirstOrDefault(c => c.Id == id.Value);   
+            if (id == null || id.Value <= 0)
+            {
+                throw new ArgumentException("Invalid or missing ID parameter.");
+            }
+
+            Cargo result = null;
+
+            try
+            {
+                result = _context.Cargo.FirstOrDefault(m => m.Id == id);
+            }
+            catch (Exception ex)
+            {
+                throw new ApplicationException("An error occurred while fetching the data from the database.", ex);
+            }
+
+            return result;
         }
 
         public void insert(Cargo obj)
         {
-            _context.Add(obj);
+            _context.Cargo.Add(obj);
             _context.SaveChanges();
         }
 
         public void update(Cargo obj)
         {
-            throw new NotImplementedException();
+            var objOld = findById(obj.Id);
+            _context.Entry(objOld).CurrentValues.SetValues(obj);
         }
     }
 }

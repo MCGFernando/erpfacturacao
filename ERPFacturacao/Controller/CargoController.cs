@@ -1,15 +1,17 @@
-﻿using ERPFacturacao.Data;
+﻿using ERPFacturacao.Controller.impl;
+using ERPFacturacao.Data;
 using ERPFacturacao.Model;
 using ERPFacturacao.Service;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace ERPFacturacao.Controller
 {
-    public class CargoController
+    public class CargoController 
     {
         private readonly FormCargo frmCargo;
         private readonly CargoService _service;
@@ -45,8 +47,8 @@ namespace ERPFacturacao.Controller
                 return;
             }
             DataGridViewRow selectedRow = this.frmCargo.tblCargo.SelectedRows[0];
-            int auxNumber;
-            bool tryParse = int.TryParse(selectedRow.Cells[0].Value.ToString(), out auxNumber);
+            
+            bool tryParse = int.TryParse(selectedRow.Cells[0].Value.ToString(), out int auxNumber);
 
             if (!tryParse)
             {
@@ -69,14 +71,53 @@ namespace ERPFacturacao.Controller
 
         private void Gravar(object? sender, EventArgs e)
         {
-            var cargo = new Cargo()
+            var cargo = SetCargoFromForm();
+
+            if (cargo == null)
             {
-                Sigla = this.frmCargo.SiglaTextBox,
-                _Cargo = this.frmCargo.CargoTextBox,
-                DataRegisto = DateTime.Now,
-            };
-            _service.insert(cargo);
-            MessageBox.Show("OK");
+                return;
+            }
+             
+            if (string.IsNullOrEmpty(this.frmCargo.IDTextBox))
+            {
+                cargo.DataRegisto = DateTime.Now;
+                _service.insert(cargo);
+                MessageBox.Show("Inserido com sucesso");
+            }
+            else
+            {
+                cargo.DataActualizacao = DateTime.Now;
+                _service.update(cargo);
+                MessageBox.Show("actualizado com sucesso");
+            }
+            
+            
+        }
+
+        private Cargo SetCargoFromForm()
+        {
+            var Cargo = new Cargo();
+            if (int.TryParse(this.frmCargo.IDTextBox, out int utilizadorId))
+            {
+                Cargo.Id = utilizadorId;
+            }
+
+            Cargo._Cargo = this.frmCargo.CargoTextBox;
+            Cargo.Sigla = this.frmCargo.SiglaTextBox;
+
+
+            var validationContext = new ValidationContext(Cargo, serviceProvider: null, items: null);
+            var validationResults = new List<ValidationResult>();
+
+            if (!Validator.TryValidateObject(Cargo, validationContext, validationResults, validateAllProperties: true))
+            {
+                foreach (var validationResult in validationResults)
+                {
+                    MessageBox.Show(validationResult.ErrorMessage);
+                    Cargo = null;             
+                }
+            }
+            return Cargo;
         }
     }
 }

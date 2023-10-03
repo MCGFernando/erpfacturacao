@@ -95,7 +95,7 @@ namespace ERPFacturacao
                 childForm.Close();
             }
         }
-        
+
         private void sectoresToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FormSector frmSector = new FormSector();
@@ -118,7 +118,7 @@ namespace ERPFacturacao
 
         private void paísToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FormPais frmPais= new FormPais();
+            FormPais frmPais = new FormPais();
             frmPais.MdiParent = this;
             frmPais.Show();
             new PaisController(frmPais);
@@ -126,16 +126,16 @@ namespace ERPFacturacao
 
         private void provínciaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FormProvincia frmProvincia= new FormProvincia();
-            frmProvincia.MdiParent= this;
+            FormProvincia frmProvincia = new FormProvincia();
+            frmProvincia.MdiParent = this;
             frmProvincia.Show();
             new ProvinciaController(frmProvincia);
         }
 
         private void municípioToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FormMunicipio frmMunicipio= new FormMunicipio();   
-            frmMunicipio.MdiParent= this;   
+            FormMunicipio frmMunicipio = new FormMunicipio();
+            frmMunicipio.MdiParent = this;
             frmMunicipio.Show();
             new MunicipioController(frmMunicipio);
         }
@@ -148,7 +148,7 @@ namespace ERPFacturacao
         private void ramoDeActividadeToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FormRamoActividade frmRamoActividade = new FormRamoActividade();
-            frmRamoActividade.MdiParent= this;  
+            frmRamoActividade.MdiParent = this;
             frmRamoActividade.Show();
             new RamoActividadeController(frmRamoActividade);
         }
@@ -156,15 +156,15 @@ namespace ERPFacturacao
         private void moedaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FormMoeda frmMoeda = new FormMoeda();
-            frmMoeda.MdiParent= this;
+            frmMoeda.MdiParent = this;
             frmMoeda.Show();
             new MoedaController(frmMoeda);
         }
 
         private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FormCadastroClienteFornecedor frmClienteFornecedor = new FormCadastroClienteFornecedor();   
-            frmClienteFornecedor.MdiParent= this;   
+            FormCadastroClienteFornecedor frmClienteFornecedor = new FormCadastroClienteFornecedor();
+            frmClienteFornecedor.MdiParent = this;
             frmClienteFornecedor.Show();
             new ClienteFornecedorController(frmClienteFornecedor);
         }
@@ -191,6 +191,14 @@ namespace ERPFacturacao
             frmBanco.MdiParent = this;
             frmBanco.Show();
             new BancoController(frmBanco);
+        }
+
+        private void productosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormCadastroProductoServico formCadastroProductoServico = new FormCadastroProductoServico();
+            formCadastroProductoServico.MdiParent = this;
+            formCadastroProductoServico.Show();
+            new CadastroProductoServico(formCadastroProductoServico);
         }
     }
 }

@@ -30,7 +30,23 @@ namespace ERPFacturacao.Service
 
         public Provincia findById(int? id)
         {
-            throw new NotImplementedException();
+            if (id == null || id.Value <= 0)
+            {
+                throw new ArgumentException("Invalid or missing ID parameter.");
+            }
+
+            Provincia result = null;
+
+            try
+            {
+                result = _context.Provincia.FirstOrDefault(m => m.Id == id);
+            }
+            catch (Exception ex)
+            {
+                throw new ApplicationException("An error occurred while fetching the data from the database.", ex);
+            }
+
+            return result;
         }
         public List<Provincia> findByPaisId(int? id)
         {
@@ -45,7 +61,8 @@ namespace ERPFacturacao.Service
 
         public void update(Provincia obj)
         {
-            throw new NotImplementedException();
+            var objOld = findById(obj.Id);
+            _context.Entry(objOld).CurrentValues.SetValues(obj);
         }
     }
 }

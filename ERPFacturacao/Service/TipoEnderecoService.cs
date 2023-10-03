@@ -30,7 +30,23 @@ namespace ERPFacturacao.Service
 
         public TipoEndereco findById(int? id)
         {
-            throw new NotImplementedException();
+            if (id == null || id.Value <= 0)
+            {
+                throw new ArgumentException("Invalid or missing ID parameter.");
+            }
+
+            TipoEndereco result = null;
+
+            try
+            {
+                result = _context.TipoEndereco.FirstOrDefault(m => m.Id == id);
+            }
+            catch (Exception ex)
+            {
+                throw new ApplicationException("An error occurred while fetching the data from the database.", ex);
+            }
+
+            return result;
         }
 
         public void insert(TipoEndereco obj)
@@ -41,7 +57,8 @@ namespace ERPFacturacao.Service
 
         public void update(TipoEndereco obj)
         {
-            throw new NotImplementedException();
+            var objOld = findById(obj.Id);
+            _context.Entry(objOld).CurrentValues.SetValues(obj);
         }
     }
 }

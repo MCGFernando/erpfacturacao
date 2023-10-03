@@ -30,7 +30,23 @@ namespace ERPFacturacao.Service
 
         public Pais findById(int? id)
         {
-            throw new NotImplementedException();
+            if (id == null || id.Value <= 0)
+            {
+                throw new ArgumentException("Invalid or missing ID parameter.");
+            }
+
+            Pais result = null;
+
+            try
+            {
+                result = _context.Pais.FirstOrDefault(m => m.Id == id);
+            }
+            catch (Exception ex)
+            {
+                throw new ApplicationException("An error occurred while fetching the data from the database.", ex);
+            }
+
+            return result;
         }
 
         public void insert(Pais obj)
@@ -41,7 +57,8 @@ namespace ERPFacturacao.Service
 
         public void update(Pais obj)
         {
-            throw new NotImplementedException();
+            var objOld = findById(obj.Id);
+            _context.Entry(objOld).CurrentValues.SetValues(obj);
         }
     }
 }

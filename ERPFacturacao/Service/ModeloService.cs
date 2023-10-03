@@ -1,6 +1,7 @@
 ﻿using ERPFacturacao.Data;
 using ERPFacturacao.Model;
 using ERPFacturacao.Service.impl;
+using System.Linq;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,6 +21,7 @@ namespace ERPFacturacao.Service
 
         public void delete(int id)
         {
+            findById(id);
             throw new NotImplementedException();
         }
 
@@ -30,18 +32,35 @@ namespace ERPFacturacao.Service
 
         public Modelo findById(int? id)
         {
-            throw new NotImplementedException();
-        }
+            if (id == null || id.Value <= 0)
+            {
+                throw new ArgumentException("Invalid or missing ID parameter.");
+            }
+
+            Modelo result = null;
+
+            try
+            {
+                result = _context.Modelo.FirstOrDefault(m => m.Id == id);
+            }
+            catch (Exception ex)
+            {
+                throw new ApplicationException("An error occurred while fetching the data from the database.", ex);
+            }
+
+            return result;
+    }
 
         public void insert(Modelo obj)
         {
-            _context.Add(obj);
+            _context.Modelo.Add(obj);
             _context.SaveChanges();
         }
 
         public void update(Modelo obj)
         {
-            throw new NotImplementedException();
+            var objOld = findById(obj.Id);
+            _context.Entry(objOld).CurrentValues.SetValues(obj);
         }
     }
 }

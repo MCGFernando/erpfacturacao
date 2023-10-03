@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <Folder Include="Model\ViewModel\" />
+    <Folder Include="Service\exceptions\" />
     <Folder Include="View\" />
   </ItemGroup>
 
