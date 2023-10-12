@@ -198,7 +198,7 @@ namespace ERPFacturacao
             FormCadastroProductoServico formCadastroProductoServico = new FormCadastroProductoServico();
             formCadastroProductoServico.MdiParent = this;
             formCadastroProductoServico.Show();
-            new CadastroProductoServico(formCadastroProductoServico);
+            new ArtigoController(formCadastroProductoServico);
         }
 
         private void fornecedoresToolStripMenuItem_Click(object sender, EventArgs e)

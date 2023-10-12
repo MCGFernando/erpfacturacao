@@ -9,11 +9,11 @@ using System.Threading.Tasks;
 
 namespace ERPFacturacao.Service
 {
-    public class CategoriaProductoServicoService : IRepository<CategoriaArtigo>
+    public class CategoriaArtigoService : IRepository<CategoriaArtigo>
     {
         private readonly EFContext _context;
 
-        public CategoriaProductoServicoService(EFContext context)
+        public CategoriaArtigoService(EFContext context)
         {
             _context = context;
         }

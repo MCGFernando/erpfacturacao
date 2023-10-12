@@ -130,7 +130,6 @@ namespace ERPFacturacao.Controller
 
         private void AdicionarBanco(object? sender, EventArgs e)
         {
-
             var banco = (Banco)this.frmClienteFornecedor.BancoComboBox.SelectedItem;
             string numeroConta = this.frmClienteFornecedor.NumeroContaTextBox;
             string iban = this.frmClienteFornecedor.IbanTextBox;
@@ -140,9 +139,6 @@ namespace ERPFacturacao.Controller
             string emailAlternativo = this.frmClienteFornecedor.EmailAlternantivoGestorTextBox;
             string telefone = this.frmClienteFornecedor.TelefoneGestorTextBox;
             string telefoneAlternativo = this.frmClienteFornecedor.TelefoneAlternativoGestorTextBox;
-
-
-
             this.frmClienteFornecedor.BancoDataGrid.Rows.Add(
                 banco.Id,
                 banco._Banco,
