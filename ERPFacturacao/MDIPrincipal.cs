@@ -208,5 +208,13 @@ namespace ERPFacturacao
             frmClienteFornecedor.Show();
             new ClienteFornecedorController(frmClienteFornecedor, Model.Enum.TipoClienteFornecedor.FORNECEDOR);
         }
+
+        private void productosToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            FormCadastroProductoServico formCadastroProductoServico = new FormCadastroProductoServico();
+            formCadastroProductoServico.MdiParent = this;
+            formCadastroProductoServico.Show();
+            new ArtigoController(formCadastroProductoServico);
+        }
     }
 }

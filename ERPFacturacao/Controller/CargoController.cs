@@ -32,6 +32,7 @@ namespace ERPFacturacao.Controller
 
         private void Listar(object? sender, EventArgs e)
         {
+            Console.WriteLine("Clicou");
             var lstCargo = _service.findAll();
             if (lstCargo.Count <= 0)
             {

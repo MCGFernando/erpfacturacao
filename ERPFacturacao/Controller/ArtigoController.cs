@@ -1,14 +1,22 @@
-﻿using System.Collections.Generic;
+﻿using ERPFacturacao.Data;
+using ERPFacturacao.Model;
+using ERPFacturacao.Model.Enum;
+using ERPFacturacao.Service;
+using System.Collections.Generic;
 
 namespace ERPFacturacao.Controller
 {
     internal class ArtigoController
     {
+        private readonly ArtigoService _service;
+        private readonly EFContext _context;
         private FormCadastroProductoServico formCadastroProductoServico;
 
         public ArtigoController(FormCadastroProductoServico formCadastroProductoServico)
         {
             this.formCadastroProductoServico = formCadastroProductoServico;
+            _context = new EFContext();
+            _service = new ArtigoService(_context);
             SetFormEvents();
         }
 
@@ -21,7 +29,33 @@ namespace ERPFacturacao.Controller
             
         }
 
-        private void Listar(object? sender, EventArgs e)
+        Artigo SetArtigoFromForm()
+        {
+            Artigo artigo = new ArtigoBuilder()
+                .SetCodigoArtigo(this.formCadastroProductoServico.CodigoArtidoTextBox)
+                .SetDescricao(this.formCadastroProductoServico.DescricaoTextBox)
+                .SetCodigoBarras(this.formCadastroProductoServico.CodigoBarraTextBox)
+                .SetMovimentaStock(this.formCadastroProductoServico.MovimentaCheckBox)
+                .SetDevolucao(this.formCadastroProductoServico.DevolucaoCheckBox)
+                .SetActivo(this.formCadastroProductoServico.ActivoCheckBox)
+                .SetDesconto(this.formCadastroProductoServico.DescontoTextBox != null ? double.Parse( this.formCadastroProductoServico.DescontoTextBox) : 0.0)
+                .SetPrecoCompra(this.formCadastroProductoServico.PrecoCompraTextBox != null ? double.Parse(this.formCadastroProductoServico.PrecoCompraTextBox):0.0)
+                //.SetCustoCompra(this.formCadastroProductoServico.)
+                .SetPrecoVenda(this.formCadastroProductoServico.PrecoVendaTextBox != null ? double.Parse(this.formCadastroProductoServico.PrecoVendaTextBox):0.0)
+                //.SetPeso(this.formCadastroProductoServico)
+                //.SetLargura()
+                //.SetAltura()
+                //.SetComprimento()
+                //.SetObservacao()
+                .SetFornecedorId(int.Parse(this.formCadastroProductoServico.FornecedorComboBox.SelectedValue.ToString()))
+                .SetTipoArtigo((TipoArtigo)this.formCadastroProductoServico.TipoArtigoComboBox.SelectedValue)
+                .SetTipoIVA((TipoIVA)this.formCadastroProductoServico.TipoIVAComboBox.SelectedValue)
+                .SetDataRegisto(DateTime.Now)
+                .Build();
+            return artigo;
+        }
+
+            private void Listar(object? sender, EventArgs e)
         {
             throw new NotImplementedException();
         }
@@ -38,7 +72,9 @@ namespace ERPFacturacao.Controller
 
         private void Gravar(object? sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            var artigo = SetArtigoFromForm();
+            _service.insert(artigo);
+            MessageBox.Show("Ok");
         }
     }
 }

@@ -1,4 +1,7 @@
-﻿using System;
+﻿using ERPFacturacao.Model;
+using ERPFacturacao.Model.Enum;
+using ERPFacturacao.Service;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +18,19 @@ namespace ERPFacturacao
         public FormCadastroProductoServico()
         {
             InitializeComponent();
+            cmbTipoArtigo.DataSource = Enum.GetValues(typeof(TipoArtigo));
+
+            FornecedorComboBox.DataSource = new FornecedorService(new Data.EFContext()).findAll();
+            FornecedorComboBox.DisplayMember = "Nome";
+            FornecedorComboBox.ValueMember = "Id";
+
+            TipoIVAComboBox.DataSource = new TipoIVAService(new Data.EFContext()).findAll();
+            TipoIVAComboBox.DisplayMember = "IVA";
+            TipoIVAComboBox.ValueMember = "Id";
+
+            CategoriaArtigoComboBox.DataSource = new CategoriaArtigoService(new Data.EFContext()).findAll();
+            CategoriaArtigoComboBox.DisplayMember = "Categoria";
+            CategoriaArtigoComboBox.ValueMember = "Id";
         }
         public string CodigoArtidoTextBox
         {

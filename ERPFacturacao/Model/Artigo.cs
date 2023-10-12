@@ -34,7 +34,7 @@ namespace ERPFacturacao.Model
         public int FornecedorId { get; set; }
         public Fornecedor Fornecedor { get; set; }//*
         public TipoIVA TipoIVA { get; set; }//*
-        public TipoArtigo TipoProductoServico { get; set; }//*
+        public TipoArtigo TipoArtigo { get; set; }//*
         public Modelo Modelo { get; set; }
         /*public Unidade Unidade { get; set; }
         public Unidade UnidadeCompra { get; set; }
