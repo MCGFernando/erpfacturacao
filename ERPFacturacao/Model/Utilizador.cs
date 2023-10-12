@@ -20,7 +20,7 @@ namespace ERPFacturacao.Model
         public string _Utilizador { get; set; }
         public string Senha { get; set; }
         public string Email { get; set; }
-        public Estado Estado { get; set; } = Estado.INACTIVO;
+        public bool Activo { get; set; } = false;
         public bool IsAdmin { get; set; } = false;
         public bool IsSu { get; set; } = false;
     }

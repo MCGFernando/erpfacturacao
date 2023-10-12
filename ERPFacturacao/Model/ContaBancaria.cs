@@ -13,7 +13,7 @@ namespace ERPFacturacao.Model
     {
         public int Id { get; set; }
         public int ClienteFonecedorId { get; set; }
-        public ClienteFonecedor ClienteFonecedor { get; set; }
+        public Cliente ClienteFonecedor { get; set; }
         public int BancoId { get; set; }
         public Banco Banco { get; set; }
         [Column("numero_conta")]

@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace ERPFacturacao.Service
 {
-    public class CategoriaProductoServicoService : IRepository<CategoriaProductoServico>
+    public class CategoriaProductoServicoService : IRepository<CategoriaArtigo>
     {
         private readonly EFContext _context;
 
@@ -23,19 +23,19 @@ namespace ERPFacturacao.Service
             throw new NotImplementedException();
         }
 
-        public List<CategoriaProductoServico> findAll()
+        public List<CategoriaArtigo> findAll()
         {
             return _context.CategoriaProductoServico.ToList();
         }
 
-        public CategoriaProductoServico findById(int? id)
+        public CategoriaArtigo findById(int? id)
         {
             if (id == null || id.Value <= 0)
             {
                 throw new ArgumentException("Invalid or missing ID parameter.");
             }
 
-            CategoriaProductoServico result = null;
+            CategoriaArtigo result = null;
 
             try
             {
@@ -49,13 +49,13 @@ namespace ERPFacturacao.Service
             return result;
         }
 
-        public void insert(CategoriaProductoServico obj)
+        public void insert(CategoriaArtigo obj)
         {
             _context.Add(obj);
             _context.SaveChanges();
         }
 
-        public void update(CategoriaProductoServico obj)
+        public void update(CategoriaArtigo obj)
         {
             var objOld = findById(obj.Id);
             _context.Entry(objOld).CurrentValues.SetValues(obj);

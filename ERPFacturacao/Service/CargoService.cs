@@ -51,12 +51,14 @@ namespace ERPFacturacao.Service
 
         public void insert(Cargo obj)
         {
+            obj.DataRegisto = DateTime.Now;
             _context.Cargo.Add(obj);
             _context.SaveChanges();
         }
 
         public void update(Cargo obj)
         {
+            obj.DataActualizacao = DateTime.Now;    
             var objOld = findById(obj.Id);
             _context.Entry(objOld).CurrentValues.SetValues(obj);
         }

@@ -4,11 +4,11 @@ using ERPFacturacao.Service.impl;
 
 namespace ERPFacturacao.Service
 {
-    internal class ClienteFornecedorService : IRepository<ClienteFonecedor>
+    public class FornecedorService : IRepository<Fornecedor>
     {
         private EFContext _context;
 
-        public ClienteFornecedorService(EFContext context)
+        public FornecedorService(EFContext context)
         {
             this._context = context;
         }
@@ -18,23 +18,23 @@ namespace ERPFacturacao.Service
             throw new NotImplementedException();
         }
 
-        public List<ClienteFonecedor> findAll()
+        public List<Fornecedor> findAll()
         {
-            return _context.ClienteFornecedor.ToList();
+            return _context.Fornecedor.ToList();
         }
 
-        public ClienteFonecedor findById(int? id)
+        public Fornecedor findById(int? id)
         {
             if (id == null || id.Value <= 0)
             {
                 throw new ArgumentException("Invalid or missing ID parameter.");
             }
 
-            ClienteFonecedor result = null;
+            Fornecedor result = null;
 
             try
             {
-                result = _context.ClienteFornecedor.FirstOrDefault(m => m.Id == id);
+                result = _context.Fornecedor.FirstOrDefault(m => m.Id == id);
             }
             catch (Exception ex)
             {
@@ -44,13 +44,13 @@ namespace ERPFacturacao.Service
             return result;
         }
 
-        public void insert(ClienteFonecedor obj)
+        public void insert(Fornecedor obj)
         {
             _context.Add(obj);
             _context.SaveChanges();
         }
 
-        public void update(ClienteFonecedor obj)
+        public void update(Fornecedor obj)
         {
             var objOld = findById(obj.Id);
             _context.Entry(objOld).CurrentValues.SetValues(obj);

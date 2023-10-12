@@ -4,19 +4,37 @@ using ERPFacturacao.Model.Enum;
 using ERPFacturacao.Service;
 using Microsoft.IdentityModel.Tokens;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace ERPFacturacao.Controller
 {
     internal class ClienteFornecedorController
     {
         private FormCadastroClienteFornecedor frmClienteFornecedor;
-        private readonly ClienteFornecedorService _service;
+        private readonly ClienteService _clitenService;
+        private readonly FornecedorService _fornecedorService;
+        private readonly ClienteForncedorServiceFactory _service;
         private readonly EFContext _context;
-        public ClienteFornecedorController(FormCadastroClienteFornecedor frmClienteFornecedor)
+        public ClienteFornecedorController(FormCadastroClienteFornecedor frmClienteFornecedor, TipoClienteFornecedor tipoClienteFornecedor)
         {
             this.frmClienteFornecedor = frmClienteFornecedor;
             _context = new EFContext();
-            _service = new ClienteFornecedorService(_context);
+            if (tipoClienteFornecedor == TipoClienteFornecedor.CLIENTE)
+            {
+                _service = new ClienteForncedorServiceFactory().PrepreClienteService(_context);
+            }
+            
+
+
+
+            SetFormEvents();
+            SetEnderecoDataGrid();
+            SetContactoDataGrid();
+            SetBancoDataGrid();
+        }
+
+        public void SetFormEvents() 
+        {
             this.frmClienteFornecedor.Gravar += Gravar;
             this.frmClienteFornecedor.Novo += Novo;
             this.frmClienteFornecedor.Editar += Editar;
@@ -25,7 +43,9 @@ namespace ERPFacturacao.Controller
             this.frmClienteFornecedor.AdicionarBanco += AdicionarBanco;
             this.frmClienteFornecedor.AdicionarContacto += AdicionarContacto;
             this.frmClienteFornecedor.AdicionarEndereco += AdicionarEndereco;
-
+        }
+        public void SetEnderecoDataGrid()
+        {
             this.frmClienteFornecedor.EnderecoDataGrid.Columns.Add("Id Tipo", "IdTipo");
             this.frmClienteFornecedor.EnderecoDataGrid.Columns.Add("Tipo", "Tipo");
             this.frmClienteFornecedor.EnderecoDataGrid.Columns.Add("Id Município", "IdMunicipio");
@@ -35,14 +55,18 @@ namespace ERPFacturacao.Controller
             this.frmClienteFornecedor.EnderecoDataGrid.Columns.Add("Bairro", "Bairro");
             this.frmClienteFornecedor.EnderecoDataGrid.Columns.Add("Cidade", "Cidade");
             this.frmClienteFornecedor.EnderecoDataGrid.Columns.Add("Referência", "Referencia");
-
+        }
+        public void SetContactoDataGrid()
+        {
             this.frmClienteFornecedor.ContactoDataGrid.Columns.Add("Id Tipo", "IdTipo");
             this.frmClienteFornecedor.ContactoDataGrid.Columns.Add("Tipo", "Tipo");
             this.frmClienteFornecedor.ContactoDataGrid.Columns.Add("Fixo", "Telefone");
             this.frmClienteFornecedor.ContactoDataGrid.Columns.Add("Telemóvel", "Telemovel");
             this.frmClienteFornecedor.ContactoDataGrid.Columns.Add("E-mail", "Email");
             this.frmClienteFornecedor.ContactoDataGrid.Columns.Add("Site", "Site");
-
+        }
+        public void SetBancoDataGrid()
+        {
             this.frmClienteFornecedor.BancoDataGrid.Columns.Add("ID Banco", "IdBanco");
             this.frmClienteFornecedor.BancoDataGrid.Columns.Add("Banco", "Banco");
             this.frmClienteFornecedor.BancoDataGrid.Columns.Add("Nº de Conta", "NumeroConta");
@@ -54,7 +78,6 @@ namespace ERPFacturacao.Controller
             this.frmClienteFornecedor.BancoDataGrid.Columns.Add("Telefone", "Telefone");
             this.frmClienteFornecedor.BancoDataGrid.Columns.Add("Telefone Alternativo", "TelefoneAlternativo");
         }
-
         private void AdicionarEndereco(object? sender, EventArgs e)
         {
 
@@ -153,19 +176,23 @@ namespace ERPFacturacao.Controller
 
         private void Gravar(object? sender, EventArgs e)
         {
-
-            var clienteFornecedor = new ClienteFonecedor();
+            var clienteFornecedor = SetClienteFonecedorFromForm();
+            _service.insert(clienteFornecedor);
+            MessageBox.Show("Ok");
+        }
+        Cliente SetClienteFonecedorFromForm()
+        {
+            Cliente clienteFornecedor = new ClienteFornecedorFactory().PrepreCliente();
 
             clienteFornecedor.Bi = this.frmClienteFornecedor.BITextBox;
             clienteFornecedor.ContribuinteOrigem = this.frmClienteFornecedor.ContribuiteOrigemTextBox;
-            clienteFornecedor.Cliente = true;
             clienteFornecedor.CodigoClienteFornecedor = this.frmClienteFornecedor.CodigoClienteFornecedorTextBox;
             clienteFornecedor.DataRegisto = DateTime.Now;
             clienteFornecedor.Desconto = this.frmClienteFornecedor.DescontoCheckBox;
-            clienteFornecedor.Estado = Model.Enum.Estado.ACTIVO;
+            
             clienteFornecedor.EstadoCivil = (EstadoCivil)this.frmClienteFornecedor.EstadoCivilComboBox.SelectedValue;
             clienteFornecedor.Genero = (Genero)this.frmClienteFornecedor.GeneroComboBox.SelectedValue;
-            clienteFornecedor.LimiteCredito = (this.frmClienteFornecedor.LimiteCreditoTextBox != null )
+            clienteFornecedor.LimiteCredito = (this.frmClienteFornecedor.LimiteCreditoTextBox != null)
                 || !(this.frmClienteFornecedor.LimiteCreditoTextBox.IsNullOrEmpty())
                 ? double.Parse(this.frmClienteFornecedor.LimiteCreditoTextBox) : 0;
             clienteFornecedor.Nacionalidade = this.frmClienteFornecedor.NacionalidadeTextBox;
@@ -184,11 +211,19 @@ namespace ERPFacturacao.Controller
             clienteFornecedor.PaisId = int.Parse(this.frmClienteFornecedor.cmbPaisDadoFiscalComboBox.SelectedValue.ToString());
             clienteFornecedor.RamoActividadeId = int.Parse(this.frmClienteFornecedor.RamoActividadeComboBox.SelectedValue.ToString());
 
+            var validationContext = new ValidationContext(clienteFornecedor, serviceProvider: null, items: null);
+            var validationResults = new List<ValidationResult>();
 
-            _service.insert(clienteFornecedor);
-            MessageBox.Show("Ok");
+            if (!Validator.TryValidateObject(clienteFornecedor, validationContext, validationResults, validateAllProperties: true))
+            {
+                foreach (var validationResult in validationResults)
+                {
+                    MessageBox.Show(validationResult.ErrorMessage);
+                    clienteFornecedor = null;
+                }
+            }
+            return clienteFornecedor;
         }
-
         public List<ContaBancaria> GetBancosFromDataGrid()
         {
             List<ContaBancaria> lstContaBancaria = new List<ContaBancaria>();

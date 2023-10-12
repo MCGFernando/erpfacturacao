@@ -29,14 +29,15 @@ namespace ERPFacturacao.Data
         public DbSet<RamoActividade> RamoActividade { get; set; }
         public DbSet<TipoContacto> TipoContacto { get; set; }
         public DbSet<TipoEndereco> TipoEndereco { get; set; }
-        public DbSet<ClienteFonecedor> ClienteFornecedor { get; set; }
-        public DbSet<CategoriaProductoServico> CategoriaProductoServico { get; set; }
+        public DbSet<Cliente> Cliente { get; set; }
+        public DbSet<Fornecedor> Fornecedor { get; set; }
+        public DbSet<CategoriaArtigo> CategoriaProductoServico { get; set; }
         public DbSet<Marca> Marca { get; set; }
         public DbSet<Modelo> Modelo { get; set; }
         public DbSet<TipoIVA> TipoIVA { get; set; }
-        public DbSet<TipoProductoServico> TipoProductoServico{ get; set; }
+        public DbSet<TipoArtigo> TipoProductoServico{ get; set; }
         public DbSet<Unidade> Unidade { get; set; }
-        public DbSet<ProductoServico> ProductoServico { get; set; }
+        public DbSet<Artigo> ProductoServico { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.

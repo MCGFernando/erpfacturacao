@@ -1,21 +1,16 @@
 ﻿using ERPFacturacao.Data;
 using ERPFacturacao.Model;
 using ERPFacturacao.Service.impl;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ERPFacturacao.Service
 {
-    public class ProductoServicoService : IRepository<Artigo>
+    public class ClienteService : IRepository<Cliente>
     {
-        private readonly EFContext _context;
+        private EFContext _context;
 
-        public ProductoServicoService(EFContext context)
+        public ClienteService(EFContext context)
         {
-            _context = context;
+            this._context = context;
         }
 
         public void delete(int id)
@@ -23,23 +18,23 @@ namespace ERPFacturacao.Service
             throw new NotImplementedException();
         }
 
-        public List<Artigo> findAll()
+        public List<Cliente> findAll()
         {
-            return _context.ProductoServico.ToList();
+            return _context.Cliente.ToList();
         }
 
-        public Artigo findById(int? id)
+        public Cliente findById(int? id)
         {
             if (id == null || id.Value <= 0)
             {
                 throw new ArgumentException("Invalid or missing ID parameter.");
             }
 
-            Artigo result = null;
+            Cliente result = null;
 
             try
             {
-                result = _context.ProductoServico.FirstOrDefault(m => m.Id == id);
+                result = _context.Cliente.FirstOrDefault(m => m.Id == id);
             }
             catch (Exception ex)
             {
@@ -49,13 +44,13 @@ namespace ERPFacturacao.Service
             return result;
         }
 
-        public void insert(Artigo obj)
+        public void insert(Cliente obj)
         {
-            _context.Add(obj);  
+            _context.Add(obj);
             _context.SaveChanges();
         }
 
-        public void update(Artigo obj)
+        public void update(Cliente obj)
         {
             var objOld = findById(obj.Id);
             _context.Entry(objOld).CurrentValues.SetValues(obj);

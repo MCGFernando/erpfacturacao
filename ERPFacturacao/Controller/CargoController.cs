@@ -2,6 +2,8 @@
 using ERPFacturacao.Data;
 using ERPFacturacao.Model;
 using ERPFacturacao.Service;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.ChangeTracking;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -77,17 +79,20 @@ namespace ERPFacturacao.Controller
             {
                 return;
             }
-             
-            if (string.IsNullOrEmpty(this.frmCargo.IDTextBox))
+            
+
+
+
+            if (cargo.Id == 0 || cargo.Id == null)
             {
-                cargo.DataRegisto = DateTime.Now;
                 _service.insert(cargo);
+                Novo(sender, e);
                 MessageBox.Show("Inserido com sucesso");
             }
-            else
+            else 
             {
-                cargo.DataActualizacao = DateTime.Now;
                 _service.update(cargo);
+                Novo(sender, e);
                 MessageBox.Show("actualizado com sucesso");
             }
             

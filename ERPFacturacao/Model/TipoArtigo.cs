@@ -8,13 +8,11 @@ using System.Threading.Tasks;
 
 namespace ERPFacturacao.Model
 {
-    public class CategoriaProductoServico
+    public class TipoArtigo
     {
         public int Id { get; set; }
-        public string Categoria { get; set; }
-        public string Descricao { get; set; }
-        public int CategoraPai { get; set; }
-        public int NivelIdentacao { get; set; }
+        public string _TipoArtigo { get; set; }
+        public TipoFiscalArtigo TipoFiscalProductoServico { get; set; }
         [Column("data_registo")]
         public DateTime DataRegisto { get; set; }
         [Column("data_actualizacao")]

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace ERPFacturacao.Service.impl
 {
-    public class TipoProductoServicoService : IRepository<TipoProductoServico>
+    public class TipoProductoServicoService : IRepository<TipoArtigo>
     {
         private readonly EFContext _context;
 
@@ -22,23 +22,23 @@ namespace ERPFacturacao.Service.impl
             throw new NotImplementedException();
         }
 
-        public List<TipoProductoServico> findAll()
+        public List<TipoArtigo> findAll()
         {
             return _context.TipoProductoServico.ToList();
         }
 
-        public TipoProductoServico findById(int? id)
+        public TipoArtigo findById(int? id)
         {
             throw new NotImplementedException();
         }
 
-        public void insert(TipoProductoServico obj)
+        public void insert(TipoArtigo obj)
         {
             _context.Add(obj);
             _context.SaveChanges();
         }
 
-        public void update(TipoProductoServico obj)
+        public void update(TipoArtigo obj)
         {
             throw new NotImplementedException();
         }

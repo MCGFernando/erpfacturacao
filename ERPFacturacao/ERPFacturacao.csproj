@@ -9,6 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Folder Include="Controller\Util\" />
     <Folder Include="Model\ViewModel\" />
     <Folder Include="Service\exceptions\" />
     <Folder Include="View\" />

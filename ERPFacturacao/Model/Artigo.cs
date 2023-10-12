@@ -7,17 +7,19 @@ using System.Threading.Tasks;
 
 namespace ERPFacturacao.Model
 {
-    public class ProductoServico
+    [Serializable]
+    [Table("productos_servicos")]
+    public class Artigo
     {
         public int Id { get; set; }
-        public string _ProductoServico { get; set; }
-        public string Descricao { get; set; }
-        public string CodigoBarras { get; set; }
+        public string _ProductoServico { get; set; }//*
+        public string Descricao { get; set; }//*
+        public string CodigoBarras { get; set; }//*
 
-        
 
-        public bool MovimentaStock { get; set; }
-        public bool Devolucao { get; set; }
+
+        public bool MovimentaStock { get; set; }//*
+        public bool Devolucao { get; set; }//*
         public int Garantia { get; set; }
         public double Desconto { get; set; }
         public double PrecoCompra { get; set; }
@@ -28,10 +30,10 @@ namespace ERPFacturacao.Model
         public string Altura { get; set; }
         public string Comprimento { get; set; }
         public string Observacao { get; set; }
-        
-
+        public int FornecedorId { get; set; }
+        public Fornecedor Fornecedor { get; set; }
         public TipoIVA TipoIVA { get; set; }
-        public TipoProductoServico TipoProductoServico { get; set; }
+        public TipoArtigo TipoProductoServico { get; set; }
         public Modelo Modelo { get; set; }
         public Unidade Unidade { get; set; }
         public Unidade UnidadeCompra { get; set; }

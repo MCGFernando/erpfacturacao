@@ -6,11 +6,9 @@ using System.Threading.Tasks;
 
 namespace ERPFacturacao.Model.Enum
 {
-    public enum TipoFiscalProductoServico : int
+    public enum TipoClienteFornecedor : int
     {
-        PRODUCTO = 1,
-        SERVICO = 2,
-        OUTROS = 3,
-        IMPOSTOS_ESPECIAIS = 4
+        CLIENTE = 1,
+        FORNECEDOR = 2,
     }
 }

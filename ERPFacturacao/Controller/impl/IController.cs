@@ -9,10 +9,10 @@ namespace ERPFacturacao.Controller.impl
 {
     internal interface IController<T>
     {
-        void Listar(object? sender, EventArgs e);
-        void Editar(object? sender, EventArgs e);
-        void Novo(object? sender, EventArgs e);
-        void Gravar(object? sender, EventArgs e);
-        T SetCargoFromForm();
+        protected void Listar(object? sender, EventArgs e);
+        protected void Editar(object? sender, EventArgs e);
+        protected void Novo(object? sender, EventArgs e);
+        protected void Gravar(object? sender, EventArgs e);
+        protected T SetCargoFromForm();
     }
 }

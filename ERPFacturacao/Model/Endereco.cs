@@ -17,13 +17,14 @@ namespace ERPFacturacao.Model
         public int? MunicipioId { get; set; }
         public Municipio? Municipio { get; set; }
         public int ClienteFonecedorId { get; set; }
-        public ClienteFonecedor ClienteFonecedor { get; set; }
+        public Cliente ClienteFonecedor { get; set; }
         [Column("endereco")]
         public string _Endereco { get; set; }
         public string? Rua { get; set; }
         public string? Bairro { get; set; }
         public string? Cidade { get; set; }
         public string? Referencia { get; set; }
+        public string? CodigoPostal { get; set; }
         [Column("data_registo")]
         public DateTime DataRegisto { get; set; }
         [Column("data_actualizacao")]
