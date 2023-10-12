@@ -35,11 +35,11 @@ namespace ERPFacturacao.Model
         public TipoIVA TipoIVA { get; set; }
         public TipoArtigo TipoProductoServico { get; set; }
         public Modelo Modelo { get; set; }
-        public Unidade Unidade { get; set; }
+        /*public Unidade Unidade { get; set; }
         public Unidade UnidadeCompra { get; set; }
         public Unidade UnidadeVenda { get; set; }
         public Unidade UnidadeEntrada { get; set; }
-        public Unidade UnidadeSaida { get; set; }
+        public Unidade UnidadeSaida { get; set; }*/
 
         [Column("data_registo")]
         public DateTime DataRegisto { get; set; }

@@ -166,7 +166,7 @@ namespace ERPFacturacao
             FormCadastroClienteFornecedor frmClienteFornecedor = new FormCadastroClienteFornecedor();
             frmClienteFornecedor.MdiParent = this;
             frmClienteFornecedor.Show();
-            new ClienteFornecedorController(frmClienteFornecedor);
+            new ClienteFornecedorController(frmClienteFornecedor, Model.Enum.TipoClienteFornecedor.CLIENTE);
         }
 
         private void tipoContactoToolStripMenuItem_Click(object sender, EventArgs e)
@@ -199,6 +199,14 @@ namespace ERPFacturacao
             formCadastroProductoServico.MdiParent = this;
             formCadastroProductoServico.Show();
             new CadastroProductoServico(formCadastroProductoServico);
+        }
+
+        private void fornecedoresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormCadastroClienteFornecedor frmClienteFornecedor = new FormCadastroClienteFornecedor();
+            frmClienteFornecedor.MdiParent = this;
+            frmClienteFornecedor.Show();
+            new ClienteFornecedorController(frmClienteFornecedor, Model.Enum.TipoClienteFornecedor.FORNECEDOR);
         }
     }
 }

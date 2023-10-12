@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace ERPFacturacao.Model
 {
-    public abstract class AbstractClienteFornecedor
+    public interface IClienteFornecedorCreator
     {
-        public abstract Cliente PrepreCliente();
+        ClienteFornecedor CreateClienteFornecedor();
 
-        public abstract Fornecedor PrepreFornecedor();
+        
         
     }
 }

@@ -46,7 +46,7 @@ namespace ERPFacturacao.Service
 
         public void insert(Fornecedor obj)
         {
-            _context.Add(obj);
+            _context.Fornecedor.Add(obj);
             _context.SaveChanges();
         }
 

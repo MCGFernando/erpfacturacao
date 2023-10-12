@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ERPFacturacao.Model
 {
-    public class ClienteFornecedor
+    public abstract class ClienteFornecedor
     {
         public int Id { get; set; }
         public string Nome { get; set; }

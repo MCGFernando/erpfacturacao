@@ -12,16 +12,23 @@ namespace ERPFacturacao.Controller
     {
         private FormCadastroClienteFornecedor frmClienteFornecedor;
         private readonly ClienteService _clitenService;
+        private  IClienteFornecedorCreator creator;
         private readonly FornecedorService _fornecedorService;
         private readonly ClienteForncedorServiceFactory _service;
         private readonly EFContext _context;
+        private readonly TipoClienteFornecedor _tipoClienteFornecedor;
         public ClienteFornecedorController(FormCadastroClienteFornecedor frmClienteFornecedor, TipoClienteFornecedor tipoClienteFornecedor)
         {
             this.frmClienteFornecedor = frmClienteFornecedor;
+            _tipoClienteFornecedor = tipoClienteFornecedor;
             _context = new EFContext();
-            if (tipoClienteFornecedor == TipoClienteFornecedor.CLIENTE)
+            if (_tipoClienteFornecedor == TipoClienteFornecedor.CLIENTE)
             {
-                _service = new ClienteForncedorServiceFactory().PrepreClienteService(_context);
+                _clitenService = new ClienteForncedorServiceFactory().PrepreClienteService(_context);
+            }
+            else
+            {
+                _fornecedorService = new ClienteForncedorServiceFactory().PrepreFornecedorService(_context);
             }
             
 
@@ -177,16 +184,96 @@ namespace ERPFacturacao.Controller
         private void Gravar(object? sender, EventArgs e)
         {
             var clienteFornecedor = SetClienteFonecedorFromForm();
-            _service.insert(clienteFornecedor);
+            if (_tipoClienteFornecedor == TipoClienteFornecedor.CLIENTE)
+            {
+                Cliente cliente = (Cliente)clienteFornecedor;
+                _clitenService.insert(cliente);
+            }
+            else
+            {
+                Fornecedor fornecedor = (Fornecedor)clienteFornecedor;
+                _fornecedorService.insert(fornecedor);
+            }
+                
             MessageBox.Show("Ok");
         }
-        Cliente SetClienteFonecedorFromForm()
+        ClienteFornecedor SetClienteFonecedorFromForm()
         {
-            Cliente clienteFornecedor = new ClienteFornecedorFactory().PrepreCliente();
+            if (_tipoClienteFornecedor == TipoClienteFornecedor.CLIENTE)
+            {
+                creator = new ClienteCreator();
+            }
+            else
+            {
+                creator = new FornecedorCreator();
+            }
+            ClienteFornecedor clienteFornecedor = creator.CreateClienteFornecedor();
+            
+            if (clienteFornecedor is Cliente)
+            {
+                Cliente cliente = new ClienteBuilder()
+                    .SetBi(this.frmClienteFornecedor.BITextBox)
+                    .SetContribuinteOrigem(this.frmClienteFornecedor.ContribuiteOrigemTextBox)
+                    .SetCodigoCliente(this.frmClienteFornecedor.CodigoClienteFornecedorTextBox)
+                    .SetDataRegisto(DateTime.Now)
+                    .SetDesconto(this.frmClienteFornecedor.DescontoCheckBox)
+                    .SetEstadoCivil((EstadoCivil)this.frmClienteFornecedor.EstadoCivilComboBox.SelectedValue)
+                    .SetGenero((Genero)this.frmClienteFornecedor.GeneroComboBox.SelectedValue)
+                    .SetLimiteCredito((this.frmClienteFornecedor.LimiteCreditoTextBox != null) || !(this.frmClienteFornecedor.LimiteCreditoTextBox.IsNullOrEmpty())
+                ? double.Parse(this.frmClienteFornecedor.LimiteCreditoTextBox) : 0.0)
+                    .SetNacionalidade(this.frmClienteFornecedor.NacionalidadeTextBox)
+                    .SetNaturalidade(this.frmClienteFornecedor.NaturalidadeTextBox)
+                    .SetNif(this.frmClienteFornecedor.NumeroContribuinteTextBox)
+                    .SetNome(this.frmClienteFornecedor.NomeTextBox)
+                    .SetNomeFiscal(this.frmClienteFornecedor.NomeFiscalTextBox)
+                    .SetObs(this.frmClienteFornecedor.ObservacoTextBox)
+                    .SetPrazoEntrega(this.frmClienteFornecedor.PrazoEntregaTextBox != null ? int.Parse(this.frmClienteFornecedor.PrazoEntregaTextBox) : 0)
+                    .SetTipoContribuinte((TipoContribuinte)this.frmClienteFornecedor.TipoContribuinteComboBox.SelectedValue)
+                    .SetValorDesconto(this.frmClienteFornecedor.ValorDescontoTextBox != null ? double.Parse(this.frmClienteFornecedor.ValorDescontoTextBox) : 0.0)
+                    .SetContasBancarias(GetBancosFromDataGrid())
+                    .SetContactos(GetContactosFromDataGrid())
+                    .SetEnderecos(GetEnderecsFromDataGrid())
+                    .SetPaisId(int.Parse(this.frmClienteFornecedor.cmbPaisDadoFiscalComboBox.SelectedValue.ToString()))
+                    .SetRamoActividadeId(int.Parse(this.frmClienteFornecedor.RamoActividadeComboBox.SelectedValue.ToString()))
+                    .Build();
+                clienteFornecedor = cliente;
 
-            clienteFornecedor.Bi = this.frmClienteFornecedor.BITextBox;
+            } else
+            {
+                Fornecedor fornecedor = new FornecedorBuilder()
+                    .SetBi(this.frmClienteFornecedor.BITextBox)
+                    .SetContribuinteOrigem(this.frmClienteFornecedor.ContribuiteOrigemTextBox)
+                    .SetCodigoFornecedor(this.frmClienteFornecedor.CodigoClienteFornecedorTextBox)
+                    .SetDataRegisto(DateTime.Now)
+                    .SetDesconto(this.frmClienteFornecedor.DescontoCheckBox)
+                    .SetEstadoCivil((EstadoCivil)this.frmClienteFornecedor.EstadoCivilComboBox.SelectedValue)
+                    .SetGenero((Genero)this.frmClienteFornecedor.GeneroComboBox.SelectedValue)
+                    .SetLimiteCredito((this.frmClienteFornecedor.LimiteCreditoTextBox != null) || !(this.frmClienteFornecedor.LimiteCreditoTextBox.IsNullOrEmpty())
+                ? double.Parse(this.frmClienteFornecedor.LimiteCreditoTextBox) : 0.0)
+                    .SetNacionalidade(this.frmClienteFornecedor.NacionalidadeTextBox)
+                    .SetNaturalidade(this.frmClienteFornecedor.NaturalidadeTextBox)
+                    .SetNif(this.frmClienteFornecedor.NumeroContribuinteTextBox)
+                    .SetNome(this.frmClienteFornecedor.NomeTextBox)
+                    .SetNomeFiscal(this.frmClienteFornecedor.NomeFiscalTextBox)
+                    .SetObs(this.frmClienteFornecedor.ObservacoTextBox)
+                    .SetPrazoEntrega(this.frmClienteFornecedor.PrazoEntregaTextBox != null ? int.Parse(this.frmClienteFornecedor.PrazoEntregaTextBox) : 0)
+                    .SetTipoContribuinte((TipoContribuinte)this.frmClienteFornecedor.TipoContribuinteComboBox.SelectedValue)
+                    .SetValorDesconto(this.frmClienteFornecedor.ValorDescontoTextBox != null ? double.Parse(this.frmClienteFornecedor.ValorDescontoTextBox) : 0.0)
+                    .SetContasBancarias(GetBancosFromDataGrid())
+                    .SetContactos(GetContactosFromDataGrid())
+                    .SetEnderecos(GetEnderecsFromDataGrid())
+                    .SetPaisId(int.Parse(this.frmClienteFornecedor.cmbPaisDadoFiscalComboBox.SelectedValue.ToString()))
+                    .SetRamoActividadeId(int.Parse(this.frmClienteFornecedor.RamoActividadeComboBox.SelectedValue.ToString()))
+                    .Build();
+                clienteFornecedor = fornecedor;
+            }
+
+
+            /*clienteFornecedor.Bi = this.frmClienteFornecedor.BITextBox;
             clienteFornecedor.ContribuinteOrigem = this.frmClienteFornecedor.ContribuiteOrigemTextBox;
-            clienteFornecedor.CodigoClienteFornecedor = this.frmClienteFornecedor.CodigoClienteFornecedorTextBox;
+
+
+            clienteFornecedor.CodigoCliente = this.frmClienteFornecedor.CodigoClienteFornecedorTextBox;
             clienteFornecedor.DataRegisto = DateTime.Now;
             clienteFornecedor.Desconto = this.frmClienteFornecedor.DescontoCheckBox;
             
@@ -194,7 +281,7 @@ namespace ERPFacturacao.Controller
             clienteFornecedor.Genero = (Genero)this.frmClienteFornecedor.GeneroComboBox.SelectedValue;
             clienteFornecedor.LimiteCredito = (this.frmClienteFornecedor.LimiteCreditoTextBox != null)
                 || !(this.frmClienteFornecedor.LimiteCreditoTextBox.IsNullOrEmpty())
-                ? double.Parse(this.frmClienteFornecedor.LimiteCreditoTextBox) : 0;
+                ? double.Parse(this.frmClienteFornecedor.LimiteCreditoTextBox) : 0.0;
             clienteFornecedor.Nacionalidade = this.frmClienteFornecedor.NacionalidadeTextBox;
             clienteFornecedor.Naturalidade = this.frmClienteFornecedor.NaturalidadeTextBox;
             clienteFornecedor.Nif = this.frmClienteFornecedor.NumeroContribuinteTextBox;
@@ -221,7 +308,7 @@ namespace ERPFacturacao.Controller
                     MessageBox.Show(validationResult.ErrorMessage);
                     clienteFornecedor = null;
                 }
-            }
+            }*/
             return clienteFornecedor;
         }
         public List<ContaBancaria> GetBancosFromDataGrid()

@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace ERPFacturacao.Model
 {
-    public class ClienteFornecedorFactory : AbstractClienteFornecedor
+    public class ClienteFornecedorFactory //: IClienteFornecedorCreator
     {
-        public override Cliente PrepreCliente()
+        /*public override Cliente PrepreCliente()
         {
             return new Cliente();
         }
@@ -16,6 +16,6 @@ namespace ERPFacturacao.Model
         public override Fornecedor PrepreFornecedor()
         {
             return new Fornecedor();
-        }
+        }*/
     }
 }

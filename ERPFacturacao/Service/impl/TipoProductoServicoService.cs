@@ -24,7 +24,7 @@ namespace ERPFacturacao.Service.impl
 
         public List<TipoArtigo> findAll()
         {
-            return _context.TipoProductoServico.ToList();
+            return _context.TipoArtigo.ToList();
         }
 
         public TipoArtigo findById(int? id)

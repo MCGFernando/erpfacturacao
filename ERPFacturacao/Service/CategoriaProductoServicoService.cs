@@ -25,7 +25,7 @@ namespace ERPFacturacao.Service
 
         public List<CategoriaArtigo> findAll()
         {
-            return _context.CategoriaProductoServico.ToList();
+            return _context.CategoriaArtigo.ToList();
         }
 
         public CategoriaArtigo findById(int? id)
@@ -39,7 +39,7 @@ namespace ERPFacturacao.Service
 
             try
             {
-                result = _context.CategoriaProductoServico.FirstOrDefault(m => m.Id == id);
+                result = _context.CategoriaArtigo.FirstOrDefault(m => m.Id == id);
             }
             catch (Exception ex)
             {
