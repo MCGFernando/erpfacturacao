@@ -12,8 +12,10 @@ namespace ERPFacturacao.Model
     public class ContaBancaria
     {
         public int Id { get; set; }
-        public int ClienteFonecedorId { get; set; }
-        public Cliente ClienteFonecedor { get; set; }
+        public int? ClienteId { get; set; }
+        public Cliente? Cliente { get; set; }
+        public int? FornecedorId { get; set; }
+        public Fornecedor? Fornecedor { get; set; }
         public int BancoId { get; set; }
         public Banco Banco { get; set; }
         [Column("numero_conta")]

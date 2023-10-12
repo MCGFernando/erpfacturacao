@@ -13,8 +13,10 @@ namespace ERPFacturacao.Model
         public int Id { get; set; }
         public int TipoContactoId { get; set; }
         public TipoContacto TipoContacto { get; set; }
-        public int ClienteFonecedorId { get; set; }
-        public Cliente ClienteFonecedor { get; set; }
+        public int? ClienteId { get; set; }
+        public Cliente? Cliente { get; set; }
+        public int? FornecedorId { get; set; }
+        public Fornecedor? Fornecedor { get; set; }
         public string? Telefone { get; set; }
         public string? Telemovel { get; set; }
         public string? Email { get; set; }

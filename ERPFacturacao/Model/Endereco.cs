@@ -16,8 +16,10 @@ namespace ERPFacturacao.Model
         public TipoEndereco? TipoEndereco { get; set; }
         public int? MunicipioId { get; set; }
         public Municipio? Municipio { get; set; }
-        public int ClienteFonecedorId { get; set; }
-        public Cliente ClienteFonecedor { get; set; }
+        public int? ClienteId { get; set; }
+        public Cliente? Cliente { get; set; }
+        public int? FornecedorId { get; set; }
+        public Fornecedor? Fornecedor { get; set; }
         [Column("endereco")]
         public string _Endereco { get; set; }
         public string? Rua { get; set; }
