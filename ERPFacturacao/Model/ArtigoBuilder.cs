@@ -134,7 +134,11 @@ namespace ERPFacturacao.Model
             artigo.TipoIVA = tipoIVA;
             return this;
         }
-
+        public ArtigoBuilder SetTipoArtigoId(int tipoArtigoId)
+        {
+            artigo.TipoArtigoId = tipoArtigoId;
+            return this;
+        }
         public ArtigoBuilder SetTipoArtigo(TipoArtigo tipoArtigo)
         {
             artigo.TipoArtigo = tipoArtigo;

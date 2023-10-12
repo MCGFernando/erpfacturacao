@@ -4,6 +4,7 @@ using ERPFacturacao.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ERPFacturacao.Migrations
 {
     [DbContext(typeof(EFContext))]
-    partial class EFContextModelSnapshot : ModelSnapshot
+    [Migration("20231012232708_Cadastro_Producto")]
+    partial class Cadastro_Producto
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -30,10 +33,11 @@ namespace ERPFacturacao.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<bool?>("Activo")
+                    b.Property<bool>("Activo")
                         .HasColumnType("bit");
 
                     b.Property<string>("Altura")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("CodigoArtigo")
@@ -41,12 +45,14 @@ namespace ERPFacturacao.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("CodigoBarras")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Comprimento")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<double?>("CustoCompra")
+                    b.Property<double>("CustoCompra")
                         .HasColumnType("float");
 
                     b.Property<DateTime?>("DataActualizacao")
@@ -61,47 +67,49 @@ namespace ERPFacturacao.Migrations
                         .HasColumnType("datetime2")
                         .HasColumnName("data_registo");
 
-                    b.Property<double?>("Desconto")
+                    b.Property<double>("Desconto")
                         .HasColumnType("float");
 
                     b.Property<string>("Descricao")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<bool?>("Devolucao")
+                    b.Property<bool>("Devolucao")
                         .HasColumnType("bit");
 
-                    b.Property<int?>("FornecedorId")
+                    b.Property<int>("FornecedorId")
                         .HasColumnType("int");
 
-                    b.Property<int?>("Garantia")
+                    b.Property<int>("Garantia")
                         .HasColumnType("int");
 
                     b.Property<string>("Largura")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("ModeloId")
+                    b.Property<int>("ModeloId")
                         .HasColumnType("int");
 
-                    b.Property<bool?>("MovimentaStock")
+                    b.Property<bool>("MovimentaStock")
                         .HasColumnType("bit");
 
                     b.Property<string>("Observacao")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<double?>("Peso")
+                    b.Property<double>("Peso")
                         .HasColumnType("float");
 
-                    b.Property<double?>("PrecoCompra")
+                    b.Property<double>("PrecoCompra")
                         .HasColumnType("float");
 
-                    b.Property<double?>("PrecoVenda")
+                    b.Property<double>("PrecoVenda")
                         .HasColumnType("float");
 
                     b.Property<int>("TipoArtigoId")
                         .HasColumnType("int");
 
-                    b.Property<int?>("TipoIVAId")
+                    b.Property<int>("TipoIVAId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
@@ -114,7 +122,7 @@ namespace ERPFacturacao.Migrations
 
                     b.HasIndex("TipoIVAId");
 
-                    b.ToTable("artigos");
+                    b.ToTable("productos_servicos");
                 });
 
             modelBuilder.Entity("ERPFacturacao.Model.Banco", b =>
@@ -1087,11 +1095,15 @@ namespace ERPFacturacao.Migrations
                 {
                     b.HasOne("ERPFacturacao.Model.Fornecedor", "Fornecedor")
                         .WithMany()
-                        .HasForeignKey("FornecedorId");
+                        .HasForeignKey("FornecedorId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("ERPFacturacao.Model.Modelo", "Modelo")
                         .WithMany()
-                        .HasForeignKey("ModeloId");
+                        .HasForeignKey("ModeloId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("ERPFacturacao.Model.TipoArtigo", "TipoArtigo")
                         .WithMany()
@@ -1101,7 +1113,9 @@ namespace ERPFacturacao.Migrations
 
                     b.HasOne("ERPFacturacao.Model.TipoIVA", "TipoIVA")
                         .WithMany()
-                        .HasForeignKey("TipoIVAId");
+                        .HasForeignKey("TipoIVAId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Fornecedor");
 

@@ -60,9 +60,9 @@
             sectoresToolStripMenuItem = new ToolStripMenuItem();
             formularioTesteToolStripMenuItem = new ToolStripMenuItem();
             paisesToolStripMenuItem = new ToolStripMenuItem();
-            paísToolStripMenuItem = new ToolStripMenuItem();
-            provínciaToolStripMenuItem = new ToolStripMenuItem();
-            municípioToolStripMenuItem = new ToolStripMenuItem();
+            paisToolStripMenuItem = new ToolStripMenuItem();
+            provinciaToolStripMenuItem = new ToolStripMenuItem();
+            municipioToolStripMenuItem = new ToolStripMenuItem();
             ramoDeActividadeToolStripMenuItem = new ToolStripMenuItem();
             moedaToolStripMenuItem = new ToolStripMenuItem();
             tipoContactoToolStripMenuItem = new ToolStripMenuItem();
@@ -225,7 +225,7 @@
             // productosToolStripMenuItem
             // 
             productosToolStripMenuItem.Name = "productosToolStripMenuItem";
-            productosToolStripMenuItem.Size = new Size(180, 22);
+            productosToolStripMenuItem.Size = new Size(128, 22);
             productosToolStripMenuItem.Text = "Productos";
             productosToolStripMenuItem.Click += productosToolStripMenuItem_Click_1;
             // 
@@ -266,6 +266,7 @@
             cargoToolStripMenuItem.Name = "cargoToolStripMenuItem";
             cargoToolStripMenuItem.Size = new Size(180, 22);
             cargoToolStripMenuItem.Text = "Cargos";
+            cargoToolStripMenuItem.Click += cargoToolStripMenuItem_Click_1;
             // 
             // sectoresToolStripMenuItem
             // 
@@ -281,58 +282,66 @@
             // 
             // paisesToolStripMenuItem
             // 
-            paisesToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { paísToolStripMenuItem, provínciaToolStripMenuItem, municípioToolStripMenuItem });
+            paisesToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { paisToolStripMenuItem, provinciaToolStripMenuItem, municipioToolStripMenuItem });
             paisesToolStripMenuItem.Name = "paisesToolStripMenuItem";
             paisesToolStripMenuItem.Size = new Size(180, 22);
             paisesToolStripMenuItem.Text = "Paises";
             // 
-            // paísToolStripMenuItem
+            // paisToolStripMenuItem
             // 
-            paísToolStripMenuItem.Name = "paísToolStripMenuItem";
-            paísToolStripMenuItem.Size = new Size(128, 22);
-            paísToolStripMenuItem.Text = "País";
+            paisToolStripMenuItem.Name = "paisToolStripMenuItem";
+            paisToolStripMenuItem.Size = new Size(180, 22);
+            paisToolStripMenuItem.Text = "País";
+            paisToolStripMenuItem.Click += paisToolStripMenuItem_Click;
             // 
-            // provínciaToolStripMenuItem
+            // provinciaToolStripMenuItem
             // 
-            provínciaToolStripMenuItem.Name = "provínciaToolStripMenuItem";
-            provínciaToolStripMenuItem.Size = new Size(128, 22);
-            provínciaToolStripMenuItem.Text = "Província";
+            provinciaToolStripMenuItem.Name = "provinciaToolStripMenuItem";
+            provinciaToolStripMenuItem.Size = new Size(180, 22);
+            provinciaToolStripMenuItem.Text = "Província";
+            provinciaToolStripMenuItem.Click += provinciaToolStripMenuItem_Click;
             // 
-            // municípioToolStripMenuItem
+            // municipioToolStripMenuItem
             // 
-            municípioToolStripMenuItem.Name = "municípioToolStripMenuItem";
-            municípioToolStripMenuItem.Size = new Size(128, 22);
-            municípioToolStripMenuItem.Text = "Município";
+            municipioToolStripMenuItem.Name = "municipioToolStripMenuItem";
+            municipioToolStripMenuItem.Size = new Size(180, 22);
+            municipioToolStripMenuItem.Text = "Município";
+            municipioToolStripMenuItem.Click += municipioToolStripMenuItem_Click;
             // 
             // ramoDeActividadeToolStripMenuItem
             // 
             ramoDeActividadeToolStripMenuItem.Name = "ramoDeActividadeToolStripMenuItem";
             ramoDeActividadeToolStripMenuItem.Size = new Size(180, 22);
             ramoDeActividadeToolStripMenuItem.Text = "Ramo de Actividade";
+            ramoDeActividadeToolStripMenuItem.Click += ramoDeActividadeToolStripMenuItem_Click;
             // 
             // moedaToolStripMenuItem
             // 
             moedaToolStripMenuItem.Name = "moedaToolStripMenuItem";
             moedaToolStripMenuItem.Size = new Size(180, 22);
             moedaToolStripMenuItem.Text = "Moeda";
+            moedaToolStripMenuItem.Click += moedaToolStripMenuItem_Click;
             // 
             // tipoContactoToolStripMenuItem
             // 
             tipoContactoToolStripMenuItem.Name = "tipoContactoToolStripMenuItem";
             tipoContactoToolStripMenuItem.Size = new Size(180, 22);
             tipoContactoToolStripMenuItem.Text = "Tipo Contacto";
+            tipoContactoToolStripMenuItem.Click += tipoContactoToolStripMenuItem_Click;
             // 
             // tipoEnderecoToolStripMenuItem
             // 
             tipoEnderecoToolStripMenuItem.Name = "tipoEnderecoToolStripMenuItem";
             tipoEnderecoToolStripMenuItem.Size = new Size(180, 22);
             tipoEnderecoToolStripMenuItem.Text = "Tipo Endereco";
+            tipoEnderecoToolStripMenuItem.Click += tipoEnderecoToolStripMenuItem_Click;
             // 
             // bancosToolStripMenuItem
             // 
             bancosToolStripMenuItem.Name = "bancosToolStripMenuItem";
             bancosToolStripMenuItem.Size = new Size(180, 22);
             bancosToolStripMenuItem.Text = "Bancos";
+            bancosToolStripMenuItem.Click += bancosToolStripMenuItem_Click;
             // 
             // helpMenu
             // 
@@ -452,9 +461,9 @@
         private ToolStripStatusLabel toolStripStatusLabel1;
         private ToolStripMenuItem formularioTesteToolStripMenuItem;
         private ToolStripMenuItem paisesToolStripMenuItem;
-        private ToolStripMenuItem paísToolStripMenuItem;
-        private ToolStripMenuItem provínciaToolStripMenuItem;
-        private ToolStripMenuItem municípioToolStripMenuItem;
+        private ToolStripMenuItem paisToolStripMenuItem;
+        private ToolStripMenuItem provinciaToolStripMenuItem;
+        private ToolStripMenuItem municipioToolStripMenuItem;
         private ToolStripMenuItem ramoDeActividadeToolStripMenuItem;
         private ToolStripMenuItem moedaToolStripMenuItem;
         private ToolStripMenuItem tipoContactoToolStripMenuItem;

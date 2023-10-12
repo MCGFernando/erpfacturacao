@@ -26,11 +26,12 @@ namespace ERPFacturacao.Controller
             this.formCadastroProductoServico.Novo += Novo;
             this.formCadastroProductoServico.Editar += Editar;
             this.formCadastroProductoServico.Listar += Listar;
-            
+            Console.WriteLine("Chegou Events");
         }
 
         Artigo SetArtigoFromForm()
         {
+            Console.WriteLine("Chegou SetArtigo");
             Artigo artigo = new ArtigoBuilder()
                 .SetCodigoArtigo(this.formCadastroProductoServico.CodigoArtidoTextBox)
                 .SetDescricao(this.formCadastroProductoServico.DescricaoTextBox)
@@ -48,7 +49,7 @@ namespace ERPFacturacao.Controller
                 //.SetComprimento()
                 //.SetObservacao()
                 .SetFornecedorId(int.Parse(this.formCadastroProductoServico.FornecedorComboBox.SelectedValue.ToString()))
-                .SetTipoArtigo((TipoArtigo)this.formCadastroProductoServico.TipoArtigoComboBox.SelectedValue)
+                .SetTipoArtigoId(int.Parse(this.formCadastroProductoServico.TipoArtigoComboBox.SelectedValue.ToString()))
                 .SetTipoIVA((TipoIVA)this.formCadastroProductoServico.TipoIVAComboBox.SelectedValue)
                 .SetDataRegisto(DateTime.Now)
                 .Build();
@@ -73,6 +74,7 @@ namespace ERPFacturacao.Controller
         private void Gravar(object? sender, EventArgs e)
         {
             var artigo = SetArtigoFromForm();
+            Console.WriteLine("Chegou Grvar");
             _service.insert(artigo);
             MessageBox.Show("Ok");
         }

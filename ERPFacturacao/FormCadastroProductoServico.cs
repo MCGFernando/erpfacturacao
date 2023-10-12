@@ -15,23 +15,12 @@ namespace ERPFacturacao
 {
     public partial class FormCadastroProductoServico : Form
     {
-        public FormCadastroProductoServico()
-        {
-            InitializeComponent();
-            cmbTipoArtigo.DataSource = Enum.GetValues(typeof(TipoArtigo));
+        public event EventHandler Gravar;
+        public event EventHandler Novo;
+        public event EventHandler Editar;
+        public event EventHandler Anular;
+        public event EventHandler Listar;
 
-            FornecedorComboBox.DataSource = new FornecedorService(new Data.EFContext()).findAll();
-            FornecedorComboBox.DisplayMember = "Nome";
-            FornecedorComboBox.ValueMember = "Id";
-
-            TipoIVAComboBox.DataSource = new TipoIVAService(new Data.EFContext()).findAll();
-            TipoIVAComboBox.DisplayMember = "IVA";
-            TipoIVAComboBox.ValueMember = "Id";
-
-            CategoriaArtigoComboBox.DataSource = new CategoriaArtigoService(new Data.EFContext()).findAll();
-            CategoriaArtigoComboBox.DisplayMember = "Categoria";
-            CategoriaArtigoComboBox.ValueMember = "Id";
-        }
         public string CodigoArtidoTextBox
         {
             get
@@ -232,10 +221,36 @@ namespace ERPFacturacao
                 cmbModelo = value;
             }
         }
-        public event EventHandler Gravar;
-        public event EventHandler Novo;
-        public event EventHandler Editar;
-        public event EventHandler Anular;
-        public event EventHandler Listar;
+        public FormCadastroProductoServico()
+        {
+            InitializeComponent();
+            //cmbTipoArtigo.DataSource = Enum.GetValues(typeof(TipoFiscalArtigo));
+            cmbTipoArtigo.DataSource = new TipoArtigoService(new Data.EFContext()).findAll();
+            cmbTipoArtigo.DisplayMember = "_TipoArtigo";
+            cmbTipoArtigo.ValueMember = "Id";
+
+            FornecedorComboBox.DataSource = new FornecedorService(new Data.EFContext()).findAll();
+            FornecedorComboBox.DisplayMember = "Nome";
+            FornecedorComboBox.ValueMember = "Id";
+
+            TipoIVAComboBox.DataSource = new TipoIVAService(new Data.EFContext()).findAll();
+            TipoIVAComboBox.DisplayMember = "IVA";
+            TipoIVAComboBox.ValueMember = "Id";
+
+            CategoriaArtigoComboBox.DataSource = new CategoriaArtigoService(new Data.EFContext()).findAll();
+            CategoriaArtigoComboBox.DisplayMember = "Categoria";
+            CategoriaArtigoComboBox.ValueMember = "Id";
+
+            btnGravar.Click += (sender, e) =>
+            {
+                Gravar?.Invoke(sender, e);
+            };
+            btnNovo.Click += (sender, e) => Novo?.Invoke(sender, e);
+            btnEditar.Click += (sender, e) => Editar?.Invoke(sender, e);
+            btnAnular.Click += (sender, e) => Anular?.Invoke(sender, e);
+            btnListar.Click += (sender, e) => Listar?.Invoke(sender, e);
+        }
+        
+        
     }
 }

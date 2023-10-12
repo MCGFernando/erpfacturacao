@@ -103,7 +103,7 @@ namespace ERPFacturacao
             frmSector.Show();
         }
 
-        private void cargoToolStripMenuItem_Click(object sender, EventArgs e)
+        private void cargoToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             FormCargo frmCargo = new FormCargo();
             frmCargo.MdiParent = this;
@@ -116,7 +116,7 @@ namespace ERPFacturacao
             new Form1().Show();
         }
 
-        private void paísToolStripMenuItem_Click(object sender, EventArgs e)
+        private void paisToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FormPais frmPais = new FormPais();
             frmPais.MdiParent = this;
@@ -124,7 +124,7 @@ namespace ERPFacturacao
             new PaisController(frmPais);
         }
 
-        private void provínciaToolStripMenuItem_Click(object sender, EventArgs e)
+        private void provinciaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FormProvincia frmProvincia = new FormProvincia();
             frmProvincia.MdiParent = this;
@@ -132,7 +132,7 @@ namespace ERPFacturacao
             new ProvinciaController(frmProvincia);
         }
 
-        private void municípioToolStripMenuItem_Click(object sender, EventArgs e)
+        private void municipioToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FormMunicipio frmMunicipio = new FormMunicipio();
             frmMunicipio.MdiParent = this;
@@ -216,5 +216,10 @@ namespace ERPFacturacao
             formCadastroProductoServico.Show();
             new ArtigoController(formCadastroProductoServico);
         }
+
+        /*private void municipioToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+
+        }*/
     }
 }
