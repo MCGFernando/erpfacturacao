@@ -217,6 +217,30 @@ namespace ERPFacturacao
             new ArtigoController(formCadastroProductoServico);
         }
 
+        private void tipoDeDocumentoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormTipoDocumento formTipoDocumento = new FormTipoDocumento();
+            formTipoDocumento.MdiParent = this;
+            formTipoDocumento.Show();
+            new TipoDocumentoController(formTipoDocumento);
+        }
+
+        private void tipoIVAToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormTipoIVA formTipoIVA =  new FormTipoIVA();
+            formTipoIVA.MdiParent = this;   
+            formTipoIVA.Show();
+            new TipoIVAController(formTipoIVA);
+        }
+
+        private void tipoArtigoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormTipoArtigo formTipoArtigo = new FormTipoArtigo();
+            formTipoArtigo.MdiParent = this;
+            formTipoArtigo.Show();  
+            new TipoArtigoController(formTipoArtigo);
+        }
+
         /*private void municipioToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
 

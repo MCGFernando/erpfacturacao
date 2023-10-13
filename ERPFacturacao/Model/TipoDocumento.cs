@@ -7,8 +7,13 @@ using System.Threading.Tasks;
 
 namespace ERPFacturacao.Model
 {
+    [Serializable]
+    [Table("tipos_documentos")]
     public class TipoDocumento
     {
+        public int Id { get; set; }
+        public string Codigo { get; set; }
+        public string Descricao { get; set; }
         [Column("data_registo")]
         public DateTime DataRegisto { get; set; }
         [Column("data_actualizacao")]

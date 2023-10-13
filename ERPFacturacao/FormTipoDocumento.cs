@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace ERPFacturacao
 {
-    public partial class FormTipoIVA : Form
+    public partial class FormTipoDocumento : Form
     {
-        public string IdTextBox
+        public string IDTextBox
         {
             get
             {
@@ -24,15 +24,15 @@ namespace ERPFacturacao
                 txtId.Text = value;
             }
         }
-        public string TipoIVATextBox
+        public string CodigoTipoDocumentoTextBox
         {
             get
             {
-                return txtTipoIVA.Text;
+                return txtCodigoTipoDocumento.Text;
             }
             set
             {
-                txtTipoIVA.Text = value;
+                txtCodigoTipoDocumento.Text = value;
             }
         }
         public string DescricaoTextBox
@@ -46,26 +46,15 @@ namespace ERPFacturacao
                 txtDescricao.Text = value;
             }
         }
-        public string TaxaTextBox
+        public AdvancedDataGridView tblTipoDocumento
         {
             get
             {
-                return txtTaxa.Text;
+                return dataGridTipoDocumento;
             }
             set
             {
-                txtTaxa.Text = value;
-            }
-        }
-        public AdvancedDataGridView tblTipoIVA
-        {
-            get
-            {
-                return dataGridTipoIVA;
-            }
-            set
-            {
-                dataGridTipoIVA = value;
+                dataGridTipoDocumento = value;
             }
         }
         public event EventHandler Gravar;
@@ -73,7 +62,7 @@ namespace ERPFacturacao
         public event EventHandler Editar;
         public event EventHandler Anular;
         public event EventHandler Listar;
-        public FormTipoIVA()
+        public FormTipoDocumento()
         {
             InitializeComponent();
             btnGravar.Click += (sender, e) =>

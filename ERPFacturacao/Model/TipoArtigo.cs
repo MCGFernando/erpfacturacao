@@ -12,6 +12,7 @@ namespace ERPFacturacao.Model
     {
         public int Id { get; set; }
         public string _TipoArtigo { get; set; }
+        public string Descricao { get; set; }
         public TipoFiscalArtigo TipoFiscalProductoServico { get; set; }
         [Column("data_registo")]
         public DateTime DataRegisto { get; set; }

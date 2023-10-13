@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace ERPFacturacao
 {
-    public partial class FormTipoIVA : Form
+    public partial class FormTipoArtigo : Form
     {
         public string IdTextBox
         {
@@ -24,15 +24,15 @@ namespace ERPFacturacao
                 txtId.Text = value;
             }
         }
-        public string TipoIVATextBox
+        public string TipoArtigoTextBox
         {
             get
             {
-                return txtTipoIVA.Text;
+                return txtTipoArtigo.Text;
             }
             set
             {
-                txtTipoIVA.Text = value;
+                txtTipoArtigo.Text = value;
             }
         }
         public string DescricaoTextBox
@@ -46,26 +46,26 @@ namespace ERPFacturacao
                 txtDescricao.Text = value;
             }
         }
-        public string TaxaTextBox
+        public ComboBox TipoFiscalArtigoComboBox
         {
             get
             {
-                return txtTaxa.Text;
+                return cmbTipoFiscalArtigo;
             }
             set
             {
-                txtTaxa.Text = value;
+                cmbTipoFiscalArtigo = value;
             }
         }
-        public AdvancedDataGridView tblTipoIVA
+        public AdvancedDataGridView tblTipoArtigo
         {
             get
             {
-                return dataGridTipoIVA;
+                return dataGridTipoArtigo;
             }
             set
             {
-                dataGridTipoIVA = value;
+                dataGridTipoArtigo = value;
             }
         }
         public event EventHandler Gravar;
@@ -73,9 +73,10 @@ namespace ERPFacturacao
         public event EventHandler Editar;
         public event EventHandler Anular;
         public event EventHandler Listar;
-        public FormTipoIVA()
+        public FormTipoArtigo()
         {
             InitializeComponent();
+            TipoFiscalArtigoComboBox.DataSource = Enum.GetValues(typeof(Model.Enum.TipoFiscalArtigo));
             btnGravar.Click += (sender, e) =>
             {
                 Gravar?.Invoke(sender, e);
@@ -84,6 +85,8 @@ namespace ERPFacturacao
             btnEditar.Click += (sender, e) => Editar?.Invoke(sender, e);
             btnAnular.Click += (sender, e) => Anular?.Invoke(sender, e);
             btnListar.Click += (sender, e) => Listar?.Invoke(sender, e);
+
+
         }
     }
 }

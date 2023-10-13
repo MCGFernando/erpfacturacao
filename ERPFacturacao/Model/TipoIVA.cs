@@ -7,11 +7,14 @@ using System.Threading.Tasks;
 
 namespace ERPFacturacao.Model
 {
+    [Serializable]
+    [Table("tipos_ivas")]
     public class TipoIVA
     {
         public int Id { get; set; }
-        public int IVA { get; set; }
-        public int Descricao { get; set; }
+        [Column("tipo_iva")]
+        public string _TipoIVA { get; set; }
+        public string Descricao { get; set; }
         public double Taxa { get; set; }
         [Column("data_registo")]
         public DateTime DataRegisto { get; set; }
