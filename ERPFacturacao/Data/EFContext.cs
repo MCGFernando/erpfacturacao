@@ -1,4 +1,5 @@
-﻿using ERPFacturacao.Model;
+﻿//using ERPFacturacao.Config;
+using ERPFacturacao.Model;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -14,6 +15,7 @@ namespace ERPFacturacao.Data
 
         public EFContext(DbContextOptions<EFContext> options) : base(options)
         {
+            //Database.SetInitializer(new BDInitializer());
         }
         public DbSet<Utilizador> Utilizador { get; set; } = default!;
         public DbSet<Sector> Sector { get; set; }
@@ -39,6 +41,10 @@ namespace ERPFacturacao.Data
         public DbSet<TipoDocumento> TipoDocumento { get; set; }
         public DbSet<Unidade> Unidade { get; set; }
         public DbSet<Artigo> Artigo { get; set; }
+        public DbSet<Serie> Serie { get; set; }
+        public DbSet<ClasseContabil> ClasseContabil { get; set; }
+        public DbSet<ContaContabilAgregadora> ContaContabilAgregadora { get; set; }
+        public DbSet<ContaContabil> ContaContabil { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
