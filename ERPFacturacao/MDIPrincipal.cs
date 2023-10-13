@@ -1,4 +1,5 @@
 ﻿using ERPFacturacao.Controller;
+using ERPFacturacao.Model;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -227,8 +228,8 @@ namespace ERPFacturacao
 
         private void tipoIVAToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FormTipoIVA formTipoIVA =  new FormTipoIVA();
-            formTipoIVA.MdiParent = this;   
+            FormTipoIVA formTipoIVA = new FormTipoIVA();
+            formTipoIVA.MdiParent = this;
             formTipoIVA.Show();
             new TipoIVAController(formTipoIVA);
         }
@@ -237,8 +238,16 @@ namespace ERPFacturacao
         {
             FormTipoArtigo formTipoArtigo = new FormTipoArtigo();
             formTipoArtigo.MdiParent = this;
-            formTipoArtigo.Show();  
+            formTipoArtigo.Show();
             new TipoArtigoController(formTipoArtigo);
+        }
+
+        private void contaContabilAgregadoraToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormContaContabilAgragadora formContaContabilAgragadora = new FormContaContabilAgragadora();
+            formContaContabilAgragadora.MdiParent = this;
+            formContaContabilAgragadora.Show();
+            new ContaContabilAgragadoraController(formContaContabilAgragadora);
         }
 
         /*private void municipioToolStripMenuItem_Click_1(object sender, EventArgs e)

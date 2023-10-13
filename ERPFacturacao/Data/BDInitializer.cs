@@ -9,9 +9,9 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.ToolTip;
 
 namespace ERPFacturacao.Data
 {
-    public class BDInitializer : DropCreateDatabaseIfModelChanges<EFContext>
+    public class BDInitializer //j<>: p8.DropCreateDatabaseIfModelChanges<EFContext>
     {
-        protected override void Seed(EFContext context)
+        /*protected override void Seed(EFContext context)
         {
             // Insert default data here
             context.ClasseContabil.Add(new Model.ClasseContabil { Classe = "DefaultData1" });
@@ -19,6 +19,6 @@ namespace ERPFacturacao.Data
             // Add more data as needed
             context.SaveChanges();
             base.Seed(context);
-        }
+        }*/
     }
 }

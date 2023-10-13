@@ -4,6 +4,7 @@ using ERPFacturacao.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ERPFacturacao.Migrations
 {
     [DbContext(typeof(EFContext))]
-    partial class EFContextModelSnapshot : ModelSnapshot
+    [Migration("20231013193303_Codigo_de_contasv3")]
+    partial class Codigo_de_contasv3
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -429,9 +432,6 @@ namespace ERPFacturacao.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("ContaContabilAgregadoraId")
-                        .HasColumnType("int");
-
                     b.Property<string>("Descricao")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -440,8 +440,6 @@ namespace ERPFacturacao.Migrations
                         .HasColumnType("bigint");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("ContaContabilAgregadoraId");
 
                     b.ToTable("contas_contabeis");
                 });
@@ -454,9 +452,6 @@ namespace ERPFacturacao.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int>("ClasseContabilId")
-                        .HasColumnType("int");
-
                     b.Property<string>("Codigo")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -466,8 +461,6 @@ namespace ERPFacturacao.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("ClasseContabilId");
 
                     b.ToTable("contas_contabeis_agregadoras");
                 });
@@ -1324,28 +1317,6 @@ namespace ERPFacturacao.Migrations
                     b.Navigation("Cliente");
 
                     b.Navigation("Fornecedor");
-                });
-
-            modelBuilder.Entity("ERPFacturacao.Model.ContaContabil", b =>
-                {
-                    b.HasOne("ERPFacturacao.Model.ContaContabilAgregadora", "ContaContabilAgregadora")
-                        .WithMany()
-                        .HasForeignKey("ContaContabilAgregadoraId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("ContaContabilAgregadora");
-                });
-
-            modelBuilder.Entity("ERPFacturacao.Model.ContaContabilAgregadora", b =>
-                {
-                    b.HasOne("ERPFacturacao.Model.ClasseContabil", "ClasseContabil")
-                        .WithMany()
-                        .HasForeignKey("ClasseContabilId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("ClasseContabil");
                 });
 
             modelBuilder.Entity("ERPFacturacao.Model.Contacto", b =>

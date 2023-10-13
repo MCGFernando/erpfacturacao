@@ -14,5 +14,7 @@ namespace ERPFacturacao.Model
         public int Id { get; set; }
         public string Codigo { get; set; }
         public string Descricao { get; set;}
+        public int ClasseContabilId { get; set; }
+        public ClasseContabil ClasseContabil { get; set; }
     }
 }

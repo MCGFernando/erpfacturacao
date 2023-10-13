@@ -1,5 +1,4 @@
-﻿//using ERPFacturacao.Config;
-using ERPFacturacao.Model;
+﻿using ERPFacturacao.Model;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -49,8 +48,8 @@ namespace ERPFacturacao.Data
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
         =>
-            optionsBuilder.UseSqlServer("Server=AOMFERNANDO01;Database=erpfacturacao;User Id=SA; Password=n@#TEPOSSODIZER07;Trusted_Connection=True; TrustServerCertificate=True");
-            //optionsBuilder.UseSqlServer("Server=MFERNANDO;Database=erpfacturacao;User Id=SA; Password=marodcgf07;Trusted_Connection=True; TrustServerCertificate=True");
+            //optionsBuilder.UseSqlServer("Server=AOMFERNANDO01;Database=erpfacturacao;User Id=SA; Password=n@#TEPOSSODIZER07;Trusted_Connection=True; TrustServerCertificate=True");
+            optionsBuilder.UseSqlServer("Server=MFERNANDO;Database=erpfacturacao;User Id=SA; Password=marodcgf07;Trusted_Connection=True; TrustServerCertificate=True");
         
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

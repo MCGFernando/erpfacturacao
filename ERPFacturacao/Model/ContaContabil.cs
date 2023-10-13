@@ -15,5 +15,8 @@ namespace ERPFacturacao.Model
         public string Codigo { get; set; }
         public long Sequencia { get; set; }
         public string Descricao { get; set; }
+
+        public int ContaContabilAgregadoraId { get; set; }
+        public ContaContabilAgregadora ContaContabilAgregadora { get; set; }
     }
 }
