@@ -250,6 +250,14 @@ namespace ERPFacturacao
             new ContaContabilAgragadoraController(formContaContabilAgragadora);
         }
 
+        private void contaContábilToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormContaContabil formContaContabil = new FormContaContabil();
+            formContaContabil.MdiParent = this;
+            formContaContabil.Show();
+            new ContaContabilController(formContaContabil);
+        }
+
         /*private void municipioToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
 

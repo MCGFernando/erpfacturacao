@@ -71,6 +71,7 @@
             tipoDeDocumentoToolStripMenuItem = new ToolStripMenuItem();
             tipoIVAToolStripMenuItem = new ToolStripMenuItem();
             tipoArtigoToolStripMenuItem = new ToolStripMenuItem();
+            contaContabilAgregadoraToolStripMenuItem = new ToolStripMenuItem();
             helpMenu = new ToolStripMenuItem();
             contentsToolStripMenuItem = new ToolStripMenuItem();
             indexToolStripMenuItem = new ToolStripMenuItem();
@@ -80,7 +81,7 @@
             statusStrip = new StatusStrip();
             toolStripStatusLabel1 = new ToolStripStatusLabel();
             toolTip = new ToolTip(components);
-            contaContabilAgregadoraToolStripMenuItem = new ToolStripMenuItem();
+            contaContábilToolStripMenuItem = new ToolStripMenuItem();
             menuStrip.SuspendLayout();
             statusStrip.SuspendLayout();
             SuspendLayout();
@@ -258,7 +259,7 @@
             // 
             // tabelasToolStripMenuItem
             // 
-            tabelasToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { cargoToolStripMenuItem, sectoresToolStripMenuItem, formularioTesteToolStripMenuItem, paisesToolStripMenuItem, ramoDeActividadeToolStripMenuItem, moedaToolStripMenuItem, tipoContactoToolStripMenuItem, tipoEnderecoToolStripMenuItem, bancosToolStripMenuItem, tipoDeDocumentoToolStripMenuItem, tipoIVAToolStripMenuItem, tipoArtigoToolStripMenuItem, contaContabilAgregadoraToolStripMenuItem });
+            tabelasToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { cargoToolStripMenuItem, sectoresToolStripMenuItem, formularioTesteToolStripMenuItem, paisesToolStripMenuItem, ramoDeActividadeToolStripMenuItem, moedaToolStripMenuItem, tipoContactoToolStripMenuItem, tipoEnderecoToolStripMenuItem, bancosToolStripMenuItem, tipoDeDocumentoToolStripMenuItem, tipoIVAToolStripMenuItem, tipoArtigoToolStripMenuItem, contaContabilAgregadoraToolStripMenuItem, contaContábilToolStripMenuItem });
             tabelasToolStripMenuItem.Name = "tabelasToolStripMenuItem";
             tabelasToolStripMenuItem.Size = new Size(57, 20);
             tabelasToolStripMenuItem.Text = "Tabelas";
@@ -357,6 +358,13 @@
             tipoArtigoToolStripMenuItem.Text = "Tipo Artigo";
             tipoArtigoToolStripMenuItem.Click += tipoArtigoToolStripMenuItem_Click;
             // 
+            // contaContabilAgregadoraToolStripMenuItem
+            // 
+            contaContabilAgregadoraToolStripMenuItem.Name = "contaContabilAgregadoraToolStripMenuItem";
+            contaContabilAgregadoraToolStripMenuItem.Size = new Size(219, 22);
+            contaContabilAgregadoraToolStripMenuItem.Text = "Conta Contabil Agregadora";
+            contaContabilAgregadoraToolStripMenuItem.Click += contaContabilAgregadoraToolStripMenuItem_Click;
+            // 
             // helpMenu
             // 
             helpMenu.DropDownItems.AddRange(new ToolStripItem[] { contentsToolStripMenuItem, indexToolStripMenuItem, searchToolStripMenuItem, toolStripSeparator8, aboutToolStripMenuItem });
@@ -414,12 +422,12 @@
             toolStripStatusLabel1.Size = new Size(105, 17);
             toolStripStatusLabel1.Text = "Seja bem vindo(a):";
             // 
-            // contaContabilAgregadoraToolStripMenuItem
+            // contaContábilToolStripMenuItem
             // 
-            contaContabilAgregadoraToolStripMenuItem.Name = "contaContabilAgregadoraToolStripMenuItem";
-            contaContabilAgregadoraToolStripMenuItem.Size = new Size(219, 22);
-            contaContabilAgregadoraToolStripMenuItem.Text = "Conta Contabil Agregadora";
-            contaContabilAgregadoraToolStripMenuItem.Click += contaContabilAgregadoraToolStripMenuItem_Click;
+            contaContábilToolStripMenuItem.Name = "contaContábilToolStripMenuItem";
+            contaContábilToolStripMenuItem.Size = new Size(219, 22);
+            contaContábilToolStripMenuItem.Text = "Conta Contábil";
+            contaContábilToolStripMenuItem.Click += contaContábilToolStripMenuItem_Click;
             // 
             // MDIPrincipal
             // 
@@ -494,6 +502,7 @@
         private ToolStripMenuItem tipoIVAToolStripMenuItem;
         private ToolStripMenuItem tipoArtigoToolStripMenuItem;
         private ToolStripMenuItem contaContabilAgregadoraToolStripMenuItem;
+        private ToolStripMenuItem contaContábilToolStripMenuItem;
     }
 }
 
