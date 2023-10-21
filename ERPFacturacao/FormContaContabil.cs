@@ -26,15 +26,26 @@ namespace ERPFacturacao
                 txtID.Text = value;
             }
         }
-        public string CodigoTextBox
+        public string CodigoCantaPaiTextBox
         {
             get
             {
-                return txtCodigo.Text;
+                return txtCodigoCantaPai.Text;
             }
             set
             {
-                txtCodigo.Text = value;
+                txtCodigoCantaPai.Text = value;
+            }
+        }
+        public string SequenciaTextBox
+        {
+            get
+            {
+                return txtSequencia.Text;
+            }
+            set
+            {
+                txtSequencia.Text = value;
             }
         }
         public string DescricaoTextBox
@@ -93,7 +104,7 @@ namespace ERPFacturacao
             InitializeComponent();
             ClasseContabilComboBox.DataSource = new ClasseContabilService(new Data.EFContext()).findAll();
             ClasseContabilComboBox.DisplayMember = "Descricao";
-            ClasseContabilComboBox.ValueMember = "Id";   
+            ClasseContabilComboBox.ValueMember = "Id";
             btnGravar.Click += (sender, e) =>
             {
                 Gravar?.Invoke(sender, e);

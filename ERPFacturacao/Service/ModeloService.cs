@@ -59,8 +59,8 @@ namespace ERPFacturacao.Service
 
         public void update(Modelo obj)
         {
-            var objOld = findById(obj.Id);
-            _context.Entry(objOld).CurrentValues.SetValues(obj);
+             _context.Modelo.Add(obj);
+            _context.SaveChanges();
         }
     }
 }

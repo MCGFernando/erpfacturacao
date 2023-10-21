@@ -19,27 +19,51 @@ namespace ERPFacturacao.Service
         }
         public void delete(int id)
         {
+            findById(id);
             throw new NotImplementedException();
         }
 
         public List<ContaContabil> findAll()
         {
-            throw new NotImplementedException();
+            return _context.ContaContabil.ToList();
         }
 
         public ContaContabil findById(int? id)
+        {
+            if (id == null || id.Value <= 0)
+            {
+                throw new ArgumentException("Invalid or missing ID parameter.");
+            }
+
+            ContaContabil result = null;
+
+            try
+            {
+                result = _context.ContaContabil.FirstOrDefault(m => m.Id == id);
+            }
+            catch (Exception ex)
+            {
+                throw new ApplicationException("An error occurred while fetching the data from the database.", ex);
+            }
+
+            return result;
+        }
+
+        public ContaContabil findByCodigo(string? codigo)
         {
             throw new NotImplementedException();
         }
 
         public void insert(ContaContabil obj)
         {
-            throw new NotImplementedException();
+            _context.ContaContabil.Add(obj);
+            _context.SaveChanges();
         }
 
         public void update(ContaContabil obj)
         {
-            throw new NotImplementedException();
+            _context.ContaContabil.Add(obj);
+            _context.SaveChanges();
         }
     }
 }

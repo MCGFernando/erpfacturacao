@@ -41,12 +41,14 @@
             label2 = new Label();
             label1 = new Label();
             txtDescricao = new TextBox();
-            txtCodigo = new TextBox();
+            txtCodigoCantaPai = new TextBox();
             txtID = new TextBox();
             cmbClasseContabil = new ComboBox();
             cmbContaContabilAgregadora = new ComboBox();
             label4 = new Label();
             label5 = new Label();
+            label6 = new Label();
+            txtSequencia = new TextBox();
             toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridContaContabil).BeginInit();
             SuspendLayout();
@@ -120,7 +122,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(119, 86);
+            label3.Location = new Point(225, 86);
             label3.Name = "label3";
             label3.Size = new Size(63, 15);
             label3.TabIndex = 21;
@@ -132,9 +134,9 @@
             label2.AutoSize = true;
             label2.Location = new Point(13, 86);
             label2.Name = "label2";
-            label2.Size = new Size(46, 15);
+            label2.Size = new Size(58, 15);
             label2.TabIndex = 20;
-            label2.Text = "Código";
+            label2.Text = "Conta Pai";
             // 
             // label1
             // 
@@ -147,17 +149,18 @@
             // 
             // txtDescricao
             // 
-            txtDescricao.Location = new Point(119, 104);
+            txtDescricao.Location = new Point(225, 104);
             txtDescricao.Name = "txtDescricao";
-            txtDescricao.Size = new Size(429, 23);
+            txtDescricao.Size = new Size(323, 23);
             txtDescricao.TabIndex = 18;
             // 
-            // txtCodigo
+            // txtCodigoCantaPai
             // 
-            txtCodigo.Location = new Point(13, 104);
-            txtCodigo.Name = "txtCodigo";
-            txtCodigo.Size = new Size(100, 23);
-            txtCodigo.TabIndex = 17;
+            txtCodigoCantaPai.Enabled = false;
+            txtCodigoCantaPai.Location = new Point(13, 104);
+            txtCodigoCantaPai.Name = "txtCodigoCantaPai";
+            txtCodigoCantaPai.Size = new Size(100, 23);
+            txtCodigoCantaPai.TabIndex = 17;
             // 
             // txtID
             // 
@@ -201,11 +204,29 @@
             label5.TabIndex = 26;
             label5.Text = "Conta Agregadora";
             // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Location = new Point(119, 86);
+            label6.Name = "label6";
+            label6.Size = new Size(61, 15);
+            label6.TabIndex = 28;
+            label6.Text = "Sequència";
+            // 
+            // txtSequencia
+            // 
+            txtSequencia.Location = new Point(119, 104);
+            txtSequencia.Name = "txtSequencia";
+            txtSequencia.Size = new Size(100, 23);
+            txtSequencia.TabIndex = 27;
+            // 
             // FormContaContabil
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(560, 450);
+            Controls.Add(label6);
+            Controls.Add(txtSequencia);
             Controls.Add(label5);
             Controls.Add(label4);
             Controls.Add(cmbContaContabilAgregadora);
@@ -215,7 +236,7 @@
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(txtDescricao);
-            Controls.Add(txtCodigo);
+            Controls.Add(txtCodigoCantaPai);
             Controls.Add(txtID);
             Controls.Add(toolStrip1);
             Name = "FormContaContabil";
@@ -241,11 +262,13 @@
         private Label label2;
         private Label label1;
         private TextBox txtDescricao;
-        private TextBox txtCodigo;
+        private TextBox txtCodigoCantaPai;
         private TextBox txtID;
         private ComboBox cmbClasseContabil;
         private ComboBox cmbContaContabilAgregadora;
         private Label label4;
         private Label label5;
+        private Label label6;
+        private TextBox txtSequencia;
     }
 }

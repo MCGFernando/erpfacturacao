@@ -3,6 +3,7 @@ using ERPFacturacao.Model;
 using ERPFacturacao.Service;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -39,7 +40,7 @@ namespace ERPFacturacao.Controller
                 if (contaContabilAgregadora != null)
                 {
                     MessageBox.Show(contaContabilAgregadora.ToString());
-                    this.formContaContabil.CodigoTextBox = contaContabilAgregadora.Codigo + ".";
+                    this.formContaContabil.CodigoCantaPaiTextBox = contaContabilAgregadora.Codigo + ".";
                 }
                 
             }
@@ -60,22 +61,98 @@ namespace ERPFacturacao.Controller
         private void Listar(object? sender, EventArgs e)
         {
             //MessageBox.Show("Cliquei");
-            throw new NotImplementedException();
+            var lstContaContabil = _service.findAll();
+            if (lstContaContabil.Count <= 0)
+            {
+                MessageBox.Show("Nok");
+                return;
+            }
+            this.formContaContabil.tblContaContabil.DataSource = lstContaContabil;
         }
 
         private void Editar(object? sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            if (this.formContaContabil.tblContaContabil.SelectedRows.Count <= 0)
+            {
+                MessageBox.Show("Por favor selecione a coluna que deseja editar", "", MessageBoxButtons.OK);
+                return;
+            }
+            DataGridViewRow selectedRow = this.formContaContabil.tblContaContabil.SelectedRows[0];
+
+            bool tryParse = int.TryParse(selectedRow.Cells[0].Value.ToString(), out int auxNumber);
+
+            if (!tryParse)
+            {
+                MessageBox.Show("Não foi possível converter o ID do cliente", "", MessageBoxButtons.OK);
+                return;
+            }
+            int idContaContabil = auxNumber;
+            var contaContabil = _service.findById(idContaContabil);
+            this.formContaContabil.IDTextBox = contaContabil.Id.ToString();
+            this.formContaContabil.SequenciaTextBox= contaContabil.Sequencia.ToString();
+            this.formContaContabil.CodigoCantaPaiTextBox = contaContabil.Codigo;
+            this.formContaContabil.DescricaoTextBox = contaContabil.Descricao;
         }
 
         private void Novo(object? sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            this.formContaContabil.CodigoCantaPaiTextBox = "";
+            this.formContaContabil.SequenciaTextBox = "";
+            this.formContaContabil.DescricaoTextBox = "";
         }
 
         private void Gravar(object? sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            var contaContabil = SetContaContabilFromForm();
+
+            if (contaContabil == null)
+            {
+                return;
+            }
+
+
+
+
+            if (contaContabil.Id == 0 || contaContabil.Id == null)
+            {
+                _service.insert(contaContabil);
+                Novo(sender, e);
+                MessageBox.Show("Inserido com sucesso");
+            }
+            else
+            {
+                _service.update(contaContabil);
+                Novo(sender, e);
+                MessageBox.Show("actualizado com sucesso");
+            }
+        }
+
+        private ContaContabil SetContaContabilFromForm()
+        {
+            var ContaContabil = new ContaContabil();
+            if (int.TryParse(this.formContaContabil.IDTextBox, out int utilizadorId))
+            {
+                ContaContabil.Id = utilizadorId;
+            }
+
+            ContaContabil.ContaContabilAgregadoraId = int.Parse(this.formContaContabil.ContaContabilAgregadoraComboBox.SelectedValue.ToString());
+            ContaContabil.Codigo = this.formContaContabil.CodigoCantaPaiTextBox;
+            ContaContabil.Sequencia = long.Parse( this.formContaContabil.SequenciaTextBox);
+            ContaContabil.Descricao = this.formContaContabil.DescricaoTextBox;
+
+
+            var validationContext = new ValidationContext(ContaContabil, serviceProvider: null, items: null);
+            var validationResults = new List<ValidationResult>();
+
+            if (!Validator.TryValidateObject(ContaContabil, validationContext, validationResults, validateAllProperties: true))
+            {
+                foreach (var validationResult in validationResults)
+                {
+                    MessageBox.Show(validationResult.ErrorMessage);
+                    ContaContabil = null;
+                }
+            }
+            return ContaContabil;
         }
     }
 }
